@@ -20,7 +20,7 @@ const dirtyMessages = [
 
 const mixedMessages = [...cleanMessages, ...dirtyMessages];
 
-function bench(name: string, fn: () => void, iterations: number): void {
+function bench(name: string, fn: () => void, iterations: number, msgsPerOp: number): void {
   // Warmup
   for (let i = 0; i < 100; i++) fn();
 
@@ -28,48 +28,44 @@ function bench(name: string, fn: () => void, iterations: number): void {
   for (let i = 0; i < iterations; i++) fn();
   const elapsed = performance.now() - start;
 
-  const opsPerSec = Math.round((iterations / elapsed) * 1000);
+  const totalMsgs = iterations * msgsPerOp;
+  const msgsPerSec = Math.round((totalMsgs / elapsed) * 1000);
   console.log(
-    `${name}: ${elapsed.toFixed(2)}ms for ${iterations} ops (${opsPerSec.toLocaleString()} ops/sec)`,
+    `${name}: ${elapsed.toFixed(2)}ms (${msgsPerSec.toLocaleString()} msgs/sec)`,
   );
 }
 
 console.log("=== terlik.js Benchmark ===\n");
 
 console.log("--- containsProfanity ---");
-bench("10k clean messages", () => {
+bench("Clean messages", () => {
   for (const msg of cleanMessages) terlik.containsProfanity(msg);
-}, 2_000);
+}, 2_000, cleanMessages.length);
 
-bench("10k dirty messages", () => {
+bench("Dirty messages", () => {
   for (const msg of dirtyMessages) terlik.containsProfanity(msg);
-}, 2_000);
+}, 2_000, dirtyMessages.length);
 
-bench("10k mixed messages", () => {
+bench("Mixed messages", () => {
   for (const msg of mixedMessages) terlik.containsProfanity(msg);
-}, 1_000);
+}, 2_000, mixedMessages.length);
 
 console.log("\n--- clean ---");
-bench("10k clean operations", () => {
+bench("Mixed clean()", () => {
   for (const msg of mixedMessages) terlik.clean(msg);
-}, 1_000);
+}, 2_000, mixedMessages.length);
 
 console.log("\n--- getMatches ---");
-bench("10k getMatches", () => {
+bench("Mixed getMatches()", () => {
   for (const msg of mixedMessages) terlik.getMatches(msg);
-}, 1_000);
+}, 2_000, mixedMessages.length);
 
-console.log("\n--- 100k mixed containsProfanity ---");
-bench("100k mixed messages", () => {
-  for (const msg of mixedMessages) terlik.containsProfanity(msg);
-}, 10_000);
-
-console.log("\n--- Modes comparison (10k each) ---");
+console.log("\n--- Modes comparison ---");
 for (const mode of ["strict", "balanced", "loose"] as const) {
   const t = new Terlik({ mode });
-  bench(`${mode} mode`, () => {
+  bench(`${mode} mode (mixed)`, () => {
     for (const msg of mixedMessages) t.containsProfanity(msg);
-  }, 1_000);
+  }, 2_000, mixedMessages.length);
 }
 
 console.log("\nDone.");

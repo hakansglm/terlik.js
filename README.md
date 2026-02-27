@@ -115,14 +115,14 @@ app.post("/chat", (req, res) => {
 });
 ```
 
-Benchmark on a single core (Apple Silicon):
+Benchmark results (Apple Silicon, single core, msgs/sec):
 
-| Scenario | ops/sec |
+| Scenario | msgs/sec |
 |---|---|
-| Clean messages (no matches) | ~190,000 |
-| Mixed messages (balanced mode) | ~40,000 |
-| Strict mode | ~37,000 |
-| Loose mode (with fuzzy) | ~1,750 |
+| Clean messages (no matches) | ~250,000 |
+| Mixed messages (balanced mode) | ~188,000 |
+| Strict mode | ~384,000 |
+| Loose mode (with fuzzy) | ~11,000 |
 
 > Tip: Avoid creating `new Terlik()` per request. Constructor cost is ~10ms (pattern compilation). A cached instance handles requests in microseconds.
 
@@ -154,7 +154,7 @@ const terlik = new Terlik({
 
 ### `terlik.containsProfanity(text, options?): boolean`
 
-Quick check. Returns as soon as first match is found.
+Quick boolean check. Runs full detection internally and returns `true` if any match exists.
 
 ### `terlik.getMatches(text, options?): MatchResult[]`
 
@@ -221,7 +221,7 @@ An interactive browser-based test environment is included. Chat interface on the
 pnpm dev:live      # http://localhost:2026
 ```
 
-See [`live_test_server/KULLANIM.md`](./live_test_server/KULLANIM.md) for details.
+See [`live_test_server/README.md`](./live_test_server/README.md) for details.
 
 ## License
 
