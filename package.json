@@ -1,0 +1,54 @@
+{
+  "name": "terlik.js",
+  "version": "1.0.0",
+  "description": "Turkish-first profanity detection and filtering library with advanced normalization and anti-manipulation capabilities",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bench": "tsx benchmarks/bench.ts",
+    "typecheck": "tsc --noEmit",
+    "dev:live": "tsx watch live_test_server/server.ts"
+  },
+  "keywords": [
+    "profanity",
+    "filter",
+    "turkish",
+    "censor",
+    "badwords",
+    "kufur",
+    "turkce"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0",
+    "tsx": "^4.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
