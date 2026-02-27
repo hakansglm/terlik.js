@@ -1,33 +1,34 @@
-# terlik.js — Canlı Test Sunucusu Kullanım Kılavuzu
+# terlik.js — Live Test Server
 
-## Hızlı Başlangıç
+An interactive browser-based test environment for terlik.js. Send messages in a chat interface, see profanity detection results in real-time, and inspect every step of the normalization and pattern matching pipeline.
+
+## Quick Start
 
 ```bash
-# Proje kök dizininde:
 pnpm dev:live
 ```
 
-Tarayıcıda aç: **http://localhost:2026**
+Open **http://localhost:2026** in your browser.
 
 ---
 
-## Nasıl Çalıştırılır
+## How to Run
 
-### Yöntem 1: npm script ile (önerilen)
+### Option 1: npm script (recommended)
 
 ```bash
 pnpm dev:live
 ```
 
-Bu komut `tsx watch` kullanır — `src/` altında herhangi bir dosyayı değiştirdiğinde sunucu otomatik olarak yeniden başlar. Build almaya gerek yok.
+Uses `tsx watch` — the server auto-restarts when you edit any file under `src/`. No build step needed.
 
-### Yöntem 2: Doğrudan
+### Option 2: Direct
 
 ```bash
 npx tsx live_test_server/server.ts
 ```
 
-### Yöntem 3: Watch modunda (otomatik yenileme)
+### Option 3: Watch mode (manual)
 
 ```bash
 npx tsx watch live_test_server/server.ts
@@ -35,116 +36,140 @@ npx tsx watch live_test_server/server.ts
 
 ---
 
-## Arayüz Rehberi
+## Interface Guide
 
-Sayfa iki panelden oluşur:
+The page is split into two panels:
 
-### Sol Panel — Chat
+### Left Panel — Chat
 
-- **Mesaj kutusu**: Alta mesajını yaz, Enter veya "Gönder" butonuna bas
-- **Kullanıcı mesajı** (mor balon): Gönderdiğin orijinal metin
-- **Sistem yanıtı** (koyu balon): Temizlenmiş metin
-  - Kırmızı kenarlık = küfür tespit edildi
-  - Yeşil kenarlık = temiz mesaj
-- **Hızlı test butonları**: Sabit örnek mesajlar — tek tıkla dene
+- **Message input**: Type a message at the bottom, press Enter or click "Gönder"
+- **User message** (purple bubble): Your original text
+- **System response** (dark bubble): Cleaned text
+  - Red border = profanity detected
+  - Green border = clean message
+- **Quick test buttons**: Pre-built test scenarios — click to send instantly
 
-### Sağ Panel — İşlem Süreci (Process Log)
+### Right Panel — Process Log
 
-Her mesaj gönderildiğinde, sağ panelde terlik.js'in adım adım neler yaptığını görürsün:
+Every message you send generates a step-by-step log showing exactly what terlik.js did:
 
-| Adım | Açıklama |
-|------|----------|
-| **Girdi** | Orijinal metin |
-| **Doğrulama** | Karakter sayısı, geçerlilik |
-| **Normalizasyon** | Metin nasıl dönüştürüldü (küçük harf, Türkçe karakter, leet, tekrar) |
-| **Motor** | Hangi ayarlarla çalıştığı |
-| **Tespit** | Kaç eşleşme bulundu |
-| **Eşleşme detayları** | Her eşleşme: kelime, kök, pozisyon, seviye, yöntem |
-| **Temizleme** | Sonuç ve maskeleme |
-| **Toplam süre** | İşlemin kaç ms sürdüğü |
+| Step | Description |
+|------|-------------|
+| **Girdi** | Original input text |
+| **Doğrulama** | Character count, validation |
+| **Normalizasyon** | How the text was transformed (lowercase, Turkish chars, leet decode, number expansion, repeat collapse) |
+| **Motor hazır** | Engine config (mode, mask style, fuzzy, custom words, whitelist) |
+| **Tespit** | Number of matches found |
+| **Eşleşme #N** | Each match: word, root, position, severity, detection method |
+| **Temizleme** | Final masked result |
+| **Tamamlandı** | Total processing time (ms) |
 
-Her adımın yanında geçen süre (ms cinsinden) görünür.
-
----
-
-## Ayarlar
-
-Alt kısımdaki ayar çubuğundan gerçek zamanlı değiştirebilirsin:
-
-| Ayar | Seçenekler | Varsayılan | Açıklama |
-|------|-----------|------------|----------|
-| **Mod** | strict / balanced / loose | balanced | Tespit hassasiyeti |
-| **Maske** | stars / partial / replace | stars | Maskeleme stili |
-| **Fuzzy** | açık / kapalı | kapalı | Bulanık eşleştirme |
-| **Eşik** | 0 - 1 | 0.8 | Fuzzy benzerlik eşiği |
-| **Algoritma** | levenshtein / dice | levenshtein | Fuzzy algoritması |
-
-### Modlar ne yapar?
-
-- **strict**: Sadece normalize et + tam eşleşme ara. En az false positive, ama evasion'a karşı zayıf.
-- **balanced**: Pattern matching ile araya karakter girme, leet speak, tekrar karakterleri yakalar. Günlük kullanım için ideal.
-- **loose**: Pattern + fuzzy matching. Yazım hatalarını da yakalar ama daha fazla false positive riski var.
+Each step shows its individual timing in milliseconds.
 
 ---
 
-## Hızlı Test Senaryoları
+## Settings
 
-Arayüzdeki butonlarla deneyebileceğin senaryolar:
+Settings are organized in three collapsible sections below the quick test buttons. Click a section title to collapse/expand.
 
-| Buton | Ne test eder |
-|-------|-------------|
-| temiz mesaj | Küfür içermeyen normal metin |
-| düz küfür | Doğrudan yazılmış küfür |
-| ayraçlı | `s.i.k.t.i.r` — harfler arası nokta ile evasion |
-| leet speak | `$1kt1r` — karakter yerine koyma ile evasion |
-| tekrar karakter | `siiiiiktir` — harf tekrarı ile evasion |
-| türkçe büyük harf | `SİKTİR` — Türkçe İ/I farkı |
-| whitelist test | `sikke` — yanlış pozitif olmamalı |
-| çoklu eşleşme | Birden fazla küfür içeren metin |
-| false positive | `amsterdam` — whitelist doğrulaması |
+### Detection Settings
 
----
+| Setting | Options | Default | Description |
+|---------|---------|---------|-------------|
+| **Mod** | strict / balanced / loose | balanced | Detection sensitivity |
+| **Maskeleme** | stars / partial / replace | stars | Mask style for profanity |
+| **Maske metni** | any text | `[***]` | Custom mask text (only visible when "replace" is selected) |
 
-## Geliştirme İpuçları
+**Modes explained:**
+- **strict**: Normalize + exact match only. Fewest false positives, but weak against evasion.
+- **balanced**: Pattern matching with separator, leet speak, and repetition tolerance. Best for general use.
+- **loose**: Pattern + fuzzy matching. Catches typos but higher false positive risk.
 
-### src/ dosyalarını değiştir, sunucu otomatik yenilensin
+### Fuzzy Matching
 
-```bash
-pnpm dev:live   # tsx watch modunda çalışır
-```
+| Setting | Options | Default | Description |
+|---------|---------|---------|-------------|
+| **Aktif** | on / off | off | Toggle fuzzy matching |
+| **Eşik** | 0.0 - 1.0 | 0.8 | Similarity threshold (lower = more tolerant) |
+| **Algoritma** | levenshtein / dice | levenshtein | Fuzzy algorithm |
 
-`src/normalizer.ts`, `src/detector.ts` vb. dosyalarda değişiklik yap → sunucu otomatik restart → tarayıcıyı yenile (F5).
+### Dictionary Management
 
-### Yeni kelime ekleyip test et
+| Setting | Description |
+|---------|-------------|
+| **Ekstra yakalanacak kelimeler** | Add custom words to detect, comma-separated. These are added on top of the built-in dictionary. Example: `hiyar, kodumun` |
+| **Yakalanmasın (whitelist)** | Words to exclude from detection, comma-separated. Use this to prevent false positives on specific words. Example: `testword` |
 
-`src/dictionary/tr.ts` dosyasına yeni kelime ekle → kaydet → sunucu yeniden başlar → arayüzde dene.
+### normalize() Button
 
-### Tüm testleri çalıştır
-
-```bash
-pnpm test          # Tek sefer
-pnpm test:watch    # İzleme modunda (dosya değişince otomatik çalışır)
-```
-
-### Build al
-
-```bash
-pnpm build         # dist/ klasörüne ESM + CJS çıktı üretir
-```
-
-### Benchmark çalıştır
-
-```bash
-pnpm bench         # Performans ölçümü
-```
+Next to the send button, there's a **normalize()** button. It takes the text from the input field and runs only the normalization pipeline (no detection). The result appears in the process log. Useful for inspecting how terlik.js transforms text before matching.
 
 ---
 
-## Sorun Giderme
+## Quick Test Scenarios
 
-| Sorun | Çözüm |
-|-------|-------|
-| Port 2026 kullanımda | `lsof -i :2026` ile kontrol et, gerekirse `kill` ile kapat |
-| Modül bulunamadı hatası | `pnpm install` çalıştır |
-| Değişiklikler yansımıyor | `tsx watch` modunda olduğundan emin ol, tarayıcıyı yenile |
-| TypeScript hatası | `pnpm typecheck` ile kontrol et |
+| Button | What it tests |
+|--------|---------------|
+| temiz mesaj | Clean text, no profanity |
+| düz küfür | Plain profanity |
+| ayraçlı | `s.i.k.t.i.r` — dot separator evasion |
+| leet speak | `$1kt1r` — character substitution evasion |
+| tekrar karakter | `siiiiiktir` — character repetition evasion |
+| türkçe büyük harf | `SİKTİR` — Turkish İ/I case handling |
+| whitelist test | `sikke` — should NOT be flagged (Ottoman coin) |
+| çoklu eşleşme | Multiple profanities in one message |
+| false positive | `amsterdam` — whitelist verification |
+| visual leet 8→b | `8ok` — visual similarity (8 looks like b) |
+| visual leet 6→g | `6öt` — visual similarity (6 looks like g) |
+| visual leet i8ne | `i8ne` — mixed visual leet |
+| TR sayı s2mle | `s2mle` — Turkish number word expansion (2 = iki) |
+
+---
+
+## Development Tips
+
+### Auto-reload on source changes
+
+```bash
+pnpm dev:live   # tsx watch mode
+```
+
+Edit `src/normalizer.ts`, `src/detector.ts`, `src/dictionary/tr.ts`, etc. → server auto-restarts → refresh the browser (F5).
+
+### Add words via UI
+
+Use the "Ekstra yakalanacak kelimeler" field to test custom words without editing source code. Type comma-separated words and send a message — the engine will include them.
+
+### Add words via source
+
+Edit `src/dictionary/tr.ts` → save → server restarts → test in the browser.
+
+### Run the test suite
+
+```bash
+pnpm test          # single run
+pnpm test:watch    # watch mode
+```
+
+### Build
+
+```bash
+pnpm build         # outputs ESM + CJS to dist/
+```
+
+### Benchmark
+
+```bash
+pnpm bench         # performance measurement (msgs/sec)
+```
+
+---
+
+## Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| Port 2026 in use | `lsof -i :2026` to check, `kill <PID>` to free it |
+| Module not found | Run `pnpm install` |
+| Changes not reflected | Make sure you're in `tsx watch` mode, then refresh the browser |
+| TypeScript error | Run `pnpm typecheck` to diagnose |

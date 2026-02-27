@@ -12,6 +12,8 @@ interface AnalyzeRequest {
   fuzzyThreshold: number;
   fuzzyAlgorithm: "levenshtein" | "dice";
   replaceMask: string;
+  customWords?: string[];
+  whitelist?: string[];
 }
 
 // Warmup: Sunucu ayağa kalkarken tüm yaygın konfigürasyonları önceden oluştur
@@ -40,7 +42,9 @@ for (const cfg of WARMUP_CONFIGS) {
 const warmupDuration = performance.now() - warmupStart;
 
 function getCachedTerlik(req: AnalyzeRequest): Terlik {
-  const key = `${req.mode}|${req.maskStyle}|${req.enableFuzzy}|${req.fuzzyThreshold}|${req.fuzzyAlgorithm}|${req.replaceMask}`;
+  const cw = (req.customWords ?? []).sort().join(",");
+  const wl = (req.whitelist ?? []).sort().join(",");
+  const key = `${req.mode}|${req.maskStyle}|${req.enableFuzzy}|${req.fuzzyThreshold}|${req.fuzzyAlgorithm}|${req.replaceMask}|${cw}|${wl}`;
   let instance = terlikCache.get(key);
   if (!instance) {
     instance = new Terlik({
@@ -50,6 +54,8 @@ function getCachedTerlik(req: AnalyzeRequest): Terlik {
       fuzzyThreshold: req.fuzzyThreshold,
       fuzzyAlgorithm: req.fuzzyAlgorithm,
       replaceMask: req.replaceMask,
+      customList: req.customWords,
+      whitelist: req.whitelist,
     });
     terlikCache.set(key, instance);
   }
@@ -141,7 +147,7 @@ function analyze(req: AnalyzeRequest) {
   steps.push({
     step: "4",
     label: "Motor hazır",
-    detail: `Mod: ${req.mode} | Maske: ${req.maskStyle} | Fuzzy: ${req.enableFuzzy ? `açık (${req.fuzzyAlgorithm}, eşik: ${req.fuzzyThreshold})` : "kapalı"}`,
+    detail: `Mod: ${req.mode} | Maske: ${req.maskStyle}${req.maskStyle === "replace" ? ` ("${req.replaceMask}")` : ""} | Fuzzy: ${req.enableFuzzy ? `açık (${req.fuzzyAlgorithm}, eşik: ${req.fuzzyThreshold})` : "kapalı"}${(req.customWords?.length ?? 0) > 0 ? ` | +Kelime: ${req.customWords!.join(", ")}` : ""}${(req.whitelist?.length ?? 0) > 0 ? ` | Whitelist: ${req.whitelist!.join(", ")}` : ""}`,
     duration: performance.now() - t2,
     type: "info",
   });
@@ -395,50 +401,7 @@ const HTML = /* html */ `<!DOCTYPE html>
 
   .msg-user .msg-meta { text-align: right; }
 
-  /* Settings bar */
-  .settings-bar {
-    padding: 12px 20px;
-    background: var(--surface);
-    border-top: 1px solid var(--border);
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .setting-group {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .setting-group label {
-    font-size: 11px;
-    color: var(--text2);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .setting-group select,
-  .setting-group input[type="number"] {
-    background: var(--surface2);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 4px 8px;
-    font-size: 12px;
-    font-family: var(--font);
-    outline: none;
-  }
-
-  .setting-group select:focus,
-  .setting-group input:focus {
-    border-color: var(--accent);
-  }
-
-  .setting-group input[type="checkbox"] {
-    accent-color: var(--accent);
-  }
+  /* Legacy settings-bar (unused, kept for compat) */
 
   /* Input area */
   .chat-input-area {
@@ -602,6 +565,94 @@ const HTML = /* html */ `<!DOCTYPE html>
     line-height: 2;
   }
 
+  /* Settings sections */
+  .settings-section {
+    padding: 10px 20px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+  }
+
+  .settings-section-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text2);
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+  }
+
+  .settings-section-title:hover { color: var(--text); }
+  .settings-section-title .arrow { transition: transform 0.2s; font-size: 8px; }
+  .settings-section-title .arrow.collapsed { transform: rotate(-90deg); }
+
+  .settings-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .settings-row.collapsed { display: none; }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .field label {
+    font-size: 10px;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .field .helper {
+    font-size: 10px;
+    color: var(--text2);
+    opacity: 0.7;
+    font-style: italic;
+  }
+
+  .field select, .field input[type="number"], .field input[type="text"] {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-family: var(--font);
+    outline: none;
+  }
+
+  .field select:focus, .field input:focus { border-color: var(--accent); }
+  .field input[type="checkbox"] { accent-color: var(--accent); }
+
+  .field-wide { flex: 1; min-width: 140px; }
+  .field-wide input[type="text"] { width: 100%; }
+
+  .field.hidden { display: none; }
+
+  .toolbar-btn {
+    background: var(--surface2);
+    color: var(--cyan);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: var(--font);
+    white-space: nowrap;
+    transition: all 0.2s;
+    align-self: flex-end;
+  }
+
+  .toolbar-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
   @media (max-width: 768px) {
     .layout {
       grid-template-columns: 1fr;
@@ -614,7 +665,7 @@ const HTML = /* html */ `<!DOCTYPE html>
 <body>
 <div class="layout">
   <div class="header">
-    <h1><span>terlik.js</span> — Canli Test</h1>
+    <h1><span>terlik.js</span> — Canlı Test</h1>
     <div class="header-right">
       <span class="status-dot"></span>
       <span style="color:var(--text2);font-size:12px">localhost:${PORT} | dev modu</span>
@@ -625,67 +676,123 @@ const HTML = /* html */ `<!DOCTYPE html>
     <div class="panel-title">Chat</div>
     <div class="chat-messages" id="chatMessages">
       <div class="empty-state">
-        Mesaj gonder, terlik.js nasil calisir gor.<br>
-        Asagidaki hazir ornekleri de deneyebilirsin.
+        Aşağıya bir mesaj yaz ve Gönder'e bas.<br>
+        Küfür varsa maskelenir, sağ panelde adım adım süreci görürsün.<br>
+        <span style="color:var(--accent2)">↓ Hazır örnekleri tek tıkla dene</span>
       </div>
     </div>
     <div class="quick-tests">
-      <button class="quick-btn" data-text="merhaba dunya nasilsin">temiz mesaj</button>
-      <button class="quick-btn" data-text="siktir git burdan">duz kufur</button>
-      <button class="quick-btn" data-text="s.i.k.t.i.r git">ayracli</button>
+      <button class="quick-btn" data-text="merhaba dünya nasılsın">temiz mesaj</button>
+      <button class="quick-btn" data-text="siktir git burdan">düz küfür</button>
+      <button class="quick-btn" data-text="s.i.k.t.i.r git">ayraçlı</button>
       <button class="quick-btn" data-text="$1kt1r lan">leet speak</button>
       <button class="quick-btn" data-text="siiiiiktir">tekrar karakter</button>
-      <button class="quick-btn" data-text="SİKTİR GİT">turkce buyuk harf</button>
+      <button class="quick-btn" data-text="SİKTİR GİT">türkçe büyük harf</button>
       <button class="quick-btn" data-text="sikke koleksiyonu">whitelist test</button>
-      <button class="quick-btn" data-text="aptal orospu cocugu">coklu eslesme</button>
-      <button class="quick-btn" data-text="amsterdam guzel sehir">false positive</button>
+      <button class="quick-btn" data-text="aptal orospu cocugu">çoklu eşleşme</button>
+      <button class="quick-btn" data-text="amsterdam güzel şehir">false positive</button>
+      <button class="quick-btn" data-text="8ok herif">visual leet 8→b</button>
+      <button class="quick-btn" data-text="6öt">visual leet 6→g</button>
+      <button class="quick-btn" data-text="i8ne">visual leet i8ne</button>
+      <button class="quick-btn" data-text="s2mle uğraş">TR sayı s2mle</button>
     </div>
-    <div class="settings-bar">
-      <div class="setting-group">
-        <label>Mod</label>
-        <select id="optMode">
-          <option value="strict">strict</option>
-          <option value="balanced" selected>balanced</option>
-          <option value="loose">loose</option>
-        </select>
+
+    <!-- Tespit Ayarları -->
+    <div class="settings-section">
+      <div class="settings-section-title" data-toggle="settingsCore">
+        <span class="arrow">▼</span> Tespit Ayarları
       </div>
-      <div class="setting-group">
-        <label>Maske</label>
-        <select id="optMask">
-          <option value="stars" selected>stars (******)</option>
-          <option value="partial">partial (s****r)</option>
-          <option value="replace">replace ([***])</option>
-        </select>
-      </div>
-      <div class="setting-group">
-        <label>Fuzzy</label>
-        <input type="checkbox" id="optFuzzy">
-      </div>
-      <div class="setting-group">
-        <label>Esik</label>
-        <input type="number" id="optThreshold" value="0.8" min="0" max="1" step="0.05" style="width:55px">
-      </div>
-      <div class="setting-group">
-        <label>Algoritma</label>
-        <select id="optAlgorithm">
-          <option value="levenshtein">levenshtein</option>
-          <option value="dice">dice</option>
-        </select>
+      <div class="settings-row" id="settingsCore">
+        <div class="field">
+          <label>Mod</label>
+          <select id="optMode">
+            <option value="strict">strict</option>
+            <option value="balanced" selected>balanced</option>
+            <option value="loose">loose</option>
+          </select>
+          <span class="helper">strict: sadece tam eşleşme, balanced: pattern, loose: fuzzy dahil</span>
+        </div>
+        <div class="field">
+          <label>Maskeleme</label>
+          <select id="optMask">
+            <option value="stars" selected>stars (******)</option>
+            <option value="partial">partial (s****r)</option>
+            <option value="replace">replace (özel metin)</option>
+          </select>
+        </div>
+        <div class="field hidden" id="replaceMaskField">
+          <label>Maske metni</label>
+          <input type="text" id="optReplaceMask" value="[***]" style="width:80px">
+          <span class="helper">replace seçiliyken kullanılır</span>
+        </div>
       </div>
     </div>
+
+    <!-- Fuzzy Ayarları -->
+    <div class="settings-section" style="border-top:none;padding-top:0">
+      <div class="settings-section-title" data-toggle="settingsFuzzy">
+        <span class="arrow">▼</span> Fuzzy Eşleştirme
+      </div>
+      <div class="settings-row" id="settingsFuzzy">
+        <div class="field">
+          <label>Aktif</label>
+          <div style="padding:4px 0"><input type="checkbox" id="optFuzzy"></div>
+          <span class="helper">Yazım hatalarını yakalamak için aç</span>
+        </div>
+        <div class="field">
+          <label>Eşik (0-1)</label>
+          <input type="number" id="optThreshold" value="0.8" min="0" max="1" step="0.05" style="width:65px">
+          <span class="helper">Düşük = daha toleranslı</span>
+        </div>
+        <div class="field">
+          <label>Algoritma</label>
+          <select id="optAlgorithm">
+            <option value="levenshtein">levenshtein</option>
+            <option value="dice">dice</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sözlük Ayarları -->
+    <div class="settings-section" style="border-top:none;padding-top:0">
+      <div class="settings-section-title" data-toggle="settingsDict">
+        <span class="arrow">▼</span> Sözlük Yönetimi
+      </div>
+      <div class="settings-row" id="settingsDict">
+        <div class="field field-wide">
+          <label>Ekstra yakalanacak kelimeler</label>
+          <input type="text" id="optCustomWords" placeholder="hiyar, kodumun, zıbıdı">
+          <span class="helper">Varsayılan sözlüğe ek kelimeler. Virgül ile ayır.</span>
+        </div>
+        <div class="field field-wide">
+          <label>Yakalanmasın (whitelist)</label>
+          <input type="text" id="optWhitelist" placeholder="örnekkelime, testsözcük">
+          <span class="helper">Bu kelimeleri küfür olarak işaretleme. Virgül ile ayır.</span>
+        </div>
+      </div>
+    </div>
+
     <div class="chat-input-area">
       <div class="chat-input-row">
-        <input type="text" id="chatInput" placeholder="Bir mesaj yaz..." autocomplete="off">
-        <button id="sendBtn">Gonder</button>
+        <input type="text" id="chatInput" placeholder="Bir mesaj yaz ve Enter'a bas..." autocomplete="off">
+        <button id="normalizeBtn" class="toolbar-btn" title="Mesaj kutusundaki metni sadece normalize et, tespit yapma">normalize()</button>
+        <button id="sendBtn">Gönder</button>
       </div>
     </div>
   </div>
 
   <div class="process-panel">
-    <div class="panel-title">Islem Sureci (Process Log)</div>
+    <div class="panel-title">İşlem Süreci (Process Log)</div>
     <div class="process-log" id="processLog">
       <div class="empty-state">
-        Bir mesaj gonderildiginde<br>islem adimlari burada gorunecek.
+        <div>
+          Soldan bir mesaj gönder, burada<br>terlik.js'in adım adım ne yaptığını gör:<br><br>
+          <span style="color:var(--orange)">1.</span> Normalizasyon (harf dönüşümleri)<br>
+          <span style="color:var(--red)">2.</span> Tespit (pattern eşleşmeler)<br>
+          <span style="color:var(--green)">3.</span> Temizleme (maskeleme)<br>
+          <span style="color:var(--blue)">4.</span> Süre ölçümü (ms)
+        </div>
       </div>
     </div>
   </div>
@@ -698,14 +805,39 @@ const chatInput = document.getElementById('chatInput');
 const sendBtn = document.getElementById('sendBtn');
 let msgCount = 0;
 
+// Section toggle (collapse/expand)
+document.querySelectorAll('.settings-section-title').forEach(title => {
+  title.addEventListener('click', () => {
+    const targetId = title.getAttribute('data-toggle');
+    const target = document.getElementById(targetId);
+    const arrow = title.querySelector('.arrow');
+    if (target) {
+      target.classList.toggle('collapsed');
+      arrow.classList.toggle('collapsed');
+    }
+  });
+});
+
+// Show/hide replace mask field based on mask style selection
+const optMask = document.getElementById('optMask');
+const replaceMaskField = document.getElementById('replaceMaskField');
+optMask.addEventListener('change', () => {
+  replaceMaskField.classList.toggle('hidden', optMask.value !== 'replace');
+});
+
+
 function getOptions() {
+  const cwRaw = document.getElementById('optCustomWords').value.trim();
+  const wlRaw = document.getElementById('optWhitelist').value.trim();
   return {
     mode: document.getElementById('optMode').value,
     maskStyle: document.getElementById('optMask').value,
     enableFuzzy: document.getElementById('optFuzzy').checked,
     fuzzyThreshold: parseFloat(document.getElementById('optThreshold').value),
     fuzzyAlgorithm: document.getElementById('optAlgorithm').value,
-    replaceMask: '[***]',
+    replaceMask: document.getElementById('optReplaceMask').value || '[***]',
+    customWords: cwRaw ? cwRaw.split(',').map(s => s.trim()).filter(Boolean) : [],
+    whitelist: wlRaw ? wlRaw.split(',').map(s => s.trim()).filter(Boolean) : [],
   };
 }
 
@@ -795,6 +927,48 @@ document.querySelectorAll('.quick-btn').forEach(btn => {
     send(text);
   });
 });
+
+// Normalize standalone test
+document.getElementById('normalizeBtn').addEventListener('click', async () => {
+  const text = chatInput.value.trim();
+  if (!text) return;
+  try {
+    const res = await fetch('/api/normalize', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text }),
+    });
+    const data = await res.json();
+
+    // Show in process log
+    const empty = processLog.querySelector('.empty-state');
+    if (empty) empty.remove();
+
+    const group = document.createElement('div');
+    group.className = 'log-group';
+
+    const header = document.createElement('div');
+    header.className = 'log-group-header';
+    header.innerHTML =
+      '<span>normalize() — ' + new Date().toLocaleTimeString('tr-TR') + '</span>' +
+      '<span>' + data.duration.toFixed(3) + 'ms</span>';
+    group.appendChild(header);
+
+    const entry = document.createElement('div');
+    entry.className = 'log-entry type-transform';
+    entry.innerHTML =
+      '<div class="log-step">→</div>' +
+      '<div class="log-content"><span class="log-label">normalize</span>' +
+      '<span class="log-detail">"' + escapeHtml(data.input) + '" → "' + escapeHtml(data.normalized) + '"</span></div>' +
+      '<div class="log-duration">' + data.duration.toFixed(3) + 'ms</div>';
+    group.appendChild(entry);
+
+    processLog.appendChild(group);
+    processLog.scrollTop = processLog.scrollHeight;
+  } catch (err) {
+    addChatMessage('Hata: ' + err.message, 'system', 'has-profanity');
+  }
+});
 </script>
 </body>
 </html>`;
@@ -820,6 +994,28 @@ const server = http.createServer((req, res) => {
           "Access-Control-Allow-Origin": "*",
         });
         res.end(JSON.stringify(result));
+      } catch (err) {
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: String(err) }));
+      }
+    });
+    return;
+  }
+
+  if (req.method === "POST" && req.url === "/api/normalize") {
+    let body = "";
+    req.on("data", (chunk) => (body += chunk));
+    req.on("end", () => {
+      try {
+        const { text } = JSON.parse(body);
+        const start = performance.now();
+        const result = normalize(text ?? "");
+        const duration = performance.now() - start;
+        res.writeHead(200, {
+          "Content-Type": "application/json; charset=utf-8",
+          "Access-Control-Allow-Origin": "*",
+        });
+        res.end(JSON.stringify({ input: text, normalized: result, duration }));
       } catch (err) {
         res.writeHead(400, { "Content-Type": "application/json" });
         res.end(JSON.stringify({ error: String(err) }));
