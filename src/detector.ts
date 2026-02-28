@@ -12,14 +12,14 @@ export class Detector {
 
   constructor(dictionary: Dictionary) {
     this.dictionary = dictionary;
-    this.patterns = compilePatterns(dictionary.getEntries());
+    this.patterns = compilePatterns(dictionary.getEntries(), dictionary.getSuffixes());
     this.normalizedWordSet = new Set<string>();
     this.normalizedWordToRoot = new Map<string, string>();
     this.buildNormalizedLookup();
   }
 
   recompile(): void {
-    this.patterns = compilePatterns(this.dictionary.getEntries());
+    this.patterns = compilePatterns(this.dictionary.getEntries(), this.dictionary.getSuffixes());
     this.buildNormalizedLookup();
   }
 

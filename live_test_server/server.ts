@@ -27,24 +27,43 @@ const WARMUP_CONFIGS: Array<{ mode: Mode; maskStyle: MaskStyle; enableFuzzy: boo
   { mode: "loose", maskStyle: "stars", enableFuzzy: true },
 ];
 
+function buildCacheKey(mode: string, maskStyle: string, enableFuzzy: boolean, fuzzyThreshold: number, fuzzyAlgorithm: string, replaceMask: string, customWords?: string[], whitelist?: string[]): string {
+  const cw = (customWords ?? []).sort().join(",");
+  const wl = (whitelist ?? []).sort().join(",");
+  return `${mode}|${maskStyle}|${enableFuzzy}|${fuzzyThreshold}|${fuzzyAlgorithm}|${replaceMask}|${cw}|${wl}`;
+}
+
+// Warmup sample texts to trigger V8 JIT compilation on regex patterns
+const WARMUP_TEXTS = [
+  "merhaba dünya nasılsın",
+  "siktir git burdan",
+  "s.i.k.t.i.r lan",
+  "$1kt1r",
+  "amsterdam sikke bokser malzeme",
+];
+
 const warmupStart = performance.now();
 for (const cfg of WARMUP_CONFIGS) {
-  const key = `${cfg.mode}|${cfg.maskStyle}|${cfg.enableFuzzy}|0.8|levenshtein|[***]`;
-  terlikCache.set(key, new Terlik({
+  const key = buildCacheKey(cfg.mode, cfg.maskStyle, cfg.enableFuzzy, 0.8, "levenshtein", "[***]");
+  const instance = new Terlik({
     mode: cfg.mode,
     maskStyle: cfg.maskStyle,
     enableFuzzy: cfg.enableFuzzy,
     fuzzyThreshold: 0.8,
     fuzzyAlgorithm: "levenshtein",
     replaceMask: "[***]",
-  }));
+  });
+  terlikCache.set(key, instance);
+
+  // JIT warmup: run actual detection so V8 compiles the regex patterns
+  for (const text of WARMUP_TEXTS) {
+    instance.containsProfanity(text);
+  }
 }
 const warmupDuration = performance.now() - warmupStart;
 
 function getCachedTerlik(req: AnalyzeRequest): Terlik {
-  const cw = (req.customWords ?? []).sort().join(",");
-  const wl = (req.whitelist ?? []).sort().join(",");
-  const key = `${req.mode}|${req.maskStyle}|${req.enableFuzzy}|${req.fuzzyThreshold}|${req.fuzzyAlgorithm}|${req.replaceMask}|${cw}|${wl}`;
+  const key = buildCacheKey(req.mode, req.maskStyle, req.enableFuzzy, req.fuzzyThreshold, req.fuzzyAlgorithm, req.replaceMask, req.customWords, req.whitelist);
   let instance = terlikCache.get(key);
   if (!instance) {
     instance = new Terlik({

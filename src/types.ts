@@ -8,6 +8,8 @@ export interface WordEntry {
   root: string;
   variants: string[];
   severity: Severity;
+  category?: string;
+  suffixable?: boolean;
 }
 
 export interface TerlikOptions {

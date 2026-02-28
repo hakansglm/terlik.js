@@ -32,6 +32,26 @@ describe("edge cases", () => {
     it("does not flag 'bokser' (boxer)", () => {
       expect(terlik.containsProfanity("bokser köpek cinsi")).toBe(false);
     });
+
+    it("does not flag 'ama' (but)", () => {
+      expect(terlik.containsProfanity("ama yapamam")).toBe(false);
+    });
+
+    it("does not flag 'ami' (whitelisted)", () => {
+      expect(terlik.containsProfanity("ami sorunu")).toBe(false);
+    });
+
+    it("does not flag 'amen'", () => {
+      expect(terlik.containsProfanity("amen dedi papaz")).toBe(false);
+    });
+
+    it("does not flag 'amir'", () => {
+      expect(terlik.containsProfanity("amir bey geldi")).toBe(false);
+    });
+
+    it("does not flag 'dolmen'", () => {
+      expect(terlik.containsProfanity("dolmen antik yapi")).toBe(false);
+    });
   });
 
   describe("emoji handling", () => {

@@ -8,9 +8,9 @@ Zero runtime dependencies. Full TypeScript. ESM + CJS.
 
 ## Why terlik.js?
 
-Turkish profanity evasion is creative. Users write `s2k`, `$1kt1r`, `s.i.k.t.i.r`, `SİKTİR`, `siiiiiktir`, `i8ne`, `or*spu`, `pu$ttt`, `6öt` — and expect to get away with it.
+Turkish profanity evasion is creative. Users write `s2k`, `$1kt1r`, `s.i.k.t.i.r`, `SİKTİR`, `siiiiiktir`, `i8ne`, `or*spu`, `pu$ttt`, `6öt` — and expect to get away with it. Turkish is agglutinative — a single root like `sik` spawns dozens of forms: `siktiler`, `sikerim`, `siktirler`, `sikimsonik`. Manually listing every variant doesn't scale.
 
-terlik.js catches all of these. Here's what a single call handles:
+terlik.js catches all of these with a **suffix engine** that automatically recognizes Turkish grammatical suffixes on profane roots. Here's what a single call handles:
 
 ```ts
 import { Terlik } from "terlik.js";
@@ -68,6 +68,9 @@ terlik.getMatches("aptal orospu cocugu");
 | Char repetition | `siiiiiktir`, `pu$ttt` | sik, puşt |
 | Mixed punctuation | `or*spu`, `g0t_v3r3n` | orospu, göt |
 | Combined | `$1kt1r g0t_v3r3n` | both caught |
+| **Suffix forms** | `siktiler`, `orospuluk`, `gotune` | sik, orospu, göt |
+| **Suffix + evasion** | `s.i.k.t.i.r.l.e.r`, `$1kt1rler` | sik |
+| **Suffix chaining** | `siktirler` (sik+tir+ler) | sik |
 
 ### What It Doesn't Catch (on purpose)
 
@@ -80,6 +83,9 @@ terlik.containsProfanity("ambulans");     // false
 terlik.containsProfanity("siklet");       // false (boxing weight class)
 terlik.containsProfanity("memur");        // false
 terlik.containsProfanity("malzeme");      // false
+terlik.containsProfanity("ama");          // false (conjunction)
+terlik.containsProfanity("amir");         // false
+terlik.containsProfanity("dolmen");       // false
 ```
 
 ## How It Works
@@ -101,30 +107,71 @@ input
 
 Pattern engine generates regex per root word with full substitution maps. For example, `sik` becomes a pattern that matches `s`, `$`, `5` for the first char, allows separators between chars, and so on.
 
+For suffixable roots, the engine appends an optional suffix group (up to 2 chained suffixes from 73 Turkish grammatical suffixes). This means `sik` automatically catches `siktiler`, `sikerim`, `siktirler` without manually listing each variant.
+
+### Dictionary Format
+
+The dictionary is a community-friendly JSON file (`src/dictionary/tr.json`) with runtime validation. No TypeScript knowledge needed to contribute:
+
+```json
+{
+  "root": "sik",
+  "variants": ["siktir", "sikerim", ...],
+  "severity": "high",
+  "category": "sexual",
+  "suffixable": true
+}
+```
+
+Categories: `sexual`, `insult`, `slur`, `general`. Severity: `high`, `medium`, `low`.
+
 ## Performance
 
-The `Terlik` constructor compiles regex patterns and builds lookup tables. **Create it once, reuse it everywhere.**
+### Startup Cost & First Request Latency
+
+terlik.js uses 25+ compiled regex patterns. There are two one-time costs:
+
+1. **`new Terlik()`** — Compiles patterns and builds lookup tables (~10-50ms)
+2. **First detection call** — JavaScript engine JIT-compiles the regex patterns on first execution. This can add **1-3 seconds** to the first call.
+
+These costs are paid only once. After that, every call runs in **<1ms**.
+
+**The key question:** Where do you want to pay the JIT cost?
 
 ```ts
-// Do this once at startup
+// Option A: Pay at startup (recommended for servers)
+// App startup takes longer, but no user ever waits.
 const terlik = new Terlik();
+terlik.containsProfanity("warmup"); // Forces JIT compilation here (~1-3s)
 
-// Then use it for every message — no per-call overhead
 app.post("/chat", (req, res) => {
-  const cleaned = terlik.clean(req.body.message); // <1ms typical
+  const cleaned = terlik.clean(req.body.message); // <1ms from the very first request
 });
 ```
+
+```ts
+// Option B: Pay on first request
+// App starts faster, but the first user request will be slow (~1-3s).
+const terlik = new Terlik();
+
+app.post("/chat", (req, res) => {
+  const cleaned = terlik.clean(req.body.message); // First call: ~1-3s, then <1ms
+});
+```
+
+> **Important:** Never create `new Terlik()` per request. Each constructor call recompiles all patterns. A single cached instance handles requests in microseconds.
+
+### Throughput
 
 Benchmark results (Apple Silicon, single core, msgs/sec):
 
 | Scenario | msgs/sec |
 |---|---|
-| Clean messages (no matches) | ~250,000 |
-| Mixed messages (balanced mode) | ~188,000 |
-| Strict mode | ~384,000 |
-| Loose mode (with fuzzy) | ~11,000 |
-
-> Tip: Avoid creating `new Terlik()` per request. Constructor cost is ~10ms (pattern compilation). A cached instance handles requests in microseconds.
+| Clean messages (no matches) | ~193,000 |
+| Mixed messages (balanced mode) | ~151,000 |
+| Suffixed dirty messages | ~142,000 |
+| Strict mode | ~390,000 |
+| Loose mode (with fuzzy) | ~8,400 |
 
 ## Options
 
@@ -206,7 +253,7 @@ normalize("s2mle");         // "sikimle"
 
 ## Testing
 
-101 tests covering normalization, detection, fuzzy matching, cleaning, integration, and edge cases:
+346 tests covering all 25 root words, suffix detection, normalization, fuzzy matching, cleaning, integration, and edge cases:
 
 ```bash
 pnpm test          # run once
@@ -222,6 +269,19 @@ pnpm dev:live      # http://localhost:2026
 ```
 
 See [`live_test_server/README.md`](./live_test_server/README.md) for details.
+
+## Changelog
+
+### 2026-02-28
+
+**Suffix Engine + JSON Dictionary Migration**
+
+- **JSON dictionary** — Sözlük `tr.ts`'den community-friendly `tr.json` formatına taşındı. Runtime schema validation (`validateDictionary`) eklendi. Her entry'ye `category` ve `suffixable` alanları eklendi.
+- **Suffix engine** — 73 Türkçe gramer eki tanımlandı. Suffixable kökler (`orospu`, `salak`, `aptal`, `kahpe` vb.) ekli formları otomatik yakalar: `orospuluk`, `salaksin`, `aptallarin`, `kahpeler` gibi. 3 harfli kökler (`sik`, `bok`, `göt`, `döl`) FP riski nedeniyle explicit varyant yaklaşımına alındı.
+- **Kritik bug fix: `\W` separator** — JavaScript'te `\W` Türkçe harfleri (`ı`, `ş`, `ğ`, `ö`, `ü`, `ç`) non-word olarak görüyordu. Pattern engine'deki separator `[\W_]*` → `[^\p{L}\p{N}]*` olarak düzeltildi. Bu `sıkma`, `sıkıntı`, `sıkıştı` gibi masum kelimelerin FP olarak yakalanmasını engelledi.
+- **Live test server warmup fix** — Cache key uyumsuzluğu ve JIT compilation eksikliği düzeltildi. İlk request latency 3318ms → 37ms.
+- **Test kapsamı** — 101 → 346 test. Tüm 25 kök kelime kapsamlı test ediliyor.
+- **Whitelist genişletildi** — `ama`, `ami`, `amen`, `amir`, `amil`, `dolmen` eklendi.
 
 ## License
 

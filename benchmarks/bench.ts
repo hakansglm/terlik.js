@@ -18,6 +18,19 @@ const dirtyMessages = [
   "salak misin sen",
 ];
 
+const suffixedDirtyMessages = [
+  "siktiler hepsini",
+  "sikerim seni",
+  "orospuluk yapma",
+  "gotune sokayim",
+  "bokluklari bitmez",
+  "ibnelik etme",
+  "kahpeler toplandi",
+  "serefsizler burda",
+  "yavsaklik yapiyorsun",
+  "aptallarin isi",
+];
+
 const mixedMessages = [...cleanMessages, ...dirtyMessages];
 
 function bench(name: string, fn: () => void, iterations: number, msgsPerOp: number): void {
@@ -59,6 +72,11 @@ console.log("\n--- getMatches ---");
 bench("Mixed getMatches()", () => {
   for (const msg of mixedMessages) terlik.getMatches(msg);
 }, 2_000, mixedMessages.length);
+
+console.log("\n--- Suffixed dirty messages ---");
+bench("Suffixed dirty", () => {
+  for (const msg of suffixedDirtyMessages) terlik.containsProfanity(msg);
+}, 2_000, suffixedDirtyMessages.length);
 
 console.log("\n--- Modes comparison ---");
 for (const mode of ["strict", "balanced", "loose"] as const) {

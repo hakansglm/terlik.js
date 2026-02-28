@@ -1,5 +1,20 @@
 import type { WordEntry } from "../types.js";
-import { TR_DICTIONARY, TR_WHITELIST } from "./tr.js";
+import trData from "./tr.json";
+import { validateDictionary } from "./schema.js";
+import type { DictionaryData } from "./schema.js";
+
+let validatedData: DictionaryData;
+try {
+  validatedData = validateDictionary(trData);
+} catch (e) {
+  throw new Error(
+    `Dictionary validation failed: ${e instanceof Error ? e.message : String(e)}`,
+  );
+}
+
+const TR_ENTRIES = validatedData.entries;
+const TR_WHITELIST = validatedData.whitelist;
+const TR_SUFFIXES = validatedData.suffixes;
 
 export class Dictionary {
   private entries: Map<string, WordEntry> = new Map();
@@ -15,8 +30,14 @@ export class Dictionary {
       }
     }
 
-    for (const entry of TR_DICTIONARY) {
-      this.addEntry(entry);
+    for (const entry of TR_ENTRIES) {
+      this.addEntry({
+        root: entry.root,
+        variants: entry.variants,
+        severity: entry.severity as WordEntry["severity"],
+        category: entry.category,
+        suffixable: entry.suffixable,
+      });
     }
 
     if (customWords) {
@@ -49,6 +70,10 @@ export class Dictionary {
 
   getWhitelist(): Set<string> {
     return this.whitelist;
+  }
+
+  getSuffixes(): string[] {
+    return TR_SUFFIXES;
   }
 
   addWords(words: string[]): void {

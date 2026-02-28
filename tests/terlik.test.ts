@@ -116,8 +116,8 @@ describe("Terlik (integration)", () => {
 
     it("respects maxLength", () => {
       const terlik = new Terlik({ maxLength: 5 });
-      // Input gets truncated to 5 chars
-      expect(terlik.containsProfanity("siktir git")).toBe(false); // "sikti" may partially match, but "siktir" is truncated
+      // Input gets truncated to 5 chars — profanity beyond limit not detected
+      expect(terlik.containsProfanity("abcde siktir git")).toBe(false); // "abcde" — profanity truncated away
     });
   });
 

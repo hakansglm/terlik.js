@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "suffixes": [
+    "tir", "dir",
+    "il",
+    "in",
+    "ik", "uk", "en", "ici",
+    "di", "ti", "dim", "tim", "din", "dik", "tik", "mis", "mus",
+    "iyor", "uyor",
+    "ecek", "acak", "ecem", "acam", "icem",
+    "er", "ir", "ar",
+    "eyim", "ayim", "elim", "alim",
+    "se", "sa",
+    "im", "um", "sin", "sun", "yim",
+    "mek", "mak",
+    "me", "ma", "is", "us",
+    "ler", "lar",
+    "si",
+    "e", "a", "de", "da", "den", "dan", "te", "ta", "ten", "tan", "i",
+    "lik", "luk", "li", "lu", "ci", "cu", "ce", "ca",
+    "le", "la",
+    "ken", "esi",
+    "un", "lari", "leri", "larin", "lerin"
+  ],
+  "entries": [
+    {
+      "root": "sik",
+      "variants": [
+        "siktir", "sikicem", "siktim", "sikeyim", "sikerim", "sikis", "sikik",
+        "sikim", "sikimle", "sikimin", "sikime",
+        "sike", "siken", "siker", "sikti", "siktiler", "sikmis", "sikmek",
+        "sikecek", "sikiyor", "sikme", "sikici", "siksin", "siktirler",
+        "sikimsonik", "siktirin", "siktiler", "sikerler", "sikiler"
+      ],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "amk",
+      "variants": ["amk", "amina", "aminakoyim", "aminakoydugum", "amq"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "orospu",
+      "variants": ["orospucocugu", "orosbucocugu", "orspu", "oruspu", "orosbu"],
+      "severity": "high",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "piç",
+      "variants": ["pic", "piclik"],
+      "severity": "high",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "yarrak",
+      "variants": ["yarak", "yarrak", "yarakli", "dalyarak", "dalyarrak"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": true
+    },
+    {
+      "root": "göt",
+      "variants": [
+        "got", "gotunu", "gotlek", "gotveren", "gotverenler",
+        "gote", "gotu", "gotler", "gotlu", "gotunden", "gotune"
+      ],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "am",
+      "variants": ["amcik", "amcuk"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "taşak",
+      "variants": ["tasak", "tassak", "tassakli"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": true
+    },
+    {
+      "root": "meme",
+      "variants": [],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "ibne",
+      "variants": ["ibneler"],
+      "severity": "high",
+      "category": "slur",
+      "suffixable": true
+    },
+    {
+      "root": "gavat",
+      "variants": ["gavatlik"],
+      "severity": "high",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "pezevenk",
+      "variants": ["pezo"],
+      "severity": "high",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "bok",
+      "variants": [
+        "boktan", "boka", "boku", "boklu", "boklar", "boklari"
+      ],
+      "severity": "medium",
+      "category": "general",
+      "suffixable": false
+    },
+    {
+      "root": "haysiyetsiz",
+      "variants": [],
+      "severity": "medium",
+      "category": "insult",
+      "suffixable": false
+    },
+    {
+      "root": "salak",
+      "variants": ["salaklik"],
+      "severity": "low",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "aptal",
+      "variants": ["aptallik", "aptalca"],
+      "severity": "low",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "gerizekalı",
+      "variants": ["gerizekali"],
+      "severity": "low",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "mal",
+      "variants": [],
+      "severity": "low",
+      "category": "insult",
+      "suffixable": false
+    },
+    {
+      "root": "dangalak",
+      "variants": [],
+      "severity": "low",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "ezik",
+      "variants": [],
+      "severity": "low",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "puşt",
+      "variants": ["pust", "pustt"],
+      "severity": "high",
+      "category": "slur",
+      "suffixable": true
+    },
+    {
+      "root": "şerefsiz",
+      "variants": ["serefsiz", "serefsizler"],
+      "severity": "medium",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "yavşak",
+      "variants": ["yavsak"],
+      "severity": "medium",
+      "category": "insult",
+      "suffixable": true
+    },
+    {
+      "root": "döl",
+      "variants": ["dol", "dolunu", "dolcu"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "kahpe",
+      "variants": ["kahpelik"],
+      "severity": "high",
+      "category": "insult",
+      "suffixable": true
+    }
+  ],
+  "whitelist": [
+    "amsterdam",
+    "amateur",
+    "amatör",
+    "sikke",
+    "sikkeler",
+    "masikler",
+    "sikilasma",
+    "ambalaj",
+    "ambassador",
+    "ambulans",
+    "amel",
+    "ameliyat",
+    "amerika",
+    "amele",
+    "amino",
+    "amonyak",
+    "amper",
+    "ampul",
+    "boksör",
+    "bokser",
+    "bokluk",
+    "malzeme",
+    "maliyet",
+    "malik",
+    "malikane",
+    "maliye",
+    "mallorca",
+    "malta",
+    "malt",
+    "gotan",
+    "gotik",
+    "gotham",
+    "memento",
+    "memleket",
+    "memur",
+    "memorial",
+    "piknik",
+    "pikachu",
+    "amatör",
+    "tasselled",
+    "siklet",
+    "kasim",
+    "kasım",
+    "yarasa",
+    "dolunay",
+    "dolum",
+    "doluluk",
+    "ama",
+    "ami",
+    "amen",
+    "amir",
+    "amil",
+    "dolmen"
+  ]
+}
