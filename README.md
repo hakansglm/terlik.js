@@ -339,6 +339,10 @@ pnpm dev:live      # http://localhost:2026
 
 See [`live_test_server/README.md`](./live_test_server/README.md) for details.
 
+### Integration Guide
+
+See [**Integration Guide**](./docs/integration-guide.md) for Express, Fastify, Next.js, Nuxt, Socket.io, and multi-language server examples.
+
 ## Development
 
 ```bash
