@@ -148,16 +148,14 @@ export class Detector {
     isNormalized: boolean,
   ): void {
     const existingIndices = new Set(results.map((r) => r.index));
-    const startTime = Date.now();
 
     for (const pattern of this.patterns) {
-      if (Date.now() - startTime > REGEX_TIMEOUT_MS) break;
-
+      const patternStart = Date.now();
       pattern.regex.lastIndex = 0;
       let match: RegExpExecArray | null;
 
       while ((match = pattern.regex.exec(searchText)) !== null) {
-        if (Date.now() - startTime > REGEX_TIMEOUT_MS) break;
+        if (Date.now() - patternStart > REGEX_TIMEOUT_MS) break;
 
         const matchedText = match[0];
         const matchIndex = match.index;
