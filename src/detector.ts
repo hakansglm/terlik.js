@@ -138,13 +138,15 @@ export class Detector {
     whitelist: Set<string>,
     results: MatchResult[],
   ): void {
-    // Run patterns on original text
-    this.runPatterns(text, text, whitelist, results, false);
+    // First pass: locale-lowered text ensures İ→i (Turkish) and similar
+    // locale-specific mappings happen before regex matching, avoiding
+    // platform-specific V8/ICU case-folding differences.
+    const lowerText = text.toLocaleLowerCase(this.locale);
+    this.runPatterns(lowerText, text, whitelist, results, lowerText !== text);
 
     // Second pass on normalized text only if normalization changed something
     // beyond simple lowercasing (leet, numExpand, punctuation removal, etc.)
     const normalizedText = this.normalizeFn(text);
-    const lowerText = text.toLocaleLowerCase(this.locale);
     if (normalizedText !== lowerText && normalizedText.length > 0) {
       this.runPatterns(normalizedText, text, whitelist, results, true);
     }
@@ -166,8 +168,6 @@ export class Detector {
       let match: RegExpExecArray | null;
 
       while ((match = pattern.regex.exec(searchText)) !== null) {
-        if (Date.now() - patternStart > REGEX_TIMEOUT_MS) break;
-
         const matchedText = match[0];
         const matchIndex = match.index;
 
@@ -207,6 +207,9 @@ export class Detector {
         if (matchedText.length === 0) {
           pattern.regex.lastIndex++;
         }
+
+        // Timeout check: process current match first, then stop looking for more
+        if (Date.now() - patternStart > REGEX_TIMEOUT_MS) break;
       }
     }
   }

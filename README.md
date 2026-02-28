@@ -451,6 +451,18 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
 ## Changelog
 
+### 2026-02-28 (v2.2.1) — CI Fix: Timeout Race Condition + İ Platform Compatibility
+
+**Fixes detection failures on slow runners and cross-platform İ (U+0130) handling.**
+
+- **Timeout race condition fix** — `REGEX_TIMEOUT_MS` check moved from _before_ match processing to _after_. Previously, V8 JIT compilation on first `exec()` call (triggered by lazy compilation) could exceed 250ms, causing the timeout to discard a valid match before it was recorded. Now the current match is always processed; the timeout only prevents scanning for additional matches.
+- **İ (U+0130) cross-platform fix** — First regex pass now runs on `text.toLocaleLowerCase(locale)` instead of raw text. Turkish İ→i mapping is performed explicitly before regex matching, avoiding inconsistent V8/ICU case-folding behavior across platforms (Ubuntu vs macOS). The `mapNormalizedToOriginal()` mapper recovers original-cased words for result output.
+
+| Change | File |
+|---|---|
+| Timeout check moved after match processing | `src/detector.ts` (`runPatterns`) |
+| Locale-lower first pass for İ safety | `src/detector.ts` (`detectPattern`) |
+
 ### 2026-02-28 (v2.2) — Lazy Compilation + Linguistic Patch
 
 **Zero-cost construction. Background warmup. Turkish agglutination hardening.**
