@@ -451,6 +451,25 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
 ## Changelog
 
+### 2026-02-28 (v2.3.0) — 40x Faster Cold Start: V8 JIT Regex Optimization
+
+**Replaces `\p{L}`/`\p{N}` Unicode property escapes with explicit Latin ranges, eliminating V8 JIT bottleneck.**
+
+- **40x faster cold start** — First `containsProfanity()` call: 16,494ms → 404ms.
+- **356x faster multi-language warmup** — 4-language warmup: 19,234ms → 54ms.
+- **13x less memory** — Heap usage: 492MB → 38MB.
+- **Static pattern cache** — Same-language instances share compiled patterns via `Detector.patternCache`.
+- **Background warmup** — Dev server starts instantly, warms up in background.
+
+| Change | File |
+|---|---|
+| Replace `\p{L}\p{N}` with `[a-zA-Z0-9À-ɏ]` | `src/patterns.ts` |
+| Static pattern cache + explicit range in getSurroundingWord | `src/detector.ts` |
+| Explicit range in number expander + punctuation removal | `src/normalizer.ts` |
+| Pass cacheKey to Detector | `src/terlik.ts` |
+| Background warmup, lazy instance cache | `live_test_server/server.ts` |
+| NODE_OPTIONS heap safety net | `.github/workflows/ci.yml` |
+
 ### 2026-02-28 (v2.2.1) — CI Fix: Timeout Race Condition + İ Platform Compatibility
 
 **Fixes detection failures on slow runners and cross-platform İ (U+0130) handling.**
