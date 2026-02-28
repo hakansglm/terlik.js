@@ -5,3 +5,4 @@ coverage/
 .DS_Store
 .plans/
 benchmarks/accuracy-results.json
+.devlogs
