@@ -152,6 +152,53 @@ Categories: `sexual`, `insult`, `slur`, `general`. Severity: `high`, `medium`, `
 4. Register in `src/lang/index.ts` (one import line)
 5. Write tests, build, done
 
+## Dictionary Strategy
+
+terlik.js ships with a **deliberately narrow dictionary** — the goal is to **minimize false positives** while catching real-world evasion patterns. The dictionary is not a massive word list; it's a curated set of roots + variants that the pattern engine expands through normalization, leet decoding, separator tolerance, and suffix chaining.
+
+### Coverage
+
+| Language | Roots | Explicit Variants | Suffixes | Whitelist | Effective Forms |
+|---|---|---|---|---|---|
+| Turkish | 25 | ~90 | 73 | 53 | ~2,500+ |
+| English | 23 | ~85 | 8 | 43 | ~700+ |
+| Spanish | 19 | ~55 | 12 | 15 | ~400+ |
+| German | 18 | ~45 | 8 | 3 | ~300+ |
+
+"Effective forms" = roots × normalization variants × suffix combinations × evasion patterns. A root like `sik` with 73 possible suffixes, leet decoding, separator tolerance, and repeat collapse produces thousands of detectable surface forms.
+
+### What IS Covered
+
+- **Core profanity roots** per language (high-severity sexual, insults, slurs)
+- **Grammatical inflections** via suffix engine (Turkish agglutination, English -ing/-ed, etc.)
+- **Evasion patterns**: leet speak, separators, repetition, mixed case, number words (TR)
+- **Compound forms**: `orospucocugu`, `motherfucker`, `hijoputa`, `hurensohn`
+
+### What is NOT Covered (by design)
+
+- **Slang / regional variants** that change rapidly — better handled with `customList`
+- **Context-dependent words** that are profane only in certain contexts
+- **Phonetic substitutions** beyond leet (e.g., "phuck") — add via `customList`
+- **New coinages** — use `addWords()` at runtime
+
+### Why Narrow?
+
+A large dictionary maximizes recall but tanks precision. In production chat systems, **false positives are worse than false negatives** — blocking "class" or "grass" because the dictionary is too broad erodes user trust. terlik.js defaults to high precision and lets you widen coverage per your needs:
+
+```ts
+// Add domain-specific words
+terlik.addWords(["customSlang", "anotherWord"]);
+
+// Or at construction time
+const terlik = new Terlik({
+  customList: ["customSlang", "anotherWord"],
+  whitelist: ["legitimateWord"],
+});
+
+// Remove a built-in word if it causes false positives in your domain
+terlik.removeWords(["damn"]);
+```
+
 ## Performance
 
 ### Startup Cost & First Request Latency
@@ -212,6 +259,32 @@ Benchmark results (Apple Silicon, single core, msgs/sec):
 | Loose mode (with fuzzy) | ~8,400 |
 
 > **Note:** Loose/fuzzy mode is ~18x slower than balanced mode due to O(n*m) similarity computation. Use it only when typo tolerance is critical, not as a default.
+
+### Accuracy
+
+Measured on a labeled corpus of 388 samples across 4 languages (profane + clean + whitelist + edge cases):
+
+| Language | Mode | Precision | Recall | F1 | FPR | FNR |
+|---|---|---|---|---|---|---|
+| TR | strict | 100.0% | 88.6% | 93.9% | 0.0% | 11.4% |
+| TR | **balanced** | **100.0%** | **100.0%** | **100.0%** | **0.0%** | **0.0%** |
+| TR | loose | 99.1% | 100.0% | 99.5% | 1.6% | 0.0% |
+| EN | strict | 100.0% | 95.5% | 97.7% | 0.0% | 4.5% |
+| EN | **balanced** | **100.0%** | **98.5%** | **99.2%** | **0.0%** | **1.5%** |
+| EN | loose | 98.5% | 98.5% | 98.5% | 2.0% | 1.5% |
+| ES | strict | 100.0% | 96.7% | 98.3% | 0.0% | 3.3% |
+| ES | **balanced** | **100.0%** | **96.7%** | **98.3%** | **0.0%** | **3.3%** |
+| ES | loose | 100.0% | 96.7% | 98.3% | 0.0% | 3.3% |
+| DE | strict | 100.0% | 100.0% | 100.0% | 0.0% | 0.0% |
+| DE | **balanced** | **100.0%** | **100.0%** | **100.0%** | **0.0%** | **0.0%** |
+| DE | loose | 100.0% | 100.0% | 100.0% | 0.0% | 0.0% |
+
+**Mode characteristics:**
+- **Strict** — highest precision (0% FP), trades recall for safety. Misses some suffixed forms and evasion patterns.
+- **Balanced** — best overall F1. Catches evasion patterns while keeping FPR near zero. **Recommended for production.**
+- **Loose** — adds fuzzy matching. Slightly higher FPR due to similarity matches on borderline words.
+
+Reproduce: `pnpm bench:accuracy` — outputs per-category breakdown, failure list, and JSON results.
 
 ## Options
 
