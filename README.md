@@ -76,6 +76,8 @@ de.containsProfanity("scheiße");       // true
 | **Suffix forms** | `siktiler`, `orospuluk`, `gotune` | sik, orospu, göt |
 | **Suffix + evasion** | `s.i.k.t.i.r.l.e.r`, `$1kt1rler` | sik |
 | **Suffix chaining** | `siktirler` (sik+tir+ler) | sik |
+| **Deep agglutination** | `siktiğimin`, `sikermisiniz`, `siktirmişcesine` | sik |
+| **Zero-width chars** | `s\u200Bi\u200Bk\u200Bt\u200Bi\u200Br` (ZWSP/ZWNJ/ZWJ) | sik |
 
 ### What It Doesn't Catch (on purpose)
 
@@ -112,7 +114,7 @@ input
 
 Each language has its own char map, leet map, char classes, and optional number expansions. The engine is language-agnostic — only the data is language-specific.
 
-For suffixable roots, the engine appends an optional suffix group (up to 2 chained suffixes). Turkish has 73 suffixes, English has 6, Spanish has 9, German has 5.
+For suffixable roots, the engine appends an optional suffix group (up to 2 chained suffixes). Turkish has 81 suffixes (including question particles and adverbial forms), English has 6, Spanish has 9, German has 5.
 
 ### Language Packs
 
@@ -160,7 +162,7 @@ terlik.js ships with a **deliberately narrow dictionary** — the goal is to **m
 
 | Language | Roots | Explicit Variants | Suffixes | Whitelist | Effective Forms |
 |---|---|---|---|---|---|
-| Turkish | 25 | ~90 | 73 | 53 | ~2,500+ |
+| Turkish | 25 | ~95 | 81 | 53 | ~3,000+ |
 | English | 23 | ~85 | 8 | 43 | ~700+ |
 | Spanish | 19 | ~55 | 12 | 15 | ~400+ |
 | German | 18 | ~45 | 8 | 3 | ~300+ |
@@ -201,50 +203,59 @@ terlik.removeWords(["damn"]);
 
 ## Performance
 
-### Startup Cost & First Request Latency
+### Lazy Compilation
 
-terlik.js uses 25+ compiled regex patterns. There are two one-time costs:
+terlik.js uses **lazy compilation** — `new Terlik()` is near-instant (~1.5ms). Regex patterns are compiled on the first `detect()` call, not at construction time. This eliminates startup cost when creating multiple instances.
 
-1. **`new Terlik()`** — Compiles patterns and builds lookup tables (~10-50ms)
-2. **First detection call** — JavaScript engine JIT-compiles the regex patterns on first execution. This can add **1-3 seconds** to the first call.
+| Phase | Cost | When |
+|---|---|---|
+| `new Terlik()` | **~1.5ms** | Construction (lookup tables only) |
+| First `detect()` | ~200-700ms | Lazy regex compilation + V8 JIT warmup |
+| Subsequent calls | **<1ms** | Patterns cached, JIT optimized |
 
-These costs are paid only once. After that, every call runs in **<1ms**.
-
-**The key question:** Where do you want to pay the JIT cost?
+**Where do you want to pay the compilation cost?**
 
 ```ts
-// Option A: Pay at startup (recommended for servers)
-// App startup takes longer, but no user ever waits.
-const terlik = new Terlik();
-terlik.containsProfanity("warmup"); // Forces JIT compilation here (~1-3s)
+// Option A: Background warmup (recommended for servers)
+// Construction is instant. Patterns compile in the next event loop tick.
+// If a request arrives before warmup finishes, it compiles synchronously.
+const terlik = new Terlik({ backgroundWarmup: true });
 
 app.post("/chat", (req, res) => {
-  const cleaned = terlik.clean(req.body.message); // <1ms from the very first request
+  const cleaned = terlik.clean(req.body.message); // <1ms (warmup already done)
 });
 ```
 
 ```ts
-// Option B: Pay on first request
-// App starts faster, but the first user request will be slow (~1-3s).
+// Option B: Explicit warmup at startup
 const terlik = new Terlik();
+terlik.containsProfanity("warmup"); // Forces compilation here
 
 app.post("/chat", (req, res) => {
-  const cleaned = terlik.clean(req.body.message); // First call: ~1-3s, then <1ms
+  const cleaned = terlik.clean(req.body.message); // <1ms
 });
 ```
 
 ```ts
-// Option C: Multi-language warmup
-// Creates and JIT-warms all languages at once.
+// Option C: Lazy (pay on first request)
+const terlik = new Terlik(); // ~1.5ms
+
+app.post("/chat", (req, res) => {
+  const cleaned = terlik.clean(req.body.message); // First call: ~500ms, then <1ms
+});
+```
+
+```ts
+// Option D: Multi-language warmup
 const cache = Terlik.warmup(["tr", "en", "es", "de"]);
 
 app.post("/chat", (req, res) => {
-  const lang = req.body.language; // "tr", "en", etc.
+  const lang = req.body.language;
   const cleaned = cache.get(lang)!.clean(req.body.message); // <1ms
 });
 ```
 
-> **Important:** Never create `new Terlik()` per request. Each constructor call recompiles all patterns. A single cached instance handles requests in microseconds.
+> **Important:** Never create `new Terlik()` per request. A single cached instance handles requests in microseconds. For serverless (Lambda, Vercel), prefer explicit warmup over `backgroundWarmup` since `setTimeout` may not fire before the function freezes.
 
 ### Throughput
 
@@ -300,6 +311,7 @@ const terlik = new Terlik({
   fuzzyThreshold: 0.8,           // similarity threshold (0-1)
   fuzzyAlgorithm: "levenshtein", // "levenshtein" | "dice"
   maxLength: 10000,              // truncate input beyond this
+  backgroundWarmup: false,       // compile patterns in background via setTimeout
 });
 ```
 
@@ -395,7 +407,7 @@ deNormalize("Scheiße"); // "scheisse"
 
 ## Testing
 
-619 tests covering all 4 languages, 25 Turkish root words, suffix detection, multi-language isolation, normalization, fuzzy matching, cleaning, integration, ReDoS hardening, attack surface coverage, and edge cases:
+631 tests covering all 4 languages, 25 Turkish root words, suffix detection, lazy compilation, multi-language isolation, normalization, fuzzy matching, cleaning, integration, ReDoS hardening, attack surface coverage, and edge cases:
 
 ```bash
 pnpm test          # run once
@@ -434,6 +446,26 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
 ## Changelog
 
+### 2026-02-28 (v2.2) — Lazy Compilation + Linguistic Patch
+
+**Zero-cost construction. Background warmup. Turkish agglutination hardening.**
+
+- **Lazy compilation** — Pattern compilation deferred from constructor to first `detect()` call. `new Terlik()` drops from ~225ms to **~1.5ms**. Strict-mode users never pay regex cost (hash lookup only).
+- **`backgroundWarmup` option** — `new Terlik({ backgroundWarmup: true })` schedules compilation + JIT warmup via `setTimeout(fn, 0)`. Idempotent: if `detect()` is called before the timer fires, it compiles synchronously and the timer becomes a no-op.
+- **`detector.compile()` public method** — Allows manual precompilation for advanced use cases.
+- **Turkish suffix expansion** — Added 8 suffixes: question particles (`misin`, `misiniz`, `musun`, `musunuz`, `miyim`, `miyiz`) and adverbial forms (`cesine`, `casina`). All suffixable entries (orospu, piç, yarrak, ibne, etc.) now catch question and adverbial inflections.
+- **Deep agglutination variants** — Added explicit variants for `siktiğimin`, `sikermisiniz`, `sikermisin`, `siktirmişcesine`. These forms require 3+ suffix chains or non-standard morpheme boundaries (ğ→g bridge) that the suffix engine can't generalize without false positives.
+- **`MAX_PATTERN_LENGTH` 6000 → 10000** — Accommodates the larger suffix group without fallback to non-suffix mode.
+- **Test count** — 619 → 631. New `tests/lazy-compilation.test.ts` covers construction timing, transparent lazy compile, strict-mode optimization, backgroundWarmup with fake timers, and idempotent early-detect.
+
+| Change | File |
+|---|---|
+| `backgroundWarmup` option | `src/types.ts` |
+| Lazy `_patterns`, `ensureCompiled()`, `compile()` | `src/detector.ts` |
+| backgroundWarmup setTimeout scheduling | `src/terlik.ts` |
+| Suffix + variant expansion, MAX_PATTERN_LENGTH | `src/patterns.ts`, `src/lang/tr/dictionary.json` |
+| Lazy compilation tests (new) | `tests/lazy-compilation.test.ts` |
+
 ### 2026-02-28 (v2.1) — ReDoS Security Hardening
 
 **Added Regex Denial-of-Service protection.**
@@ -444,7 +476,7 @@ Identified vulnerability: overlap between `charClasses` and `separator` (`@`, `$
 - **Regex timeout safety net** — Added 250ms timeout (`REGEX_TIMEOUT_MS`) to `runPatterns()` and `detectFuzzy()` loops. Never triggers on normal input (<1ms), but provides a hard cap on adversarial input.
 - **charClasses cleanup** — Removed separator-overlapping symbols from all 4 language configs (TR, EN, ES, DE). These symbols are already defined in `leetMap` and converted during the normalizer pass — removing them from pattern matching causes no false negatives.
 - **ReDoS test suite** — `tests/redos.test.ts`: 71 tests covering adversarial timing, attack surface (separator abuse, leet bypass, char repetition, Unicode tricks, whitelist integrity, boundary attacks, multi-match, input edge cases, suffix hardening).
-- **MAX_PATTERN_LENGTH** — 5000 → 6000. The `{0,3}` separator adds ~3 chars per boundary; raised the limit so large suffix patterns (e.g. `orospu`) don't fall back to non-suffix mode.
+- **MAX_PATTERN_LENGTH** — 5000 → 6000 (later raised to 10000 in v2.2). The `{0,3}` separator adds ~3 chars per boundary; raised the limit so large suffix patterns (e.g. `orospu`) don't fall back to non-suffix mode.
 - **Test count** — 548 → 619.
 
 | Change | File |
