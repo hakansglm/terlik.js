@@ -4,14 +4,29 @@
 
 [![CI](https://github.com/badursun/terlik.js/actions/workflows/ci.yml/badge.svg)](https://github.com/badursun/terlik.js/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/terlik.js.svg)](https://www.npmjs.com/package/terlik.js)
+[![npm downloads](https://img.shields.io/npm/dm/terlik.js.svg)](https://www.npmjs.com/package/terlik.js)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/terlik.js)](https://bundlephobia.com/package/terlik.js)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Turkish-first multi-language profanity detection and filtering. Not a naive blacklist — a multi-layered normalization and pattern engine that catches what simple string matching misses.
+Multi-language profanity detection and filtering engine, designed Turkish-first and **extensible to any language**. Not a naive blacklist — a multi-layered normalization and pattern engine that catches what simple string matching misses.
 
-**Turkish** is the flagship language with full coverage. **English**, **Spanish**, and **German** are community-maintained and open for contributions. Adding a new language is just a folder with two files.
+Ships with **Turkish** (flagship, full coverage), **English**, **Spanish**, and **German** built-in. Add any language with a folder and two files, or extend at runtime via `extendDictionary`.
 
-Zero runtime dependencies. Full TypeScript. ESM + CJS. **35 KB** gzipped. Works in Node.js, Bun, Deno, browsers, Cloudflare Workers, and Edge runtimes — no Node.js-specific APIs used.
+> **Turkce:** Turkce oncelikli, her dile genisletilebilir kufur tespit ve filtreleme motoru. Leet speak, karakter tekrari, ayirici karakterler ve Turkce ek sistemi destegi ile yaratici kufur denemelerini yakalar. Sifir bagimlilik, TypeScript, 35 KB.
+
+## Features
+
+- **Extensible to any language** — ships with TR/EN/ES/DE, add more via language packs or `extendDictionary`
+- Catches leet speak, separators, char repetition, mixed case, zero-width chars
+- Turkish suffix engine (83 suffixes, ~3,000+ detectable forms from 25 roots)
+- Three detection modes: strict, balanced, loose (with fuzzy matching)
+- Zero dependencies, **35 KB** gzipped
+- ESM + CJS — works in Node.js, Bun, Deno, browsers, Cloudflare Workers, Edge runtimes
+- Lazy compilation: ~1.5ms construction, <1ms per check after warmup
+- ReDoS-safe regex patterns with timeout safety net
+- Full TypeScript support with exported types
 
 ## Why terlik.js?
 
@@ -113,7 +128,7 @@ input
   → result
 ```
 
-Each language has its own char map, leet map, char classes, and optional number expansions. The engine is language-agnostic — only the data is language-specific.
+Each language has its own char map, leet map, char classes, and optional number expansions. The engine is language-agnostic — only the data is language-specific. This means **any language can be added** without modifying the core engine.
 
 For suffixable roots, the engine appends an optional suffix group (up to 2 chained suffixes). Turkish has 83 suffixes (including question particles and adverbial forms), English has 8, Spanish has 13, German has 8.
 
@@ -171,6 +186,8 @@ terlik.js ships with a **deliberately narrow dictionary** — the goal is to **m
 | German | Community | 18 | 48 | 8 | 3 | ~300+ |
 
 "Effective forms" = roots × normalization variants × suffix combinations × evasion patterns. A root like `sik` with 83 possible suffixes, leet decoding, separator tolerance, and repeat collapse produces thousands of detectable surface forms.
+
+> **Add your language!** The engine is language-agnostic. See [Adding a New Language](#adding-a-new-language) or use [`extendDictionary`](#extenddictionary-option) for runtime extension.
 
 ### What IS Covered
 
@@ -308,7 +325,7 @@ Reproduce: `pnpm bench:accuracy` — outputs per-category breakdown, failure lis
 
 ```ts
 const terlik = new Terlik({
-  language: "tr",                // "tr" | "en" | "es" | "de" (default: "tr")
+  language: "tr",                // built-in: "tr" | "en" | "es" | "de" (default: "tr")
   mode: "balanced",              // "strict" | "balanced" | "loose"
   maskStyle: "stars",            // "stars" | "partial" | "replace"
   replaceMask: "[***]",          // mask text for "replace" style
@@ -439,7 +456,7 @@ deNormalize("Scheiße"); // "scheisse"
 
 ## Testing
 
-874 tests covering all 4 languages, 25 Turkish root words, suffix detection, lazy compilation, multi-language isolation, normalization, fuzzy matching, cleaning, integration, ReDoS hardening, attack surface coverage, external dictionary merging, and edge cases:
+874 tests covering all built-in languages, 25 Turkish root words, suffix detection, lazy compilation, multi-language isolation, normalization, fuzzy matching, cleaning, integration, ReDoS hardening, attack surface coverage, external dictionary merging, and edge cases:
 
 ```bash
 pnpm test          # run once
@@ -478,99 +495,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
 ## Changelog
 
-### 2026-02-28 (v2.3.0) — 40x Faster Cold Start: V8 JIT Regex Optimization
-
-**Replaces `\p{L}`/`\p{N}` Unicode property escapes with explicit Latin ranges, eliminating V8 JIT bottleneck.**
-
-- **40x faster cold start** — First `containsProfanity()` call: 16,494ms → 404ms.
-- **356x faster multi-language warmup** — 4-language warmup: 19,234ms → 54ms.
-- **13x less memory** — Heap usage: 492MB → 38MB.
-- **Static pattern cache** — Same-language instances share compiled patterns via `Detector.patternCache`.
-- **Background warmup** — Dev server starts instantly, warms up in background.
-
-| Change | File |
-|---|---|
-| Replace `\p{L}\p{N}` with `[a-zA-Z0-9À-ɏ]` | `src/patterns.ts` |
-| Static pattern cache + explicit range in getSurroundingWord | `src/detector.ts` |
-| Explicit range in number expander + punctuation removal | `src/normalizer.ts` |
-| Pass cacheKey to Detector | `src/terlik.ts` |
-| Background warmup, lazy instance cache | `tools/server.ts` |
-| NODE_OPTIONS heap safety net | `.github/workflows/ci.yml` |
-
-### 2026-02-28 (v2.2.1) — CI Fix: Timeout Race Condition + İ Platform Compatibility
-
-**Fixes detection failures on slow runners and cross-platform İ (U+0130) handling.**
-
-- **Timeout race condition fix** — `REGEX_TIMEOUT_MS` check moved from _before_ match processing to _after_. Previously, V8 JIT compilation on first `exec()` call (triggered by lazy compilation) could exceed 250ms, causing the timeout to discard a valid match before it was recorded. Now the current match is always processed; the timeout only prevents scanning for additional matches.
-- **İ (U+0130) cross-platform fix** — First regex pass now runs on `text.toLocaleLowerCase(locale)` instead of raw text. Turkish İ→i mapping is performed explicitly before regex matching, avoiding inconsistent V8/ICU case-folding behavior across platforms (Ubuntu vs macOS). The `mapNormalizedToOriginal()` mapper recovers original-cased words for result output.
-
-| Change | File |
-|---|---|
-| Timeout check moved after match processing | `src/detector.ts` (`runPatterns`) |
-| Locale-lower first pass for İ safety | `src/detector.ts` (`detectPattern`) |
-
-### 2026-02-28 (v2.2) — Lazy Compilation + Linguistic Patch
-
-**Zero-cost construction. Background warmup. Turkish agglutination hardening.**
-
-- **Lazy compilation** — Pattern compilation deferred from constructor to first `detect()` call. `new Terlik()` drops from ~225ms to **~1.5ms**. Strict-mode users never pay regex cost (hash lookup only).
-- **`backgroundWarmup` option** — `new Terlik({ backgroundWarmup: true })` schedules compilation + JIT warmup via `setTimeout(fn, 0)`. Idempotent: if `detect()` is called before the timer fires, it compiles synchronously and the timer becomes a no-op.
-- **`detector.compile()` public method** — Allows manual precompilation for advanced use cases.
-- **Turkish suffix expansion** — Added question particles (`misin`, `misiniz`, `musun`, `musunuz`, `miyim`, `miyiz`) and adverbial forms (`cesine`, `casina`) to suffix engine (now 83 total). All suffixable entries (orospu, piç, yarrak, ibne, etc.) now catch question and adverbial inflections.
-- **Deep agglutination variants** — Added explicit variants for `siktiğimin`, `sikermisiniz`, `sikermisin`, `siktirmişcesine`. These forms require 3+ suffix chains or non-standard morpheme boundaries (ğ→g bridge) that the suffix engine can't generalize without false positives.
-- **`MAX_PATTERN_LENGTH` 6000 → 10000** — Accommodates the larger suffix group without fallback to non-suffix mode.
-- **Test count** — 619 → 631. New `tests/lazy-compilation.test.ts` covers construction timing, transparent lazy compile, strict-mode optimization, backgroundWarmup with fake timers, and idempotent early-detect.
-
-| Change | File |
-|---|---|
-| `backgroundWarmup` option | `src/types.ts` |
-| Lazy `_patterns`, `ensureCompiled()`, `compile()` | `src/detector.ts` |
-| backgroundWarmup setTimeout scheduling | `src/terlik.ts` |
-| Suffix + variant expansion, MAX_PATTERN_LENGTH | `src/patterns.ts`, `src/lang/tr/dictionary.json` |
-| Lazy compilation tests (new) | `tests/lazy-compilation.test.ts` |
-
-### 2026-02-28 (v2.1) — ReDoS Security Hardening
-
-**Added Regex Denial-of-Service protection.**
-
-Identified vulnerability: overlap between `charClasses` and `separator` (`@`, `$`, `!`, `|`, `+`, `#`, `€`, `¢`, `©` could be matched by both char class and separator) enabled polynomial O(n^2) backtracking via adversarial input.
-
-- **Bounded separator** — `[^\p{L}\p{N}]*` (unbounded) replaced with `[^\p{L}\p{N}]{0,3}` (max 3 chars). Real-world evasions (`s.i.k.t.i.r`, `s_i_k`) use 1 separator char. This reduces backtracking from O(n^2) to O(1) per boundary.
-- **Regex timeout safety net** — Added 250ms timeout (`REGEX_TIMEOUT_MS`) to `runPatterns()` and `detectFuzzy()` loops. Never triggers on normal input (<1ms), but provides a hard cap on adversarial input.
-- **charClasses cleanup** — Removed separator-overlapping symbols from all 4 language configs (TR, EN, ES, DE). These symbols are already defined in `leetMap` and converted during the normalizer pass — removing them from pattern matching causes no false negatives.
-- **ReDoS test suite** — `tests/redos.test.ts`: 71 tests covering adversarial timing, attack surface (separator abuse, leet bypass, char repetition, Unicode tricks, whitelist integrity, boundary attacks, multi-match, input edge cases, suffix hardening).
-- **MAX_PATTERN_LENGTH** — 5000 → 6000 (later raised to 10000 in v2.2). The `{0,3}` separator adds ~3 chars per boundary; raised the limit so large suffix patterns (e.g. `orospu`) don't fall back to non-suffix mode.
-- **Test count** — 548 → 619.
-
-| Change | File |
-|---|---|
-| Separator `*` → `{0,3}`, timeout constant | `src/patterns.ts` |
-| Timeout loop guard | `src/detector.ts` |
-| charClasses cleanup | `src/lang/{tr,en,es,de}/config.ts` |
-| ReDoS + attack surface test suite (new) | `tests/redos.test.ts` |
-
-### 2026-02-28 (v2)
-
-**Multi-Language Support**
-
-- **4 built-in languages** — Turkish (tr), English (en), Spanish (es), German (de). Each language is a self-contained folder (`src/lang/xx/`) with `config.ts` and `dictionary.json`.
-- **Folder-based language packs** — Adding a new language requires creating one folder with two files and one import line in the registry.
-- **`Terlik.warmup()`** — Static method to create and JIT-warm multiple language instances at once for server deployments.
-- **`language` option** — `new Terlik({ language: "en" })`. Default remains `"tr"` (backward compatible).
-- **Language-agnostic engine** — Normalizer, pattern compiler, detector, and cleaner are now fully parametric. Language-specific data (charMap, leetMap, charClasses, numberExpansions) comes from config files.
-- **New exports** — `createNormalizer`, `getLanguageConfig`, `getSupportedLanguages`, `LanguageConfig` type.
-- **Test coverage** — 346 → 418 tests. Added language-specific tests, cross-language isolation tests, and registry tests.
-
-### 2026-02-28
-
-**Suffix Engine + JSON Dictionary Migration**
-
-- **JSON dictionary** — Migrated dictionary from `tr.ts` to community-friendly `tr.json` format. Added runtime schema validation (`validateDictionary`). Each entry now includes `category` and `suffixable` fields.
-- **Suffix engine** — Defined Turkish grammatical suffixes (later expanded to 83 in v2.2). Suffixable roots (`orospu`, `salak`, `aptal`, `kahpe`, etc.) automatically catch inflected forms like `orospuluk`, `salaksin`, `aptallarin`, `kahpeler`. Short roots (3-char: `sik`, `bok`, `göt`, `döl`) use explicit variants instead to prevent false positives.
-- **Critical bug fix: `\W` separator** — JavaScript's `\W` treats Turkish characters (`ı`, `ş`, `ğ`, `ö`, `ü`, `ç`) as non-word characters. The pattern engine separator `[\W_]*` was changed to `[^\p{L}\p{N}]*` (Unicode-aware). This fixed false positives on innocent words like `sıkma`, `sıkıntı`, `sıkıştı`.
-- **Live test server warmup fix** — Fixed cache key mismatch and added JIT warmup. First request latency reduced from 3318ms to 37ms.
-- **Test coverage** — 101 → 346 tests. All 25 root words are comprehensively tested.
-- **Expanded whitelist** — Added `ama`, `ami`, `amen`, `amir`, `amil`, `dolmen`.
+See [CHANGELOG.md](./CHANGELOG.md) for the full version history.
 
 ## License
 
