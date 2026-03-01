@@ -7,3 +7,6 @@ coverage/
 benchmarks/accuracy-results.json
 .devlogs
 .claude
+marketing-files/
+benchmarks/comparison/node_modules/
+benchmarks/comparison/results/

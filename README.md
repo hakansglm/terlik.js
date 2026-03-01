@@ -295,6 +295,21 @@ Benchmark results (Apple Silicon, single core, msgs/sec):
 
 > **Note:** Loose/fuzzy mode is ~18x slower than balanced mode due to O(n*m) similarity computation. Use it only when typo tolerance is critical, not as a default.
 
+### vs Alternatives (English corpus)
+
+Head-to-head comparison on a 190-sample English corpus covering plain text, leet speak, separator evasion, char repetition, combined evasion, false-positive traps, and edge cases. All libraries tested with default settings.
+
+| Library | F1 | Precision | Recall | check() ops/sec |
+|---|---|---|---|---|
+| **terlik.js** | **92.7%** | 98.8% | 87.2% | **105,063** |
+| obscenity | 82.7% | 98.5% | 71.3% | 64,064 |
+| bad-words | 67.6% | 100.0% | 51.1% | 2,824 |
+| allprofanity | 57.6% | 100.0% | 40.4% | 45,831 |
+
+terlik.js is **1.6x faster** than the next fastest library and catches **90% of separator/repetition evasions** that other libraries miss entirely. See [full methodology, per-category breakdown, and limitations](./docs/benchmark-comparison.md).
+
+> **Transparency:** This benchmark is maintained by the terlik.js team. Dataset, adapters, and runner are open source. Reproduce with `pnpm bench:compare`. We document our own false positives and misses — [see the full report](./docs/benchmark-comparison.md#where-terlikjs-misses-transparency).
+
 ### Accuracy
 
 Measured on a labeled corpus of 388 samples across 4 languages (profane + clean + whitelist + edge cases):
@@ -486,6 +501,7 @@ pnpm test:coverage    # run tests with coverage report
 pnpm typecheck        # TypeScript type checking
 pnpm build            # build ESM + CJS output
 pnpm bench            # run performance benchmarks
+pnpm bench:compare    # run comparison benchmark vs alternatives
 pnpm dev:live         # start interactive test server
 ```
 

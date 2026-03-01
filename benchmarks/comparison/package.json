@@ -1,0 +1,20 @@
+{
+  "name": "terlik-benchmark-comparison",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx run.ts",
+    "start:memory": "node --expose-gc --import tsx/esm run.ts"
+  },
+  "dependencies": {
+    "terlik.js": "file:../../",
+    "bad-words": "^3.0.4",
+    "obscenity": "^0.4.0",
+    "allprofanity": "^2.2.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  }
+}
