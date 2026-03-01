@@ -1,6 +1,6 @@
 # terlik.js
 
-![terlik.js](assets/git-header.png)
+![terlik.js](assets/social-preview.png)
 
 [![CI](https://github.com/badursun/terlik.js/actions/workflows/ci.yml/badge.svg)](https://github.com/badursun/terlik.js/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/terlik.js.svg)](https://www.npmjs.com/package/terlik.js)
