@@ -28,7 +28,7 @@
     "bench": "tsx benchmarks/bench.ts",
     "bench:accuracy": "tsx benchmarks/accuracy.ts",
     "typecheck": "tsc --noEmit",
-    "dev:live": "tsx watch live_test_server/server.ts",
+    "dev:live": "tsx watch tools/server.ts",
     "prepare": "husky"
   },
   "keywords": [

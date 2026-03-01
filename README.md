@@ -1,6 +1,6 @@
 # terlik.js
 
-![terlik.js](git-header.png)
+![terlik.js](assets/git-header.png)
 
 [![CI](https://github.com/badursun/terlik.js/actions/workflows/ci.yml/badge.svg)](https://github.com/badursun/terlik.js/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/terlik.js.svg)](https://www.npmjs.com/package/terlik.js)
@@ -454,7 +454,7 @@ An interactive browser-based test environment is included. Chat interface on the
 pnpm dev:live      # http://localhost:2026
 ```
 
-See [`live_test_server/README.md`](./live_test_server/README.md) for details.
+See [`tools/README.md`](./tools/README.md) for details.
 
 ### Integration Guide
 
@@ -494,7 +494,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 | Static pattern cache + explicit range in getSurroundingWord | `src/detector.ts` |
 | Explicit range in number expander + punctuation removal | `src/normalizer.ts` |
 | Pass cacheKey to Detector | `src/terlik.ts` |
-| Background warmup, lazy instance cache | `live_test_server/server.ts` |
+| Background warmup, lazy instance cache | `tools/server.ts` |
 | NODE_OPTIONS heap safety net | `.github/workflows/ci.yml` |
 
 ### 2026-02-28 (v2.2.1) — CI Fix: Timeout Race Condition + İ Platform Compatibility

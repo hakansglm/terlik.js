@@ -25,13 +25,13 @@ Uses `tsx watch` — the server auto-restarts when you edit any file under `src/
 ### Option 2: Direct
 
 ```bash
-npx tsx live_test_server/server.ts
+npx tsx tools/server.ts
 ```
 
 ### Option 3: Watch mode (manual)
 
 ```bash
-npx tsx watch live_test_server/server.ts
+npx tsx watch tools/server.ts
 ```
 
 ---

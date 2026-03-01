@@ -9,7 +9,7 @@
  *   Phase 5 — Per-entry pattern string generation + new RegExp() compilation
  *   Phase 6 — JIT warmup (containsProfanity on sample texts)
  *
- * Run:  npx tsx live_test_server/profile-compile.ts
+ * Run:  npx tsx tools/profile-compile.ts
  */
 
 import { getLanguageConfig } from "../src/lang/index.js";
