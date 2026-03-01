@@ -87,25 +87,55 @@ export function compilePatterns(
       .filter((w, i, arr) => arr.indexOf(w) === i)
       .sort((a, b) => b.length - a.length);
 
-    const formPatterns = sortedForms.map((w) =>
-      wordToPattern(w, charClasses, normalizeFn),
-    );
-    const combined = formPatterns.join("|");
-
     // Determine if this entry gets suffix-aware boundary
     const useSuffix = entry.suffixable && suffixGroup.length > 0;
 
     let pattern: string;
     if (useSuffix) {
-      // Suffix-aware: root + optional suffix chain (up to MAX_SUFFIX_CHAIN), then word boundary
+      // Fully suffixable: all forms get suffix chain
+      const formPatterns = sortedForms.map((w) =>
+        wordToPattern(w, charClasses, normalizeFn),
+      );
+      const combined = formPatterns.join("|");
       pattern = `${WORD_BOUNDARY_BEHIND}(?:${combined})${suffixGroup}{0,${MAX_SUFFIX_CHAIN}}${WORD_BOUNDARY_AHEAD}`;
+    } else if (suffixGroup.length > 0) {
+      // Non-suffixable root but has variants: short forms (≤3 chars) get strict
+      // boundary, longer variants (≥4 chars) get optional suffix chain.
+      // This prevents false positives on the root (e.g. "sık"→"sik") while
+      // still catching suffixed variants (e.g. "sikişse", "götvereni").
+      const MIN_VARIANT_SUFFIX_LEN = 4;
+      const strictForms: string[] = [];
+      const suffixableForms: string[] = [];
+      for (const w of sortedForms) {
+        if (w.length >= MIN_VARIANT_SUFFIX_LEN) {
+          suffixableForms.push(wordToPattern(w, charClasses, normalizeFn));
+        } else {
+          strictForms.push(wordToPattern(w, charClasses, normalizeFn));
+        }
+      }
+      const parts: string[] = [];
+      if (suffixableForms.length > 0) {
+        parts.push(`(?:${suffixableForms.join("|")})${suffixGroup}{0,${MAX_SUFFIX_CHAIN}}`);
+      }
+      if (strictForms.length > 0) {
+        parts.push(`(?:${strictForms.join("|")})`);
+      }
+      pattern = `${WORD_BOUNDARY_BEHIND}(?:${parts.join("|")})${WORD_BOUNDARY_AHEAD}`;
     } else {
-      // Original: strict word boundary on both sides
+      // No suffix group available: strict word boundary on both sides
+      const formPatterns = sortedForms.map((w) =>
+        wordToPattern(w, charClasses, normalizeFn),
+      );
+      const combined = formPatterns.join("|");
       pattern = `${WORD_BOUNDARY_BEHIND}(?:${combined})${WORD_BOUNDARY_AHEAD}`;
     }
 
     // Safety guard: if pattern is too long, fallback to non-suffix version
-    if (pattern.length > MAX_PATTERN_LENGTH && useSuffix) {
+    if (pattern.length > MAX_PATTERN_LENGTH) {
+      const formPatterns = sortedForms.map((w) =>
+        wordToPattern(w, charClasses, normalizeFn),
+      );
+      const combined = formPatterns.join("|");
       pattern = `${WORD_BOUNDARY_BEHIND}(?:${combined})${WORD_BOUNDARY_AHEAD}`;
     }
 
@@ -121,7 +151,8 @@ export function compilePatterns(
       // Fallback: try without suffix if suffix caused the error
       if (useSuffix) {
         try {
-          const fallbackPattern = `${WORD_BOUNDARY_BEHIND}(?:${combined})${WORD_BOUNDARY_AHEAD}`;
+          const fallbackForms = sortedForms.map((w) => wordToPattern(w, charClasses, normalizeFn)).join("|");
+          const fallbackPattern = `${WORD_BOUNDARY_BEHIND}(?:${fallbackForms})${WORD_BOUNDARY_AHEAD}`;
           const regex = new RegExp(fallbackPattern, "gi");
           patterns.push({
             root: entry.root,

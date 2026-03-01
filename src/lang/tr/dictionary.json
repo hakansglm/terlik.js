@@ -34,7 +34,11 @@
         "sikecek", "sikiyor", "sikme", "sikici", "siksin", "siktirler",
         "sikimsonik", "siktirin", "siktiler", "sikerler", "sikiler",
         "siktiğimin", "sikermisiniz", "sikermisin", "siktirmişcesine",
-        "sktr"
+        "sktr",
+        "sikişse", "sikişecek", "sikişen", "sikişme", "sikişmek",
+        "sikeceksin", "sikecekler", "sikeceğim",
+        "sikmişler",
+        "sikilecek"
       ],
       "severity": "high",
       "category": "sexual",
@@ -387,6 +391,8 @@
     "namus",
     "namuslu",
     "ahlak",
-    "ahlaki"
+    "ahlaki",
+    "sıkıcı",
+    "sıkerler"
   ]
 }

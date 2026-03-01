@@ -188,16 +188,21 @@ export class Detector {
         const matchedText = match[0];
         const matchIndex = match.index;
 
+        // Whitelist check: un-normalized form (preserves ı/i distinction)
+        if (whitelist.has(matchedText)) continue;
         const normalizedMatch = this.normalizeFn(matchedText);
         if (whitelist.has(normalizedMatch)) continue;
 
         const surrounding = this.getSurroundingWord(searchText, matchIndex, matchedText.length);
+        if (whitelist.has(surrounding)) continue;
         const normalizedSurrounding = this.normalizeFn(surrounding);
         if (whitelist.has(normalizedSurrounding)) continue;
 
         if (isNormalized) {
           // Map normalized match position back to original text word
           const mapped = this.mapNormalizedToOriginal(originalText, matchIndex, matchedText);
+          // Check original word against whitelist (handles ı→i folding cases)
+          if (mapped && whitelist.has(mapped.word.toLowerCase())) continue;
           if (mapped && !existingIndices.has(mapped.index)) {
             results.push({
               word: mapped.word,
