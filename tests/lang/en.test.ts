@@ -37,6 +37,28 @@ describe("English profanity detection", () => {
       { word: "scumbag", text: "what a scumbag" },
       { word: "turd", text: "you turd" },
       { word: "bugger", text: "bugger off" },
+      // Phase 1 — new roots
+      { word: "hell", text: "go to hell" },
+      { word: "prick", text: "you prick" },
+      { word: "screw", text: "screw you" },
+      // Phase 3 — new roots
+      { word: "porn", text: "watching porn" },
+      { word: "blowjob", text: "gave a blowjob" },
+      { word: "jizz", text: "jizz everywhere" },
+      { word: "dildo", text: "bought a dildo" },
+      { word: "orgasm", text: "had an orgasm" },
+      { word: "orgy", text: "wild orgy" },
+      { word: "hooker", text: "street hooker" },
+      { word: "negro", text: "dirty negro" },
+      { word: "masturbate", text: "caught masturbating" },
+      { word: "semen", text: "covered in semen" },
+      { word: "pussy", text: "wet pussy" },
+      { word: "cum", text: "wants cum" },
+      { word: "penis", text: "show me your penis" },
+      { word: "tit", text: "nice tits" },
+      { word: "vagina", text: "lick my vagina" },
+      { word: "anal", text: "anal sex" },
+      { word: "rape", text: "he raped her" },
     ];
 
     for (const { word, text } of roots) {
@@ -50,8 +72,9 @@ describe("English profanity detection", () => {
     const variants = [
       "fucking", "fucker", "motherfucker", "stfu",
       "fuckboy", "fucktard", "fuckhead", "wtf", "mofo",
+      "unfucking", "fuckery",
       "shitty", "bullshit", "dipshit", "shithole",
-      "shitbag", "shitload", "shithouse", "shitlist",
+      "shitbag", "shitload", "shithouse", "shitlist", "shitfaced",
       "bitchy", "bitching", "bitchslap",
       "cocksucker", "cocksucking", "cockblock",
       "slutty", "whorish",
@@ -68,6 +91,24 @@ describe("English profanity detection", () => {
       "trannies", "dykes", "coons", "wetbacks",
       "bellends", "skanky", "scumbags", "turds",
       "buggered", "buggering", "buggery",
+      // Phase 1/3 new variants
+      "hells", "pricks", "pricked", "pricking",
+      "screwed", "screwing", "screws",
+      "pornographic", "pornography", "porno",
+      "blowjobs",
+      "jizzed", "jizzing",
+      "dildos",
+      "orgasms", "orgasmic",
+      "orgies",
+      "hookers",
+      "negroes",
+      "masturbating", "masturbation",
+      "pussies",
+      "cumming", "cumshot",
+      "penises",
+      "tits", "titty", "titties",
+      "vaginas", "vaginal",
+      "raped", "raping", "rapist", "rapists",
     ];
 
     for (const v of variants) {
@@ -97,6 +138,31 @@ describe("English profanity detection", () => {
     it("detects leet: b1tch", () => {
       expect(terlik.containsProfanity("b1tch")).toBe(true);
     });
+
+    // Phase 2 — new evasion tests
+    it("detects ph→f evasion: phuck", () => {
+      expect(terlik.containsProfanity("phuck you")).toBe(true);
+    });
+
+    it("detects ph→f evasion: phucking", () => {
+      expect(terlik.containsProfanity("phucking idiot")).toBe(true);
+    });
+
+    it("detects #→h evasion: s#it", () => {
+      expect(terlik.containsProfanity("s#it stain")).toBe(true);
+    });
+
+    it("detects 8→b evasion: 8itch", () => {
+      expect(terlik.containsProfanity("8itch slap")).toBe(true);
+    });
+
+    it("detects 6→g evasion: ni66er", () => {
+      expect(terlik.containsProfanity("ni66er")).toBe(true);
+    });
+
+    it("detects combined: n!66er", () => {
+      expect(terlik.containsProfanity("n!66er")).toBe(true);
+    });
   });
 
   describe("whitelist — false positive prevention", () => {
@@ -112,6 +178,21 @@ describe("English profanity detection", () => {
       "massage", "compass", "harass", "shiitake",
       "cocoon", "raccoon", "tycoon",
       "dike", "vandyke", "scunthorpe",
+      // Phase 1 — new root whitelists
+      "cocked",
+      "hello", "shell", "seashell", "eggshell", "nutshell",
+      "bombshell", "helium", "helicopter", "helmet",
+      "prickle", "prickly",
+      "screwdriver", "corkscrew",
+      // Phase 2 — puck whitelist
+      "puck", "pucks",
+      // Phase 3 — new root whitelists
+      "pussycat", "pussywillow", "pussyfoot",
+      "penistone",
+      "analysis", "analyst", "analog", "analogy", "analytical", "analyze",
+      "grape", "drape", "scrape", "rapeseed",
+      "therapist", "therapy",
+      "title", "titan", "titillate",
     ];
 
     for (const word of safeWords) {

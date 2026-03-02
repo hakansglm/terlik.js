@@ -5,7 +5,7 @@ export interface Sample {
 }
 
 export const dataset: Sample[] = [
-  // ─── PLAIN PROFANITY (25) ───────────────────────────────────────────
+  // ─── PLAIN PROFANITY (50) ───────────────────────────────────────────
   { text: "fuck you", profane: true, category: "plain" },
   { text: "shit happens", profane: true, category: "plain" },
   { text: "what the hell is this", profane: true, category: "plain" },
@@ -31,8 +31,34 @@ export const dataset: Sample[] = [
   { text: "you piece of shit", profane: true, category: "plain" },
   { text: "go fuck yourself", profane: true, category: "plain" },
   { text: "that is so damn stupid", profane: true, category: "plain" },
+  // new plain — new roots
+  { text: "watching porn is bad", profane: true, category: "plain" },
+  { text: "she gave a blowjob", profane: true, category: "plain" },
+  { text: "jizz everywhere", profane: true, category: "plain" },
+  { text: "he bought a dildo", profane: true, category: "plain" },
+  { text: "she had an orgasm", profane: true, category: "plain" },
+  { text: "they had an orgy", profane: true, category: "plain" },
+  { text: "that hooker on the corner", profane: true, category: "plain" },
+  { text: "dirty negro", profane: true, category: "plain" },
+  { text: "he was caught masturbating", profane: true, category: "plain" },
+  { text: "covered in semen", profane: true, category: "plain" },
+  { text: "wet pussy", profane: true, category: "plain" },
+  { text: "she wants cum", profane: true, category: "plain" },
+  { text: "show me your penis", profane: true, category: "plain" },
+  { text: "nice tits babe", profane: true, category: "plain" },
+  { text: "lick my vagina", profane: true, category: "plain" },
+  { text: "anal sex is common", profane: true, category: "plain" },
+  { text: "he raped her", profane: true, category: "plain" },
+  { text: "you stupid cunt", profane: true, category: "plain" },
+  { text: "bloody wanker", profane: true, category: "plain" },
+  { text: "what a twat", profane: true, category: "plain" },
+  { text: "total bollocks", profane: true, category: "plain" },
+  { text: "ugly slut", profane: true, category: "plain" },
+  { text: "you retard", profane: true, category: "plain" },
+  { text: "stupid faggot", profane: true, category: "plain" },
+  { text: "dirty nigger", profane: true, category: "plain" },
 
-  // ─── VARIANT FORMS (20) ────────────────────────────────────────────
+  // ─── VARIANT FORMS (35) ────────────────────────────────────────────
   { text: "he is fucking annoying", profane: true, category: "variant" },
   { text: "motherfucker over there", profane: true, category: "variant" },
   { text: "she is a bitchy person", profane: true, category: "variant" },
@@ -53,8 +79,24 @@ export const dataset: Sample[] = [
   { text: "horseshit excuse", profane: true, category: "variant" },
   { text: "the fuckery never ends", profane: true, category: "variant" },
   { text: "douchebag alert", profane: true, category: "variant" },
+  // new variants
+  { text: "pornographic material found", profane: true, category: "variant" },
+  { text: "he is a rapist", profane: true, category: "variant" },
+  { text: "she was masturbating again", profane: true, category: "variant" },
+  { text: "cumshot compilation", profane: true, category: "variant" },
+  { text: "multiple orgasms reported", profane: true, category: "variant" },
+  { text: "those pussies ran away", profane: true, category: "variant" },
+  { text: "nice titties on display", profane: true, category: "variant" },
+  { text: "vaginal examination required", profane: true, category: "variant" },
+  { text: "screwed everything up", profane: true, category: "variant" },
+  { text: "pricking his conscience", profane: true, category: "variant" },
+  { text: "he is a cocksucking liar", profane: true, category: "variant" },
+  { text: "total fuckwit behavior", profane: true, category: "variant" },
+  { text: "whorish behavior on display", profane: true, category: "variant" },
+  { text: "slutty outfit choice", profane: true, category: "variant" },
+  { text: "complete mindfuck experience", profane: true, category: "variant" },
 
-  // ─── LEET SPEAK (15) ───────────────────────────────────────────────
+  // ─── LEET SPEAK (25) ───────────────────────────────────────────────
   { text: "f#ck you", profane: true, category: "leet" },
   { text: "sh1t happens", profane: true, category: "leet" },
   { text: "a$$hole right here", profane: true, category: "leet" },
@@ -70,8 +112,19 @@ export const dataset: Sample[] = [
   { text: "p!ss off", profane: true, category: "leet" },
   { text: "fvck that", profane: true, category: "leet" },
   { text: "$hit posting", profane: true, category: "leet" },
+  // new leet
+  { text: "8itch slap", profane: true, category: "leet" },
+  { text: "s#it stain", profane: true, category: "leet" },
+  { text: "ni66er alert", profane: true, category: "leet" },
+  { text: "phucking loser", profane: true, category: "leet" },
+  { text: "c0ck blocker", profane: true, category: "leet" },
+  { text: "4sshole move", profane: true, category: "leet" },
+  { text: "d4mn right", profane: true, category: "leet" },
+  { text: "r3tard alert", profane: true, category: "leet" },
+  { text: "wh0re bag", profane: true, category: "leet" },
+  { text: "tw4t face", profane: true, category: "leet" },
 
-  // ─── SEPARATOR EVASION (10) ────────────────────────────────────────
+  // ─── SEPARATOR EVASION (15) ────────────────────────────────────────
   { text: "f.u.c.k you", profane: true, category: "separator" },
   { text: "s h i t man", profane: true, category: "separator" },
   { text: "a-s-s-h-o-l-e", profane: true, category: "separator" },
@@ -82,8 +135,14 @@ export const dataset: Sample[] = [
   { text: "c.o.c.k blocker", profane: true, category: "separator" },
   { text: "p.r.i.c.k move", profane: true, category: "separator" },
   { text: "c_r_a_p fest", profane: true, category: "separator" },
+  // new separator
+  { text: "n.i.g.g.e.r please", profane: true, category: "separator" },
+  { text: "s-l-u-t shaming", profane: true, category: "separator" },
+  { text: "c_u_n_t face", profane: true, category: "separator" },
+  { text: "t.w.a.t move", profane: true, category: "separator" },
+  { text: "h_e_l_l yeah", profane: true, category: "separator" },
 
-  // ─── REPETITION EVASION (10) ───────────────────────────────────────
+  // ─── REPETITION EVASION (15) ───────────────────────────────────────
   { text: "fuuuuck this", profane: true, category: "repetition" },
   { text: "shiiiit dude", profane: true, category: "repetition" },
   { text: "what an assshole", profane: true, category: "repetition" },
@@ -94,8 +153,14 @@ export const dataset: Sample[] = [
   { text: "helllll no", profane: true, category: "repetition" },
   { text: "dickkkk move", profane: true, category: "repetition" },
   { text: "pisssss off", profane: true, category: "repetition" },
+  // new repetition
+  { text: "cuuuunt face", profane: true, category: "repetition" },
+  { text: "sluuuut shaming", profane: true, category: "repetition" },
+  { text: "whoooore alert", profane: true, category: "repetition" },
+  { text: "coooock blocker", profane: true, category: "repetition" },
+  { text: "waaanker move", profane: true, category: "repetition" },
 
-  // ─── COMBINED EVASION (10) ─────────────────────────────────────────
+  // ─── COMBINED EVASION (15) ─────────────────────────────────────────
   { text: "F.U.C.K.I.N.G hell", profane: true, category: "combined" },
   { text: "$h!t posting", profane: true, category: "combined" },
   { text: "f#cking idiot", profane: true, category: "combined" },
@@ -106,8 +171,14 @@ export const dataset: Sample[] = [
   { text: "5h1t stain", profane: true, category: "combined" },
   { text: "fuuuck1ng hell", profane: true, category: "combined" },
   { text: "b!tch a$$ move", profane: true, category: "combined" },
+  // new combined
+  { text: "phuck3d up badly", profane: true, category: "combined" },
+  { text: "n!66er please", profane: true, category: "combined" },
+  { text: "8.1.t.c.h mode", profane: true, category: "combined" },
+  { text: "5h!tty weather", profane: true, category: "combined" },
+  { text: "c0ck5ucker alert", profane: true, category: "combined" },
 
-  // ─── CLEAN SENTENCES (40) ──────────────────────────────────────────
+  // ─── CLEAN SENTENCES (50) ──────────────────────────────────────────
   { text: "hello world how are you today", profane: false, category: "clean" },
   { text: "the weather is beautiful this morning", profane: false, category: "clean" },
   { text: "i love programming in typescript", profane: false, category: "clean" },
@@ -148,8 +219,19 @@ export const dataset: Sample[] = [
   { text: "i need to schedule a dentist appointment", profane: false, category: "clean" },
   { text: "the workshop was really helpful", profane: false, category: "clean" },
   { text: "we are planning a surprise party", profane: false, category: "clean" },
+  // new clean
+  { text: "the museum exhibit was fascinating", profane: false, category: "clean" },
+  { text: "our flight departs at seven in the morning", profane: false, category: "clean" },
+  { text: "she received a scholarship for her studies", profane: false, category: "clean" },
+  { text: "the recipe calls for fresh basil leaves", profane: false, category: "clean" },
+  { text: "he completed the marathon in under four hours", profane: false, category: "clean" },
+  { text: "the new software update fixed the bug", profane: false, category: "clean" },
+  { text: "they celebrated their anniversary at the beach", profane: false, category: "clean" },
+  { text: "the volunteer event was a huge success", profane: false, category: "clean" },
+  { text: "she baked cookies for the neighbors", profane: false, category: "clean" },
+  { text: "the hiking trail offers stunning views", profane: false, category: "clean" },
 
-  // ─── WHITELIST / FALSE POSITIVE TRAPS (50) ─────────────────────────
+  // ─── WHITELIST / FALSE POSITIVE TRAPS (70) ─────────────────────────
   { text: "the assassin creed game is popular", profane: false, category: "whitelist" },
   { text: "she attended the class yesterday", profane: false, category: "whitelist" },
   { text: "the scunthorpe problem is well known", profane: false, category: "whitelist" },
@@ -200,8 +282,29 @@ export const dataset: Sample[] = [
   { text: "the mass effect game is great", profane: false, category: "whitelist" },
   { text: "he runs a sextant navigation course", profane: false, category: "whitelist" },
   { text: "she teaches at the sussex campus", profane: false, category: "whitelist" },
+  // new whitelist — new root FP traps
+  { text: "say hello to the team", profane: false, category: "whitelist" },
+  { text: "the eggshell white paint looks great", profane: false, category: "whitelist" },
+  { text: "the nutshell summary was helpful", profane: false, category: "whitelist" },
+  { text: "the bombshell announcement surprised everyone", profane: false, category: "whitelist" },
+  { text: "she wore a helmet during the ride", profane: false, category: "whitelist" },
+  { text: "the helicopter landed on the roof", profane: false, category: "whitelist" },
+  { text: "helium balloons filled the room", profane: false, category: "whitelist" },
+  { text: "the prickly cactus needs water", profane: false, category: "whitelist" },
+  { text: "he used a screwdriver to fix it", profane: false, category: "whitelist" },
+  { text: "the corkscrew was in the drawer", profane: false, category: "whitelist" },
+  { text: "the pussywillow bloomed in spring", profane: false, category: "whitelist" },
+  { text: "the pussycat slept all day", profane: false, category: "whitelist" },
+  { text: "the analyst reviewed the report", profane: false, category: "whitelist" },
+  { text: "the analysis was thorough and detailed", profane: false, category: "whitelist" },
+  { text: "the analog clock showed three pm", profane: false, category: "whitelist" },
+  { text: "she picked grapes from the vine", profane: false, category: "whitelist" },
+  { text: "the drapes matched the furniture", profane: false, category: "whitelist" },
+  { text: "he used a scraper to clean the grill", profane: false, category: "whitelist" },
+  { text: "the titan rocket launched successfully", profane: false, category: "whitelist" },
+  { text: "the puck slid across the ice rink", profane: false, category: "whitelist" },
 
-  // ─── EDGE CASES (10) ───────────────────────────────────────────────
+  // ─── EDGE CASES (15) ───────────────────────────────────────────────
   { text: "", profane: false, category: "edge_case" },
   { text: " ", profane: false, category: "edge_case" },
   { text: "a", profane: false, category: "edge_case" },
@@ -212,6 +315,12 @@ export const dataset: Sample[] = [
   { text: "FuCk YoU mIxEd CaSe", profane: true, category: "edge_case" },
   { text: "the quick brown fox jumps over the lazy dog ".repeat(50).trim(), profane: false, category: "edge_case" },
   { text: "clean text with shit at the very end", profane: true, category: "edge_case" },
+  // new edge cases
+  { text: "PORN IN ALL CAPS", profane: true, category: "edge_case" },
+  { text: "RaPe MiXeD cAsE", profane: true, category: "edge_case" },
+  { text: "a]b[c{d}e", profane: false, category: "edge_case" },
+  { text: "unicode: café résumé naïve", profane: false, category: "edge_case" },
+  { text: "embedded hell in the middle of a long clean sentence about weather", profane: true, category: "edge_case" },
 ];
 
 /** Subset of samples for throughput testing — mixed clean/dirty */

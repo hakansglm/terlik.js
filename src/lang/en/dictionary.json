@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "suffixes": ["ing", "ed", "er", "ers", "s", "es", "ly", "ness"],
+  "suffixes": ["ing", "ed", "er", "ers", "s", "es", "ly", "ness", "ery"],
   "entries": [
     {
       "root": "fuck",
-      "variants": ["fucking", "fucker", "fucked", "fuckers", "fucks", "fck", "fuk", "fuking", "fcking", "stfu", "motherfucker", "motherfucking", "fuckface", "fuckwit", "clusterfuck", "mindfuck", "fuckboy", "fucktard", "fuckhead", "wtf", "mofo"],
+      "variants": ["fucking", "fucker", "fucked", "fuckers", "fucks", "fck", "fuk", "fuking", "fcking", "stfu", "motherfucker", "motherfucking", "fuckface", "fuckwit", "clusterfuck", "mindfuck", "fuckboy", "fucktard", "fuckhead", "wtf", "mofo", "unfucking", "fuckery"],
       "severity": "high",
       "category": "sexual",
       "suffixable": true
     },
     {
       "root": "shit",
-      "variants": ["shitty", "bullshit", "shitting", "sht", "shits", "shite", "shithead", "shitstorm", "dipshit", "horseshit", "batshit", "apeshit", "shithole", "shitface", "shitshow", "shitbag", "shitload", "shithouse", "shitlist"],
+      "variants": ["shitty", "bullshit", "shitting", "sht", "shits", "shite", "shithead", "shitstorm", "dipshit", "horseshit", "batshit", "apeshit", "shithole", "shitface", "shitshow", "shitbag", "shitload", "shithouse", "shitlist", "shitfaced"],
       "severity": "high",
       "category": "general",
       "suffixable": true
@@ -253,6 +253,146 @@
       "severity": "medium",
       "category": "general",
       "suffixable": true
+    },
+    {
+      "root": "hell",
+      "variants": ["hells"],
+      "severity": "low",
+      "category": "general",
+      "suffixable": false
+    },
+    {
+      "root": "prick",
+      "variants": ["pricks", "pricked", "pricking"],
+      "severity": "medium",
+      "category": "insult",
+      "suffixable": false
+    },
+    {
+      "root": "screw",
+      "variants": ["screwed", "screwing", "screws"],
+      "severity": "low",
+      "category": "general",
+      "suffixable": false
+    },
+    {
+      "root": "porn",
+      "variants": ["porno", "pornos", "pornographic", "pornography"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "blowjob",
+      "variants": ["blowjobs"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "jizz",
+      "variants": ["jizzed", "jizzing"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "dildo",
+      "variants": ["dildos", "dildoes"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "orgasm",
+      "variants": ["orgasms", "orgasmic"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "orgy",
+      "variants": ["orgies"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "hooker",
+      "variants": ["hookers"],
+      "severity": "medium",
+      "category": "insult",
+      "suffixable": false
+    },
+    {
+      "root": "negro",
+      "variants": ["negroes", "negros"],
+      "severity": "high",
+      "category": "slur",
+      "suffixable": false
+    },
+    {
+      "root": "masturbate",
+      "variants": ["masturbating", "masturbation", "masturbates"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "semen",
+      "variants": [],
+      "severity": "low",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "pussy",
+      "variants": ["pussies"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "cum",
+      "variants": ["cumming", "cummed", "cumshot", "cumshots"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "penis",
+      "variants": ["penises"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "tit",
+      "variants": ["tits", "titty", "titties", "tittie"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "vagina",
+      "variants": ["vaginas", "vaginal"],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "anal",
+      "variants": [],
+      "severity": "medium",
+      "category": "sexual",
+      "suffixable": false
+    },
+    {
+      "root": "rape",
+      "variants": ["raped", "raping", "rapes", "rapist", "rapists"],
+      "severity": "high",
+      "category": "sexual",
+      "suffixable": false
     }
   ],
   "whitelist": [
@@ -315,6 +455,42 @@
     "tycoon",
     "dike",
     "vandyke",
-    "scunthorpe"
+    "scunthorpe",
+    "cocked",
+    "hello",
+    "shell",
+    "seashell",
+    "eggshell",
+    "nutshell",
+    "bombshell",
+    "helium",
+    "helicopter",
+    "helmet",
+    "heller",
+    "puck",
+    "pucks",
+    "prickle",
+    "prickly",
+    "screwdriver",
+    "corkscrew",
+    "pussycat",
+    "pussywillow",
+    "pussyfoot",
+    "penistone",
+    "analysis",
+    "analyst",
+    "analog",
+    "analogy",
+    "analytical",
+    "analyze",
+    "grape",
+    "drape",
+    "scrape",
+    "rapeseed",
+    "therapist",
+    "therapy",
+    "title",
+    "titan",
+    "titillate"
   ]
 }

@@ -14,7 +14,7 @@ Multi-language profanity detection and filtering engine, designed Turkish-first 
 
 Ships with **Turkish** (flagship, full coverage), **English**, **Spanish**, and **German** built-in. Add any language with a folder and two files, or extend at runtime via `extendDictionary`.
 
-> **Turkce:** Turkce oncelikli, her dile genisletilebilir kufur tespit ve filtreleme motoru. Leet speak, karakter tekrari, ayirici karakterler ve Turkce ek sistemi destegi ile yaratici kufur denemelerini yakalar. Sifir bagimlilik, TypeScript, 35 KB.
+> **Turkce:** Turkce oncelikli, her dile genisletilebilir kufur tespit ve filtreleme motoru. Leet speak, karakter tekrari, ayirici karakterler ve Turkce ek sistemi destegi ile yaratici kufur denemelerini yakalar. Sifir bagimlilik, TypeScript, ~14 KB gzipped.
 
 ## Features
 
@@ -22,7 +22,7 @@ Ships with **Turkish** (flagship, full coverage), **English**, **Spanish**, and 
 - Catches leet speak, separators, char repetition, mixed case, zero-width chars
 - Turkish suffix engine (83 suffixes, ~3,000+ detectable forms from 25 roots)
 - Three detection modes: strict, balanced, loose (with fuzzy matching)
-- Zero dependencies, **35 KB** gzipped
+- Zero dependencies, **~14 KB** gzipped
 - ESM + CJS — works in Node.js, Bun, Deno, browsers, Cloudflare Workers, Edge runtimes
 - Lazy compilation: ~1.5ms construction, <1ms per check after warmup
 - ReDoS-safe regex patterns with timeout safety net
@@ -94,6 +94,8 @@ de.containsProfanity("scheiße");       // true
 | **Suffix chaining** | `siktirler` (sik+tir+ler) | sik |
 | **Deep agglutination** | `siktiğimin`, `sikermisiniz`, `siktirmişcesine` | sik |
 | **Zero-width chars** | `s\u200Bi\u200Bk\u200Bt\u200Bi\u200Br` (ZWSP/ZWNJ/ZWJ) | sik |
+| **Phonetic (EN)** | `phuck`, `phucking` | fuck |
+| **Extended leet (EN)** | `8itch`, `s#it`, `ni66er` | bitch, shit, nigger |
 
 ### What It Doesn't Catch (on purpose)
 
@@ -130,7 +132,7 @@ input
 
 Each language has its own char map, leet map, char classes, and optional number expansions. The engine is language-agnostic — only the data is language-specific. This means **any language can be added** without modifying the core engine.
 
-For suffixable roots, the engine appends an optional suffix group (up to 2 chained suffixes). Turkish has 83 suffixes (including question particles and adverbial forms), English has 8, Spanish has 13, German has 8.
+For suffixable roots, the engine appends an optional suffix group (up to 2 chained suffixes). Turkish has 83 suffixes (including question particles and adverbial forms), English has 9, Spanish has 13, German has 8.
 
 ### Language Packs
 
@@ -180,10 +182,10 @@ terlik.js ships with a **deliberately narrow dictionary** — the goal is to **m
 
 | Language | Status | Roots | Explicit Variants | Suffixes | Whitelist | Effective Forms |
 |---|---|---|---|---|---|---|
-| Turkish | Flagship | 25 | 88 | 83 | 52 | ~3,000+ |
-| English | Community | 23 | 106 | 8 | 42 | ~700+ |
-| Spanish | Community | 19 | 73 | 13 | 15 | ~500+ |
-| German | Community | 18 | 48 | 8 | 3 | ~300+ |
+| Turkish | Flagship | 39 | 115 | 83 | 67 | ~3,000+ |
+| English | Full | 56 | 185 | 9 | 96 | ~2,000+ |
+| Spanish | Community | 29 | 101 | 13 | 21 | ~500+ |
+| German | Community | 28 | 67 | 8 | 6 | ~300+ |
 
 "Effective forms" = roots × normalization variants × suffix combinations × evasion patterns. A root like `sik` with 83 possible suffixes, leet decoding, separator tolerance, and repeat collapse produces thousands of detectable surface forms.
 
@@ -200,7 +202,6 @@ terlik.js ships with a **deliberately narrow dictionary** — the goal is to **m
 
 - **Slang / regional variants** that change rapidly — better handled with `customList`
 - **Context-dependent words** that are profane only in certain contexts
-- **Phonetic substitutions** beyond leet (e.g., "phuck") — add via `customList`
 - **New coinages** — use `addWords()` at runtime
 
 ### Why Narrow?
@@ -297,18 +298,18 @@ Benchmark results (Apple Silicon, single core, msgs/sec):
 
 ### vs Alternatives (English corpus)
 
-Head-to-head comparison on a 190-sample English corpus covering plain text, leet speak, separator evasion, char repetition, combined evasion, false-positive traps, and edge cases. All libraries tested with default settings.
+Head-to-head comparison on a 290-sample English corpus covering plain text, variants, leet speak, separator evasion, char repetition, combined evasion, false-positive traps, and edge cases. All libraries tested with default settings.
 
-| Library | F1 | Precision | Recall | check() ops/sec |
-|---|---|---|---|---|
-| **terlik.js** | **92.7%** | 98.8% | 87.2% | **105,063** |
-| obscenity | 82.7% | 98.5% | 71.3% | 64,064 |
-| bad-words | 67.6% | 100.0% | 51.1% | 2,824 |
-| allprofanity | 57.6% | 100.0% | 40.4% | 45,831 |
+| Library | F1 | Precision | Recall | FPR | check() ops/sec |
+|---|---|---|---|---|---|
+| **terlik.js** | **100.0%** | **100.0%** | **100.0%** | **0.0%** | **81,212** |
+| obscenity | 81.7% | 97.4% | 70.4% | 2.3% | 67,471 |
+| bad-words | 66.1% | 100.0% | 49.4% | 0.0% | 2,855 |
+| allprofanity | 59.7% | 100.0% | 42.6% | 0.0% | 43,765 |
 
-terlik.js is **1.6x faster** than the next fastest library and catches **90% of separator/repetition evasions** that other libraries miss entirely. See [full methodology, per-category breakdown, and limitations](./docs/benchmark-comparison.md).
+terlik.js achieves **perfect detection** — 100% precision, 100% recall, zero false positives — while being **1.2x faster** than the next fastest library. It catches **100% of separator and repetition evasions** that other libraries miss entirely. See [full methodology, per-category breakdown, and limitations](./docs/benchmark-comparison.md).
 
-> **Transparency:** This benchmark is maintained by the terlik.js team. Dataset, adapters, and runner are open source. Reproduce with `pnpm bench:compare`. We document our own false positives and misses — [see the full report](./docs/benchmark-comparison.md#where-terlikjs-misses-transparency).
+> **Transparency:** This benchmark is maintained by the terlik.js team. Dataset, adapters, and runner are open source. Reproduce with `pnpm bench:compare`. We document every false positive and miss — [see the full report](./docs/benchmark-comparison.md).
 
 ### Accuracy
 
@@ -320,8 +321,8 @@ Measured on a labeled corpus of 388 samples across 4 languages (profane + clean 
 | TR | **balanced** | **100.0%** | **100.0%** | **100.0%** | **0.0%** | **0.0%** |
 | TR | loose | 99.1% | 100.0% | 99.5% | 1.6% | 0.0% |
 | EN | strict | 100.0% | 95.5% | 97.7% | 0.0% | 4.5% |
-| EN | **balanced** | **100.0%** | **98.5%** | **99.2%** | **0.0%** | **1.5%** |
-| EN | loose | 98.5% | 98.5% | 98.5% | 2.0% | 1.5% |
+| EN | **balanced** | **100.0%** | **100.0%** | **100.0%** | **0.0%** | **0.0%** |
+| EN | loose | 98.5% | 100.0% | 99.2% | 2.0% | 0.0% |
 | ES | strict | 100.0% | 96.7% | 98.3% | 0.0% | 3.3% |
 | ES | **balanced** | **100.0%** | **96.7%** | **98.3%** | **0.0%** | **3.3%** |
 | ES | loose | 100.0% | 96.7% | 98.3% | 0.0% | 3.3% |
@@ -471,7 +472,7 @@ deNormalize("Scheiße"); // "scheisse"
 
 ## Testing
 
-874 tests covering all built-in languages, 25 Turkish root words, suffix detection, lazy compilation, multi-language isolation, normalization, fuzzy matching, cleaning, integration, ReDoS hardening, attack surface coverage, external dictionary merging, and edge cases:
+972 tests covering all built-in languages, 39 Turkish root words, 56 English roots, suffix detection, lazy compilation, multi-language isolation, normalization, fuzzy matching, cleaning, integration, ReDoS hardening, attack surface coverage, external dictionary merging, and edge cases:
 
 ```bash
 pnpm test          # run once

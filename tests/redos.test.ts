@@ -243,9 +243,9 @@ describe("attack surface coverage", () => {
       expect(en.containsProfanity("f*ck you")).toBe(true);
     });
 
-    it("EN leet: ph uck should not match (no ph→f mapping)", () => {
-      // no phonetic mapping, just char class
-      expect(en.containsProfanity("phuck")).toBe(false);
+    it("EN leet: phuck should match (ph→f via charClasses)", () => {
+      // charClasses.f includes 'ph' digraph
+      expect(en.containsProfanity("phuck")).toBe(true);
     });
   });
 
