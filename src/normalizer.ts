@@ -8,6 +8,31 @@ export interface NormalizerConfig {
   numberExpansions?: [string, string][];
 }
 
+// ─── Universal Unicode normalization ─────────────────
+
+/** Invisible/zero-width characters commonly used to bypass detection */
+const INVISIBLE_CHARS =
+  /[\u200B\u200C\u200D\u200E\u200F\uFEFF\u00AD\u034F\u2060\u2061\u2062\u2063\u2064\u180E]/g;
+
+/** Combining diacritical marks (stripped after NFKD decomposition) */
+const COMBINING_MARKS = /[\u0300-\u036f]/g;
+
+/**
+ * Cyrillic → Latin confusable map.
+ * Only includes visually identical characters used for filter evasion.
+ * Applied after toLowerCase so only lowercase mappings needed.
+ */
+const CYRILLIC_CONFUSABLES: Record<string, string> = {
+  "\u0430": "a", // Cyrillic а → Latin a
+  "\u0441": "c", // Cyrillic с → Latin c
+  "\u0435": "e", // Cyrillic е → Latin e
+  "\u0456": "i", // Cyrillic і → Latin i (Ukrainian)
+  "\u043E": "o", // Cyrillic о → Latin o
+  "\u0440": "p", // Cyrillic р → Latin p
+  "\u0443": "u", // Cyrillic у → Latin u
+  "\u0445": "x", // Cyrillic х → Latin x
+};
+
 // ─── Language-agnostic helpers ───────────────────────
 
 function replaceFromMap(text: string, map: Record<string, string>): string {
@@ -54,8 +79,17 @@ function trimWhitespace(text: string): string {
 
 /**
  * Creates a language-specific normalize function using the given config.
- * The returned function applies a 6-stage pipeline: lowercase, char folding,
- * number expansion, leet decode, punctuation removal, repeat collapse.
+ * The returned function applies a 10-stage pipeline:
+ *   1. Strip invisible chars (ZWSP, ZWNJ, soft hyphen, etc.)
+ *   2. NFKD decompose (fullwidth → ASCII, precomposed → base + combining)
+ *   3. Strip combining marks (removes accents/diacritics)
+ *   4. Locale-aware lowercase
+ *   5. Cyrillic confusable → Latin
+ *   6. Language-specific char folding
+ *   7. Number expansion
+ *   8. Leet decode
+ *   9. Punctuation removal
+ *  10. Repeat collapse + whitespace trim
  *
  * @param config - Language-specific normalization settings.
  * @returns A normalize function for the configured language.
@@ -68,6 +102,8 @@ function trimWhitespace(text: string): string {
  *   leetMap: { "0": "o", "3": "e" },
  * });
  * normalize("Scheiße"); // "scheisse"
+ * normalize("fück");    // "fuck"
+ * normalize("ｆｕｃｋ");  // "fuck"
  * ```
  */
 export function createNormalizer(config: NormalizerConfig): (text: string) => string {
@@ -77,7 +113,15 @@ export function createNormalizer(config: NormalizerConfig): (text: string) => st
 
   return function normalize(text: string): string {
     let result = text;
+    // Universal: strip invisible chars, NFKD decompose, strip combining marks
+    result = result.replace(INVISIBLE_CHARS, "");
+    result = result.normalize("NFKD");
+    result = result.replace(COMBINING_MARKS, "");
+    // Locale-aware lowercase
     result = result.toLocaleLowerCase(config.locale);
+    // Universal: Cyrillic confusable → Latin
+    result = replaceFromMap(result, CYRILLIC_CONFUSABLES);
+    // Language-specific char folding
     result = replaceFromMap(result, config.charMap);
     if (expandNumbers) {
       result = expandNumbers(result);
