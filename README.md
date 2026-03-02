@@ -14,15 +14,16 @@ Multi-language profanity detection and filtering engine, designed Turkish-first 
 
 Ships with **Turkish** (flagship, full coverage), **English**, **Spanish**, and **German** built-in. Add any language with a folder and two files, or extend at runtime via `extendDictionary`.
 
-> **Turkce:** Turkce oncelikli, her dile genisletilebilir kufur tespit ve filtreleme motoru. Leet speak, karakter tekrari, ayirici karakterler ve Turkce ek sistemi destegi ile yaratici kufur denemelerini yakalar. Sifir bagimlilik, TypeScript, ~14 KB gzipped.
+> **Turkce:** Turkce oncelikli, her dile genisletilebilir kufur tespit ve filtreleme motoru. Leet speak, karakter tekrari, ayirici karakterler ve Turkce ek sistemi destegi ile yaratici kufur denemelerini yakalar. Sifir bagimlilik, TypeScript, ~14 KB gzip (tek dil: ~10 KB).
 
 ## Features
 
 - **Extensible to any language** — ships with TR/EN/ES/DE, add more via language packs or `extendDictionary`
 - Catches leet speak, separators, char repetition, mixed case, zero-width chars
-- Turkish suffix engine (83 suffixes, ~3,000+ detectable forms from 25 roots)
+- Turkish suffix engine (83 suffixes, ~3,000+ detectable forms from 30 roots)
 - Three detection modes: strict, balanced, loose (with fuzzy matching)
-- Zero dependencies, **~14 KB** gzipped
+- Zero dependencies, **~14 KB** gzip (single language: **~10 KB** with per-language imports)
+- Per-language sub-path imports for minimal bundle size (`terlik.js/tr`, `/en`, `/es`, `/de`)
 - ESM + CJS — works in Node.js, Bun, Deno, browsers, Cloudflare Workers, Edge runtimes
 - Lazy compilation: ~1.5ms construction, <1ms per check after warmup
 - ReDoS-safe regex patterns with timeout safety net
@@ -75,6 +76,31 @@ es.containsProfanity("hijo de puta");  // true
 de.containsProfanity("scheiße");       // true
 ```
 
+## Per-Language Imports
+
+If you only need **one language**, use sub-path imports to cut your bundle size by ~30%:
+
+```ts
+// Only Turkish — no EN/ES/DE dictionaries bundled
+import { Terlik } from "terlik.js/tr";
+const t = new Terlik();
+t.containsProfanity("siktir"); // true
+
+// Or use the factory
+import { createTerlik } from "terlik.js/en";
+const en = createTerlik({ mode: "strict" });
+```
+
+| Import | Gzip size | Includes |
+|---|---|---|
+| `terlik.js` | ~14 KB | All 4 languages (TR, EN, ES, DE) |
+| `terlik.js/tr` | ~10 KB | Turkish only |
+| `terlik.js/en` | ~10 KB | English only |
+| `terlik.js/es` | ~9 KB | Spanish only |
+| `terlik.js/de` | ~9 KB | German only |
+
+Each sub-path exports `Terlik`, `createTerlik`, `TerlikCore`, `languageConfig`, and all types. See [API Reference](./docs/api.md#per-language-imports) for advanced usage with `TerlikCore`.
+
 ## What It Catches
 
 | Evasion technique | Example | Detected as |
@@ -115,11 +141,15 @@ terlik.containsProfanity("dolmen");       // false
 
 ## How It Works
 
-Six-stage normalization pipeline (language-aware), then pattern matching:
+Ten-stage normalization pipeline (language-aware), then pattern matching:
 
 ```
 input
+  → strip invisible chars (ZWSP, ZWNJ, soft hyphen, etc.)
+  → NFKD decompose (fullwidth → ASCII, precomposed → base + combining)
+  → strip combining marks (diacritics)
   → lowercase (locale-aware: "tr", "en", "es", "de")
+  → Cyrillic confusable → Latin (а→a, с→c, е→e, ...)
   → char folding (language-specific: İ→i, ñ→n, ß→ss, ä→a, ...)
   → number expansion (optional, e.g. Turkish: s2k → sikik)
   → leet speak decode (0→o, 1→i, @→a, $→s, ...)
@@ -182,8 +212,8 @@ terlik.js ships with a **deliberately narrow dictionary** — the goal is to **m
 
 | Language | Status | Roots | Explicit Variants | Suffixes | Whitelist | Effective Forms |
 |---|---|---|---|---|---|---|
-| Turkish | Flagship | 39 | 115 | 83 | 67 | ~3,000+ |
-| English | Full | 56 | 185 | 9 | 96 | ~2,000+ |
+| Turkish | Flagship | 39 | 101 | 83 | 77 | ~3,000+ |
+| English | Full | 56 | 200 | 9 | 96 | ~2,000+ |
 | Spanish | Community | 29 | 101 | 13 | 21 | ~500+ |
 | German | Community | 28 | 67 | 8 | 6 | ~300+ |
 
@@ -355,7 +385,12 @@ const terlik = new Terlik({
   maxLength: 10000,              // truncate input beyond this
   backgroundWarmup: false,       // compile patterns in background via setTimeout
   extendDictionary: undefined,   // DictionaryData object to merge with built-in dictionary
+  disableLeetDecode: false,      // skip leet-speak decoding (safety layers remain active)
+  disableCompound: false,        // skip CamelCase decompounding pass
+  minSeverity: undefined,        // "high" | "medium" | "low" — exclude below threshold
+  excludeCategories: undefined,  // ["slur"] — exclude specific categories
 });
+// For per-language import options, see docs/api.md
 ```
 
 ## Detection Modes
@@ -382,6 +417,7 @@ interface MatchResult {
   root: string;       // dictionary root word
   index: number;      // position in original text
   severity: "high" | "medium" | "low";
+  category?: "sexual" | "insult" | "slur" | "general"; // undefined for custom words
   method: "exact" | "pattern" | "fuzzy";
 }
 ```
@@ -472,14 +508,32 @@ const deNormalize = createNormalizer({
 deNormalize("Scheiße"); // "scheisse"
 ```
 
+### `TerlikCore`
+
+Low-level class that accepts a pre-resolved `LanguageConfig` instead of a language string. Used internally by per-language entry points. Useful for custom language configs or advanced tree-shaking scenarios.
+
+> See [Full API Reference](./docs/api.md) for complete documentation including all types, per-call options, and `TerlikCore`.
+
 ## Testing
 
-972 tests covering all built-in languages, 39 Turkish root words, 56 English roots, suffix detection, lazy compilation, multi-language isolation, normalization, fuzzy matching, cleaning, integration, ReDoS hardening, attack surface coverage, external dictionary merging, and edge cases:
+1333 tests covering all built-in languages, 39 Turkish root words, 56 English roots, suffix detection, lazy compilation, multi-language isolation, normalization, fuzzy matching, cleaning, integration, ReDoS hardening, attack surface coverage, external dictionary merging, per-language entry points, and edge cases:
 
 ```bash
 pnpm test          # run once
 pnpm test:watch    # watch mode
 ```
+
+### Synthetic Dataset Testing (SPDG)
+
+The [Synthetic Profanity Dataset Generator](./tools/Synthetic-Profanity-Dataset-Generator/README.md) produces hundreds of randomized evasion patterns (leet speak, zalgo, separators, zero-width chars, unicode homoglyphs, etc.) and tests them against the detection engine with statistical thresholds per difficulty level:
+
+```bash
+pnpm spdg          # generate datasets + run tests (single command)
+pnpm spdg:generate # generate 4-language JSONL datasets only
+pnpm test:spdg     # run SPDG tests only (datasets must exist)
+```
+
+SPDG tests are automatically skipped when dataset files are absent — zero impact on the regular test suite. See [SPDG Automated Test docs](./docs/spdg-automated-test.md) for thresholds, pipeline details, and reference results.
 
 ### Live Test Server
 

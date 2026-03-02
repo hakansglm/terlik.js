@@ -1,200 +1,1000 @@
-{"text":"piece of orgasm","label":1,"root":"orgasm","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"best title brand in market","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"r̊ ̞,̍ḝ̻,̯̬t̵̻,̈̕ã̩̙,̒̄̇ř̩,̷̥̱d̈ head","label":1,"root":"retard","difficulty":"hard","transforms":["separator","zalgo","split"],"category":"positive"}
-{"text":"I went to the store and bought some lasso","label":0,"root":"lasso","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"what the crap","label":1,"root":"crap","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"jjizz you","label":1,"root":"jizz","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
-{"text":"you little skco⁠llob","label":1,"root":"bollocks","difficulty":"hard","transforms":["reverse","zwc"],"category":"positive"}
-{"text":"pucks review and comparison","label":0,"root":"pucks","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the new cassette technology is revolutionary","label":0,"root":"cassette","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"shell delivered on time","label":0,"root":"shell","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the analogy exhibition at the museum was fantastic","label":0,"root":"analogy","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"I bought a analyst today","label":0,"root":"analyst","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"ț̘ìt̴ head","label":1,"root":"tit","difficulty":"hard","transforms":["zalgo"],"category":"positive"}
-{"text":"piece of DYKKeers","label":1,"root":"dyke","difficulty":"extreme","transforms":["case","suffix","charRepeat"],"category":"positive"}
-{"text":"the piston is really nice","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"stupid hookerness","label":1,"root":"hooker","difficulty":"medium","transforms":["suffix"],"category":"positive"}
-{"text":"vgina head","label":1,"root":"vagina","difficulty":"medium","transforms":["vowelDrop"],"category":"positive"}
-{"text":"new lasso model released","label":0,"root":"lasso","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"best helicopter brand in market","label":0,"root":"helicopter","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a dike today","label":0,"root":"dike","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"quality pussyfoot for sale","label":0,"root":"pussyfoot","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"massage information available online","label":0,"root":"massage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the book about scunthorpe was a bestseller","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we studied passenger in science class today","label":0,"root":"passenger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the title exhibition at the museum was fantastic","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the b̋a̍s̤ ̢t̶a̷r̩̤d̊","label":1,"root":"bastard","difficulty":"hard","transforms":["split","zalgo"],"category":"positive"}
+{"text":"JIZZED face","label":1,"root":"jizz","difficulty":"hard","transforms":["suffix","case"],"category":"positive"}
+{"text":"we visited the passenger factory during our trip","label":0,"root":"passenger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend cockroach to everyone","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the therapy exhibition at the museum was fantastic","label":0,"root":"therapy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest titan technology","label":0,"root":"titan","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total s̫̖⁤̢‎c̎​̦‍̣​c̑⁡̱r̗r‎̧‏̲‏r‏̈​̀﻿́r̩⁡̦e⁡̨̕w⁤̡̳̖⁠ș̣̹","label":1,"root":"screw","difficulty":"extreme","transforms":["doubling","suffix","charRepeat","zalgo","zwc"],"category":"positive"}
+{"text":"the therapist is really nice","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I signed up for a therapist workshop next week","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend assessment to everyone","label":0,"root":"assessment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"best classic brand in market","label":0,"root":"classic","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"E̗̩T̷̻A̍̍̍B̑̔̕Ṙ̪̙Ṷ̏T̙S̈A̸M̷̙̏ off","label":1,"root":"masturbate","difficulty":"extreme","transforms":["case","reverse","zalgo","charRepeat"],"category":"positive"}
+{"text":"hell head","label":1,"root":"hell","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"Ɗam ñn off","label":1,"root":"damn","difficulty":"extreme","transforms":["charRepeat","unicode","split"],"category":"positive"}
+{"text":"the argument escalated with helling insults","label":1,"root":"hell","difficulty":"medium","transforms":["suffix"],"category":"positive"}
 {"text":"you little ţuŕd","label":1,"root":"turd","difficulty":"medium","transforms":["case","unicode"],"category":"positive"}
-{"text":"you ppussying","label":1,"root":"pussy","difficulty":"medium","transforms":["suffix","doubling"],"category":"positive"}
-{"text":"you little whrrrrer","label":1,"root":"whore","difficulty":"hard","transforms":["suffix","vowelDrop","charRepeat"],"category":"positive"}
-{"text":"they screamed Ƅ|e|ĺ|⁠|l|e|⁣|n|‌|d at the referee","label":1,"root":"bellend","difficulty":"extreme","transforms":["zwc","unicode","separator"],"category":"positive"}
-{"text":"grasshopper research has made great progress","label":0,"root":"grasshopper","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"quality assume for sale","label":0,"root":"assume","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"you little sreetabrutssssam","label":1,"root":"masturbate","difficulty":"hard","transforms":["suffix","reverse","charRepeat"],"category":"positive"}
-{"text":"you are a skankly","label":1,"root":"skank","difficulty":"easy","transforms":["suffix"],"category":"positive"}
-{"text":"heller tutorial for beginners","label":0,"root":"heller","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"shut the asshole up","label":1,"root":"asshole","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"dumb sluted","label":1,"root":"slut","difficulty":"easy","transforms":["suffix"],"category":"positive"}
-{"text":"tosšeг face","label":1,"root":"tosser","difficulty":"hard","transforms":["unicode"],"category":"positive"}
-{"text":"the documentary about heller was very informative","label":0,"root":"heller","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"dumb jjizz","label":1,"root":"jizz","difficulty":"hard","transforms":["charRepeat"],"category":"positive"}
-{"text":"I bought a rapeseed today","label":0,"root":"rapeseed","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"best analytical brand in market","label":0,"root":"analytical","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"latest cockpit technology","label":0,"root":"cockpit","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"This analog works great","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"someone wrote asshol e in the comments","label":1,"root":"asshole","difficulty":"medium","transforms":["split"],"category":"positive"}
-{"text":"piece of A SssssHLeS","label":1,"root":"asshole","difficulty":"extreme","transforms":["suffix","split","case","vowelDrop","charRepeat"],"category":"positive"}
-{"text":"da mn graffiti was sprayed on the wall","label":1,"root":"damn","difficulty":"medium","transforms":["split"],"category":"positive"}
-{"text":"what the BLoWjOb","label":1,"root":"blowjob","difficulty":"medium","transforms":["case"],"category":"positive"}
-{"text":"you little bollc🚫ks","label":1,"root":"bollocks","difficulty":"hard","transforms":["emojiMix","vowelDrop"],"category":"positive"}
-{"text":"the puck market is growing rapidly worldwide","label":0,"root":"puck","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"we studied assassin in science class today","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"our teacher explained passenger in great detail","label":0,"root":"passenger","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"he called me a or⁡ğ💀‎yy‍у in the game chat","label":1,"root":"orgy","difficulty":"extreme","transforms":["charRepeat","unicode","zwc","emojiMix"],"category":"positive"}
-{"text":"the cockatiel market is growing rapidly worldwide","label":0,"root":"cockatiel","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"class prices are going up","label":0,"root":"class","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"best lasso brand in market","label":0,"root":"lasso","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"what the ṊĨ̥❌g̲̋̍ǵ̙̗ẽ̚R̖̀","label":1,"root":"nigger","difficulty":"hard","transforms":["zalgo","case","emojiMix"],"category":"positive"}
-{"text":"piece of SHIT","label":1,"root":"shit","difficulty":"easy","transforms":["case"],"category":"positive"}
-{"text":"latest corkscrew technology","label":0,"root":"corkscrew","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"absolute KcAbTeW","label":1,"root":"wetback","difficulty":"medium","transforms":["reverse","case"],"category":"positive"}
-{"text":"Grass how to guide","label":0,"root":"grass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"quality titan for sale","label":0,"root":"titan","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"title production increased by twenty percent","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best class recipe","label":0,"root":"class","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ašshollle off","label":1,"root":"asshole","difficulty":"medium","transforms":["unicode","charRepeat"],"category":"positive"}
+{"text":"stupid faggoot","label":1,"root":"faggot","difficulty":"easy","transforms":["doubling"],"category":"positive"}
+{"text":"chink face","label":1,"root":"chink","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"basta  rd you","label":1,"root":"bastard","difficulty":"hard","transforms":["split","doubling"],"category":"positive"}
+{"text":"the player kept saying as5#oll3 to everyone","label":1,"root":"asshole","difficulty":"medium","transforms":["charRepeat","leet"],"category":"positive"}
+{"text":"orgy face","label":1,"root":"orgy","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"this assessment works great","label":0,"root":"assessment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stop being such a j!zz to people","label":1,"root":"jizz","difficulty":"medium","transforms":["leet"],"category":"positive"}
+{"text":"quality assistant for sale","label":0,"root":"assistant","difficulty":"clean","transforms":[],"category":"negative"}
 {"text":"you little Fu😤CkErS","label":1,"root":"fuck","difficulty":"hard","transforms":["suffix","case","emojiMix"],"category":"positive"}
-{"text":"you are a hookerly","label":1,"root":"hooker","difficulty":"medium","transforms":["suffix"],"category":"positive"}
-{"text":"quality drape for sale","label":0,"root":"drape","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"dy ke head","label":1,"root":"dyke","difficulty":"medium","transforms":["split"],"category":"positive"}
-{"text":"title information available online","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"passage delivered on time","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the argument escalated with dickery insults","label":1,"root":"dick","difficulty":"easy","transforms":["suffix"],"category":"positive"}
-{"text":"you are a eһc⁢‎ od","label":1,"root":"douche","difficulty":"extreme","transforms":["zwc","split","unicode","reverse","vowelDrop"],"category":"positive"}
-{"text":"new analyst model released","label":0,"root":"analyst","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"scrappy tutorial for beginners","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"hancock information available online","label":0,"root":"hancock","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"assassinate production increased by twenty percent","label":0,"root":"assassinate","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"someone wrote d`⚠️i`c`k in the comments","label":1,"root":"dick","difficulty":"medium","transforms":["separator","emojiMix"],"category":"positive"}
-{"text":"total assss","label":1,"root":"ass","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
-{"text":"you are a ànăl","label":1,"root":"anal","difficulty":"hard","transforms":["unicode"],"category":"positive"}
-{"text":"hancock prices are going up","label":0,"root":"hancock","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"prick head","label":1,"root":"prick","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"piece of bellnds","label":1,"root":"bellend","difficulty":"hard","transforms":["suffix","vowelDrop"],"category":"positive"}
-{"text":"we visited the pussycat factory during our trip","label":0,"root":"pussycat","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the book about assassin was a bestseller","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"go anal yourself","label":1,"root":"anal","difficulty":"medium","transforms":[],"category":"positive"}
-{"text":"shut the kcabtew up","label":1,"root":"wetback","difficulty":"easy","transforms":["reverse"],"category":"positive"}
-{"text":"p̹̯ů̵s̡š̮̎y̧ face","label":1,"root":"pussy","difficulty":"medium","transforms":["zalgo"],"category":"positive"}
-{"text":"p0rnnnn head","label":1,"root":"porn","difficulty":"hard","transforms":["leet","charRepeat"],"category":"positive"}
-{"text":"cocoon prices are going up","label":0,"root":"cocoon","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"díldo you","label":1,"root":"dildo","difficulty":"easy","transforms":["unicode"],"category":"positive"}
-{"text":"classic production increased by twenty percent","label":0,"root":"classic","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"new passage model released","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"v⁣🤮aginaaaaed off","label":1,"root":"vagina","difficulty":"extreme","transforms":["zwc","suffix","emojiMix","charRepeat"],"category":"positive"}
-{"text":"our teacher explained analysis in great detail","label":0,"root":"analysis","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"The corkscrew exhibition at the museum was fantastic","label":0,"root":"corkscrew","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the new class technology is revolutionary","label":0,"root":"class","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"harass how to guide","label":0,"root":"harass","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"go CцNť yourself","label":1,"root":"cunt","difficulty":"hard","transforms":["unicode","case"],"category":"positive"}
-{"text":"the woodcock is really nice","label":0,"root":"woodcock","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"online trolls keep typing tranny everywhere","label":1,"root":"tranny","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"absolute h‏o⁡ok﻿e⁡ rery","label":1,"root":"hooker","difficulty":"hard","transforms":["zwc","suffix","split"],"category":"positive"}
-{"text":"Cockroach tutorial for beginners","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"what the R;E;T;A;R;D","label":1,"root":"retard","difficulty":"hard","transforms":["separator","case"],"category":"positive"}
-{"text":"go damn yourself","label":1,"root":"damn","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"I signed up for a pussyfoot workshop next week","label":0,"root":"pussyfoot","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"he texted me calling me a O̡̘̠/̻r̵̺/̶̝̄G̰/̱̑̑y̪̕","label":1,"root":"orgy","difficulty":"hard","transforms":["case","separator","zalgo"],"category":"positive"}
-{"text":"they screamed diLDo at the referee","label":1,"root":"dildo","difficulty":"easy","transforms":["case"],"category":"positive"}
-{"text":"hello prices are going up","label":0,"root":"hello","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"piece of neegroers","label":1,"root":"negro","difficulty":"medium","transforms":["doubling","suffix"],"category":"positive"}
-{"text":"the analyst is really nice","label":0,"root":"analyst","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"he texted me calling me a ̐̉sss̤̟i̵̭̇n̓̕e̠̜̒p","label":1,"root":"penis","difficulty":"extreme","transforms":["zalgo","charRepeat","reverse"],"category":"positive"}
-{"text":"best piston brand in market","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"latest asset technology","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the post was full of a⁤ń‍a‍l and hate","label":1,"root":"anal","difficulty":"medium","transforms":["zwc","unicode"],"category":"positive"}
-{"text":"peacock review and comparison","label":0,"root":"peacock","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"piece of shit","label":1,"root":"shit","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"scrappy review and comparison","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"total va6in4","label":1,"root":"vagina","difficulty":"easy","transforms":["leet"],"category":"positive"}
-{"text":"bassist specifications listed below","label":0,"root":"bassist","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"I recommend scunthorpe to everyone","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"total blowjb","label":1,"root":"blowjob","difficulty":"hard","transforms":["charRepeat","vowelDrop"],"category":"positive"}
-{"text":"shut the n⁢ig⁤g⁢er up","label":1,"root":"nigger","difficulty":"easy","transforms":["zwc"],"category":"positive"}
-{"text":"corkscrew information available online","label":0,"root":"corkscrew","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"you little a/ /s/🤬s","label":1,"root":"ass","difficulty":"extreme","transforms":["split","separator","emojiMix"],"category":"positive"}
-{"text":"shut the erohw up","label":1,"root":"whore","difficulty":"medium","transforms":["reverse"],"category":"positive"}
-{"text":"best buckle brand in market","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"tycoon delivered on time","label":0,"root":"tycoon","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"new document model released","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"go ѡeţbbacк yourself","label":1,"root":"wetback","difficulty":"medium","transforms":["doubling","unicode"],"category":"positive"}
-{"text":"title tutorial for beginners","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"best assembly brand in market","label":0,"root":"assembly","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the analysis is really nice","label":0,"root":"analysis","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"assistant tutorial for beginners","label":0,"root":"assistant","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"I went to the store and bought some classify","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"quality cockroach for sale","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"stupid porn","label":1,"root":"porn","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"the assist exhibition at the museum was fantastic","label":0,"root":"assist","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"shut the eeeekyd up","label":1,"root":"dyke","difficulty":"medium","transforms":["charRepeat","reverse"],"category":"positive"}
-{"text":"dumb ƥïś⁡s","label":1,"root":"piss","difficulty":"medium","transforms":["zwc","unicode"],"category":"positive"}
-{"text":"stupid fa6g0ters","label":1,"root":"faggot","difficulty":"hard","transforms":["leet","suffix"],"category":"positive"}
-{"text":"shut the c̻h̤̗̐ǐ̧̋n̴̊̚k̸̸̕ up","label":1,"root":"chink","difficulty":"easy","transforms":["zalgo"],"category":"positive"}
-{"text":"the argument escalated with fggtnnnnss insults","label":1,"root":"faggot","difficulty":"hard","transforms":["suffix","vowelDrop","charRepeat"],"category":"positive"}
-{"text":"our teacher explained grape in great detail","label":0,"root":"grape","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"I bought a therapist today","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"we studied assembly in science class today","label":0,"root":"assembly","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the documentary about grass was very informative","label":0,"root":"grass","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"dumb S-к-A-N- -ķ-n-e-s-s","label":1,"root":"skank","difficulty":"extreme","transforms":["split","case","unicode","suffix","separator"],"category":"positive"}
-{"text":"cockney specifications listed below","label":0,"root":"cockney","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"k‏cid head","label":1,"root":"dick","difficulty":"extreme","transforms":["reverse","zwc"],"category":"positive"}
-{"text":"piece of scmbaging","label":1,"root":"scumbag","difficulty":"medium","transforms":["suffix","vowelDrop"],"category":"positive"}
-{"text":"Shuttlecock how to guide","label":0,"root":"shuttlecock","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"that аnaľ remark was totally uncalled for","label":1,"root":"anal","difficulty":"medium","transforms":["unicode"],"category":"positive"}
-{"text":"k⁠ike face","label":1,"root":"kike","difficulty":"medium","transforms":["zwc"],"category":"positive"}
-{"text":"classic how to guide","label":0,"root":"classic","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"document tutorial for beginners","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"I signed up for a hancock workshop next week","label":0,"root":"hancock","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"stupid g`o`o`k","label":1,"root":"gook","difficulty":"medium","transforms":["separator"],"category":"positive"}
-{"text":"dumb bitch","label":1,"root":"bitch","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"dike delivered on time","label":0,"root":"dike","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best assist recipe","label":0,"root":"assist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the documentary about dike was very informative","label":0,"root":"dike","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid shiiiters","label":1,"root":"shit","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"quality passage for sale","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the mas7urba7e","label":1,"root":"masturbate","difficulty":"easy","transforms":["leet"],"category":"positive"}
+{"text":"the review was just pure bitch language","label":1,"root":"bitch","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"vandyke research has made great progress","label":0,"root":"vandyke","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go ys😡sup yourself","label":1,"root":"pussy","difficulty":"medium","transforms":["reverse","emojiMix"],"category":"positive"}
+{"text":"quality assassinate for sale","label":0,"root":"assassinate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of A SssssHLeS","label":1,"root":"asshole","difficulty":"extreme","transforms":["suffix","split","case","vowelDrop","charRepeat"],"category":"positive"}
+{"text":"grasshopper tutorial for beginners","label":0,"root":"grasshopper","difficulty":"clean","transforms":[],"category":"negative"}
 {"text":"r etard graffiti was sprayed on the wall","label":1,"root":"retard","difficulty":"hard","transforms":["split"],"category":"positive"}
-{"text":"quality assassin for sale","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the review was just pure bollockksing language","label":1,"root":"bollocks","difficulty":"medium","transforms":["charRepeat","suffix"],"category":"positive"}
-{"text":"shut the ShiT up","label":1,"root":"shit","difficulty":"easy","transforms":["case"],"category":"positive"}
-{"text":"absolute t̼̒̇i̎h̐ș̼́ǐ̢̥n̡g̎","label":1,"root":"shit","difficulty":"hard","transforms":["reverse","suffix","zalgo"],"category":"positive"}
-{"text":"I went to the store and bought some document","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"go c👎um yourself","label":1,"root":"cum","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
-{"text":"the post was full of p̝̱e̸̎n̴̼̮i̦̋̋s̻ and hate","label":1,"root":"penis","difficulty":"easy","transforms":["zalgo"],"category":"positive"}
-{"text":"the documentary about eggshell was very informative","label":0,"root":"eggshell","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"latest title technology","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the documentary about assistant was very informative","label":0,"root":"assistant","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"quality asset for sale","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"kc🤬a‍b‌t⁣ewly off","label":1,"root":"wetback","difficulty":"extreme","transforms":["reverse","zwc","emojiMix","suffix"],"category":"positive"}
-{"text":"cockpit review and comparison","label":0,"root":"cockpit","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"absolute POrN","label":1,"root":"porn","difficulty":"easy","transforms":["case"],"category":"positive"}
-{"text":"total nemes","label":1,"root":"semen","difficulty":"easy","transforms":["reverse"],"category":"positive"}
-{"text":"b⁠ell⁢e‏n​d off","label":1,"root":"bellend","difficulty":"medium","transforms":["zwc"],"category":"positive"}
-{"text":"that k_oo_o_g remark was totally uncalled for","label":1,"root":"gook","difficulty":"extreme","transforms":["separator","charRepeat","reverse"],"category":"positive"}
-{"text":"The cocoon is really nice","label":0,"root":"cocoon","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"piece of s̩̬̚e̒m̲e̒n̙̔̇","label":1,"root":"semen","difficulty":"medium","transforms":["zalgo"],"category":"positive"}
-{"text":"absolute damn","label":1,"root":"damn","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"S‎l ‏u⁤T off","label":1,"root":"slut","difficulty":"hard","transforms":["split","case","zwc"],"category":"positive"}
-{"text":"what the г-ä-ƥ-e","label":1,"root":"rape","difficulty":"hard","transforms":["separator","unicode"],"category":"positive"}
-{"text":"nutshell delivered on time","label":0,"root":"nutshell","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"piston information available online","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"our teacher explained assess in great detail","label":0,"root":"assess","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"penistone production increased by twenty percent","label":0,"root":"penistone","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"turd head","label":1,"root":"turd","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"someone wrote bastard in the comments","label":1,"root":"bastard","difficulty":"easy","transforms":[],"category":"positive"}
-{"text":"cockatiel prices are going up","label":0,"root":"cockatiel","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"total ș̝̥p̵i̜ĩc̶̳̘","label":1,"root":"spic","difficulty":"medium","transforms":["doubling","zalgo"],"category":"positive"}
-{"text":"the message contained b'a's't'a 'r'd language","label":1,"root":"bastard","difficulty":"medium","transforms":["separator","split"],"category":"positive"}
+{"text":"The documentary about therapist was very informative","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"he called me a nigger in the game chat","label":1,"root":"nigger","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"go turd yourself","label":1,"root":"turd","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"absolute yr e⚠️ressoţ","label":1,"root":"tosser","difficulty":"extreme","transforms":["suffix","unicode","reverse","emojiMix","split"],"category":"positive"}
+{"text":"stupid porn","label":1,"root":"porn","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"I signed up for a embassy workshop next week","label":0,"root":"embassy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cumery you","label":1,"root":"cum","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"they screamed coc🤬k at the referee","label":1,"root":"cock","difficulty":"easy","transforms":["emojiMix"],"category":"positive"}
+{"text":"Scunthorpe tutorial for beginners","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"classify prices are going up","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest vandyke technology","label":0,"root":"vandyke","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the DoUcHe","label":1,"root":"douche","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"what the BLoWjOb","label":1,"root":"blowjob","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"Therapist specifications listed below","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"quality title for sale","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the argument escalated with dickery insults","label":1,"root":"dick","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"dumb n*⁣e*‏g*r⁡*⁤o","label":1,"root":"negro","difficulty":"medium","transforms":["separator","zwc"],"category":"positive"}
+{"text":"total w#ore","label":1,"root":"whore","difficulty":"easy","transforms":["leet"],"category":"positive"}
+{"text":"you are a d̫̺̐y̶̅k̭ĕ̫̲","label":1,"root":"dyke","difficulty":"medium","transforms":["zalgo"],"category":"positive"}
+{"text":"Class how to guide","label":0,"root":"class","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"this woodcock works great","label":0,"root":"woodcock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid p'o'ŕ'ň","label":1,"root":"porn","difficulty":"extreme","transforms":["unicode","separator"],"category":"positive"}
+{"text":"I recommend scunthorpe to everyone","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of räpē","label":1,"root":"rape","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"new analyst model released","label":0,"root":"analyst","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cocktail delivered on time","label":0,"root":"cocktail","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the documentary about assessment was very informative","label":0,"root":"assessment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of D̷̫̺ḭ̶̃L̞Ďo⚠️̸̣̊","label":1,"root":"dildo","difficulty":"hard","transforms":["case","zalgo","emojiMix"],"category":"positive"}
+{"text":"assist how to guide","label":0,"root":"assist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the #.0.o.k.3..r up","label":1,"root":"hooker","difficulty":"hard","transforms":["leet","separator","doubling"],"category":"positive"}
+{"text":"Buckle prices are going up","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a eggshell today","label":0,"root":"eggshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little t̷̍́1̷̳̔t̴̳̱","label":1,"root":"tit","difficulty":"medium","transforms":["leet","zalgo"],"category":"positive"}
+{"text":"the documentary about tycoon was very informative","label":0,"root":"tycoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute sppc","label":1,"root":"spic","difficulty":"hard","transforms":["vowelDrop","charRepeat"],"category":"positive"}
+{"text":"anal face","label":1,"root":"anal","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"classify production increased by twenty percent","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a ànăl","label":1,"root":"anal","difficulty":"hard","transforms":["unicode"],"category":"positive"}
+{"text":"hll head","label":1,"root":"hell","difficulty":"medium","transforms":["vowelDrop"],"category":"positive"}
+{"text":"that puss🤮y remark was totally uncalled for","label":1,"root":"pussy","difficulty":"easy","transforms":["emojiMix"],"category":"positive"}
+{"text":"I recommend peacock to everyone","label":0,"root":"peacock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid twat","label":1,"root":"twat","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"shut the ass👎sssholees up","label":1,"root":"asshole","difficulty":"hard","transforms":["suffix","charRepeat","emojiMix"],"category":"positive"}
+{"text":"latest asset technology","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"hassle information available online","label":0,"root":"hassle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a yyygřo","label":1,"root":"orgy","difficulty":"extreme","transforms":["unicode","charRepeat","reverse"],"category":"positive"}
+{"text":"lasso review and comparison","label":0,"root":"lasso","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"wank face","label":1,"root":"wank","difficulty":"hard","transforms":[],"category":"positive"}
+{"text":"you are a sscrew","label":1,"root":"screw","difficulty":"easy","transforms":["doubling"],"category":"positive"}
+{"text":"you little gookker","label":1,"root":"gook","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"we studied pussycat in science class today","label":0,"root":"pussycat","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"classify specifications listed below","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the new dike technology is revolutionary","label":0,"root":"dike","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the passive market is growing rapidly worldwide","label":0,"root":"passive","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"prick is not an appropriate word to use","label":1,"root":"prick","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"shut the c̻h̤̗̐ǐ̧̋n̴̊̚k̸̸̕ up","label":1,"root":"chink","difficulty":"easy","transforms":["zalgo"],"category":"positive"}
+{"text":"best classify brand in market","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the cocked exhibition at the museum was fantastic","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute р+ó+г+ń","label":1,"root":"porn","difficulty":"hard","transforms":["separator","unicode"],"category":"positive"}
+{"text":"my grandmother makes the best raccoon recipe","label":0,"root":"raccoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute kсAbteѡ","label":1,"root":"wetback","difficulty":"extreme","transforms":["case","unicode","reverse"],"category":"positive"}
+{"text":"stupid k*C*o*C😈ness","label":1,"root":"cock","difficulty":"extreme","transforms":["case","separator","reverse","suffix","emojiMix"],"category":"positive"}
+{"text":"woodcock how to guide","label":0,"root":"woodcock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the wetback up","label":1,"root":"wetback","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"the player kept saying damn to everyone","label":1,"root":"damn","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"you little KnIhC","label":1,"root":"chink","difficulty":"medium","transforms":["case","reverse"],"category":"positive"}
+{"text":"absolute d|\udca9\ud83dr|a|t|s|a|b","label":1,"root":"bastard","difficulty":"extreme","transforms":["separator","emojiMix","reverse"],"category":"positive"}
+{"text":"you little kcuf","label":1,"root":"fuck","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"go DdDyKe yourself","label":1,"root":"dyke","difficulty":"hard","transforms":["charRepeat","case"],"category":"positive"}
+{"text":"dumb ch﻿inkness","label":1,"root":"chink","difficulty":"hard","transforms":["zwc","suffix"],"category":"positive"}
+{"text":"the asset exhibition at the museum was fantastic","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"fu‏ck you","label":1,"root":"fuck","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"our teacher explained scrappy in great detail","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"document how to guide","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"best pussycat brand in market","label":0,"root":"pussycat","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we visited the buckle factory during our trip","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"d_a_m_n face","label":1,"root":"damn","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"s̔l̥̓ų̳̊t̘7̪̐̚3̆s$̖̔ off","label":1,"root":"slut","difficulty":"extreme","transforms":["doubling","suffix","zalgo","charRepeat","leet"],"category":"positive"}
+{"text":"our teacher explained seashell in great detail","label":0,"root":"seashell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Screwdriver tutorial for beginners","label":0,"root":"screwdriver","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the damn","label":1,"root":"damn","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"absolute whore","label":1,"root":"whore","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"new asset model released","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"hello how to guide","label":0,"root":"hello","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go słut yourself","label":1,"root":"slut","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"prickly tutorial for beginners","label":0,"root":"prickly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the scrape festival attracted thousands of visitors","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stop being such a traaanny to people","label":1,"root":"tranny","difficulty":"easy","transforms":["charRepeat"],"category":"positive"}
 {"text":"shut the ccoonery up","label":1,"root":"coon","difficulty":"medium","transforms":["doubling","suffix"],"category":"positive"}
-{"text":"I recommend compass to everyone","label":0,"root":"compass","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the titan is really nice","label":0,"root":"titan","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the analogy festival attracted thousands of visitors","label":0,"root":"analogy","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the helium is really nice","label":0,"root":"helium","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"piece of PI🔥\udd25SsS","label":1,"root":"piss","difficulty":"extreme","transforms":["suffix","case","emojiMix","doubling"],"category":"positive"}
-{"text":"I went to the store and bought some massive","label":0,"root":"massive","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"quality shell for sale","label":0,"root":"shell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little b+i+t+c+h","label":1,"root":"bitch","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"cockroach review and comparison","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little bu663r","label":1,"root":"bugger","difficulty":"medium","transforms":["leet"],"category":"positive"}
+{"text":"quality woodcock for sale","label":0,"root":"woodcock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the titan festival attracted thousands of visitors","label":0,"root":"titan","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of neegroers","label":1,"root":"negro","difficulty":"medium","transforms":["doubling","suffix"],"category":"positive"}
+{"text":"rape is not an appropriate word to use","label":1,"root":"rape","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"assess review and comparison","label":0,"root":"assess","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the therapist is really nice","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a bombshell today","label":0,"root":"bombshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the hookrs up","label":1,"root":"hooker","difficulty":"medium","transforms":["suffix","vowelDrop"],"category":"positive"}
+{"text":"SsA face","label":1,"root":"ass","difficulty":"hard","transforms":["reverse","case"],"category":"positive"}
+{"text":"I signed up for a shell workshop next week","label":0,"root":"shell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new prickly model released","label":0,"root":"prickly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Latest scrap technology","label":0,"root":"scrap","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the peacock is really nice","label":0,"root":"peacock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little k⁢o⁤o‍og","label":1,"root":"gook","difficulty":"hard","transforms":["doubling","zwc","reverse"],"category":"positive"}
+{"text":"dumb re t👊ard","label":1,"root":"retard","difficulty":"hard","transforms":["emojiMix","split"],"category":"positive"}
+{"text":"the pussywillow festival attracted thousands of visitors","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a nutshell today","label":0,"root":"nutshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I signed up for a cockatoo workshop next week","label":0,"root":"cockatoo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go vvvagina yourself","label":1,"root":"vagina","difficulty":"easy","transforms":["charRepeat"],"category":"positive"}
+{"text":"he texted me calling me a eţabrutsam","label":1,"root":"masturbate","difficulty":"hard","transforms":["unicode","reverse"],"category":"positive"}
+{"text":"what the crap","label":1,"root":"crap","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"cocked delivered on time","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"quality cockpit for sale","label":0,"root":"cockpit","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of O̔r̷̍G̎̀y̫̟","label":1,"root":"orgy","difficulty":"medium","transforms":["zalgo","case"],"category":"positive"}
+{"text":"Screwdriver tutorial for beginners","label":0,"root":"screwdriver","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you C👊rpNeSs","label":1,"root":"crap","difficulty":"extreme","transforms":["suffix","charRepeat","case","vowelDrop","emojiMix"],"category":"positive"}
+{"text":"r apeee you","label":1,"root":"rape","difficulty":"medium","transforms":["charRepeat","split"],"category":"positive"}
+{"text":"go ̵̣̌ỷ̫n̰̱n̋r̋t yourself","label":1,"root":"tranny","difficulty":"extreme","transforms":["vowelDrop","zalgo","reverse"],"category":"positive"}
+{"text":"pucks prices are going up","label":0,"root":"pucks","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the message contained coóń language","label":1,"root":"coon","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"latest piston technology","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ss pic you","label":1,"root":"spic","difficulty":"extreme","transforms":["charRepeat","split"],"category":"positive"}
+{"text":"the new bombshell technology is revolutionary","label":0,"root":"bombshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid kcabtew","label":1,"root":"wetback","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"tosser face","label":1,"root":"tosser","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"blowjjjjobed head","label":1,"root":"blowjob","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"bùgɡeг you","label":1,"root":"bugger","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"the analogy industry creates many jobs","label":0,"root":"analogy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"they screamed twat at the referee","label":1,"root":"twat","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"you little whrrrrer","label":1,"root":"whore","difficulty":"hard","transforms":["suffix","vowelDrop","charRepeat"],"category":"positive"}
+{"text":"woodcock review and comparison","label":0,"root":"woodcock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb C̘̀:̧o̢̔̏:̼̒̂o̓̊:̙̏̌N̊","label":1,"root":"coon","difficulty":"extreme","transforms":["separator","zalgo","case"],"category":"positive"}
+{"text":"latest titillate technology","label":0,"root":"titillate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little gookeeers","label":1,"root":"gook","difficulty":"hard","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"w|h |o|r|e you","label":1,"root":"whore","difficulty":"extreme","transforms":["separator","split"],"category":"positive"}
+{"text":"whore you","label":1,"root":"whore","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"shut the kcabtew up","label":1,"root":"wetback","difficulty":"easy","transforms":["reverse"],"category":"positive"}
+{"text":"the review was just pure ani\udd2c\ud83egav language","label":1,"root":"vagina","difficulty":"hard","transforms":["emojiMix","reverse"],"category":"positive"}
+{"text":"da mn graffiti was sprayed on the wall","label":1,"root":"damn","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"go to55er yourself","label":1,"root":"tosser","difficulty":"medium","transforms":["leet"],"category":"positive"}
+{"text":"this assessment works great","label":0,"root":"assessment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go c🤬hhhhinking yourself","label":1,"root":"chink","difficulty":"extreme","transforms":["suffix","emojiMix","charRepeat"],"category":"positive"}
+{"text":"I went to the store and bought some woodcock","label":0,"root":"woodcock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"compass specifications listed below","label":0,"root":"compass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"tosšeг face","label":1,"root":"tosser","difficulty":"hard","transforms":["unicode"],"category":"positive"}
+{"text":"I recommend hassle to everyone","label":0,"root":"hassle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest buckle technology","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"buckle specifications listed below","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ԁ\\̄\\̳\\o\\̞\\̻\\̭\\u\\̓\\̙\\c\\̱\\̺\\̬\\h\\̳\\̏\\e\\̞\\̎\\̸ you","label":1,"root":"douche","difficulty":"extreme","transforms":["unicode","zalgo","separator"],"category":"positive"}
+{"text":"this shuttlecock works great","label":0,"root":"shuttlecock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of AS 👎​S","label":1,"root":"ass","difficulty":"extreme","transforms":["split","case","zwc","emojiMix"],"category":"positive"}
+{"text":"dumb fuck","label":1,"root":"fuck","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"best cockroach brand in market","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we studied analyze in science class today","label":0,"root":"analyze","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go CцNť yourself","label":1,"root":"cunt","difficulty":"hard","transforms":["unicode","case"],"category":"positive"}
+{"text":"he texted me calling me a şkcoĺloƄ","label":1,"root":"bollocks","difficulty":"medium","transforms":["unicode","reverse"],"category":"positive"}
+{"text":"quality corkscrew for sale","label":0,"root":"corkscrew","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"our teacher explained hassle in great detail","label":0,"root":"hassle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"he texted me calling me a çOoո","label":1,"root":"coon","difficulty":"medium","transforms":["case","unicode"],"category":"positive"}
+{"text":"penistone how to guide","label":0,"root":"penistone","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a analog today","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ɓelľêndlý head","label":1,"root":"bellend","difficulty":"hard","transforms":["suffix","unicode"],"category":"positive"}
+{"text":"you little pissss","label":1,"root":"piss","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"what the odlidnesss","label":1,"root":"dildo","difficulty":"extreme","transforms":["reverse","suffix","charRepeat"],"category":"positive"}
+{"text":"S‎l ‏u⁤T off","label":1,"root":"slut","difficulty":"hard","transforms":["split","case","zwc"],"category":"positive"}
+{"text":"total tit","label":1,"root":"tit","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"the argument escalated with nma4@@der insults","label":1,"root":"damn","difficulty":"extreme","transforms":["reverse","suffix","charRepeat","leet","doubling"],"category":"positive"}
+{"text":"we studied assess in science class today","label":0,"root":"assess","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best classroom recipe","label":0,"root":"classroom","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"grape production increased by twenty percent","label":0,"root":"grape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total ccock","label":1,"root":"cock","difficulty":"medium","transforms":["doubling"],"category":"positive"}
+{"text":"the book about document was a bestseller","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"that jzzness remark was totally uncalled for","label":1,"root":"jizz","difficulty":"medium","transforms":["suffix","vowelDrop"],"category":"positive"}
+{"text":"cassette delivered on time","label":0,"root":"cassette","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"buckle specifications listed below","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a eһc⁢‎ od","label":1,"root":"douche","difficulty":"extreme","transforms":["zwc","split","unicode","reverse","vowelDrop"],"category":"positive"}
+{"text":"the argument escalated with b;̱;̔;o;̫;̨;l;̘;̲;l;̻;o;̸;̼;c;̪;̐;k;̄;s;̕;l;̓;y;̐;̕ insults","label":1,"root":"bollocks","difficulty":"hard","transforms":["suffix","zalgo","separator"],"category":"positive"}
+{"text":"online trolls keep typing crppp everywhere","label":1,"root":"crap","difficulty":"medium","transforms":["vowelDrop","charRepeat"],"category":"positive"}
+{"text":"new helmet model released","label":0,"root":"helmet","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"they screamed anigaav at the referee","label":1,"root":"vagina","difficulty":"medium","transforms":["doubling","reverse"],"category":"positive"}
+{"text":"best classroom brand in market","label":0,"root":"classroom","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"fаğgot is not an appropriate word to use","label":1,"root":"faggot","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"piece of scmbaging","label":1,"root":"scumbag","difficulty":"medium","transforms":["suffix","vowelDrop"],"category":"positive"}
+{"text":"I bought a prickly today","label":0,"root":"prickly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"best shitake brand in market","label":0,"root":"shitake","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"why would you call someone a pennnnis","label":1,"root":"penis","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"you little BėĽlEnD","label":1,"root":"bellend","difficulty":"medium","transforms":["unicode","case"],"category":"positive"}
+{"text":"pussyer off","label":1,"root":"pussy","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"passive specifications listed below","label":0,"root":"passive","difficulty":"clean","transforms":[],"category":"negative"}
 {"text":"F,ä,G,G,O,T is not an appropriate word to use","label":1,"root":"faggot","difficulty":"extreme","transforms":["case","separator","unicode"],"category":"positive"}
-{"text":"quality hancock for sale","label":0,"root":"hancock","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"online trolls keep typing š̂ĉ̼̔r̴̮̈ee̐̄w̠̤es everywhere","label":1,"root":"screw","difficulty":"hard","transforms":["zalgo","suffix","charRepeat"],"category":"positive"}
-{"text":"best harass brand in market","label":0,"root":"harass","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"This therapist works great","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"the pussyfoot is really nice","label":0,"root":"pussyfoot","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb c*r*4*p","label":1,"root":"crap","difficulty":"medium","transforms":["leet","separator"],"category":"positive"}
+{"text":"new document model released","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little porn","label":1,"root":"porn","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"Best assassin brand in market","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the book about analyst was a bestseller","label":0,"root":"analyst","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cassette prices are going up","label":0,"root":"cassette","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"t﻿u⁠rd you","label":1,"root":"turd","difficulty":"easy","transforms":["zwc"],"category":"positive"}
+{"text":"pissness off","label":1,"root":"piss","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"cůnt off","label":1,"root":"cunt","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"absolute wetback","label":1,"root":"wetback","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"b⁠ell⁢e‏n​d off","label":1,"root":"bellend","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"tycoon how to guide","label":0,"root":"tycoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"KcAb Tee😡W is not an appropriate word to use","label":1,"root":"wetback","difficulty":"extreme","transforms":["case","split","doubling","reverse","emojiMix"],"category":"positive"}
+{"text":"new helium model released","label":0,"root":"helium","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we visited the cassette factory during our trip","label":0,"root":"cassette","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you w⁤e⁣tb​a⁤ck","label":1,"root":"wetback","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"PRŔÎCĶ off","label":1,"root":"prick","difficulty":"hard","transforms":["doubling","unicode","case"],"category":"positive"}
+{"text":"the pussywillow industry creates many jobs","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cassette information available online","label":0,"root":"cassette","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"vgina head","label":1,"root":"vagina","difficulty":"medium","transforms":["vowelDrop"],"category":"positive"}
+{"text":"latest bombshell technology","label":0,"root":"bombshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"tran nny you","label":1,"root":"tranny","difficulty":"medium","transforms":["doubling","split"],"category":"positive"}
+{"text":"dickens specifications listed below","label":0,"root":"dickens","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a hooкer","label":1,"root":"hooker","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"I bought a assassin today","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the post was full of anal and hate","label":1,"root":"anal","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"quality scrappy for sale","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"embassy tutorial for beginners","label":0,"root":"embassy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute wW/E/T/b/a/C/K","label":1,"root":"wetback","difficulty":"extreme","transforms":["separator","doubling","case"],"category":"positive"}
+{"text":"best cockroach brand in market","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of yŕeeţaɓruuùū👎tѕaм","label":1,"root":"masturbate","difficulty":"extreme","transforms":["suffix","charRepeat","reverse","unicode","emojiMix"],"category":"positive"}
+{"text":"we studied scrape in science class today","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a kikeeee","label":1,"root":"kike","difficulty":"easy","transforms":["charRepeat"],"category":"positive"}
+{"text":"dumb Bi tch","label":1,"root":"bitch","difficulty":"hard","transforms":["split","case"],"category":"positive"}
+{"text":"go SlUter yourself","label":1,"root":"slut","difficulty":"medium","transforms":["case","suffix"],"category":"positive"}
+{"text":"you little sreetabrutssssam","label":1,"root":"masturbate","difficulty":"hard","transforms":["suffix","reverse","charRepeat"],"category":"positive"}
+{"text":"you ḿ̶̕m̴ş̖̐ǎǧ̴̉ṛ̂̋ȯ̜̫","label":1,"root":"orgasm","difficulty":"hard","transforms":["doubling","reverse","zalgo"],"category":"positive"}
+{"text":"go twat yourself","label":1,"root":"twat","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"asset delivered on time","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total bitch","label":1,"root":"bitch","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"absolute lleh","label":1,"root":"hell","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"ŕÊ\udd95\ud83dMsAGRõ face","label":1,"root":"orgasm","difficulty":"extreme","transforms":["suffix","unicode","emojiMix","reverse","case"],"category":"positive"}
+{"text":"shut the asshole up","label":1,"root":"asshole","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"go p̣̭u̠̼̔s̖̖s̢̍̃y̼ yourself","label":1,"root":"pussy","difficulty":"hard","transforms":["zalgo","doubling"],"category":"positive"}
+{"text":"p̴̓̔ǔ̦s̓s̪̍̏y̙̋ ̞̕y̋̃ off","label":1,"root":"pussy","difficulty":"hard","transforms":["doubling","split","zalgo"],"category":"positive"}
+{"text":"piece of bellnds","label":1,"root":"bellend","difficulty":"hard","transforms":["suffix","vowelDrop"],"category":"positive"}
+{"text":"WETBaCkEr face","label":1,"root":"wetback","difficulty":"hard","transforms":["suffix","case"],"category":"positive"}
+{"text":"rapeseed delivered on time","label":0,"root":"rapeseed","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the post was full of pi ss and hate","label":1,"root":"piss","difficulty":"easy","transforms":["split"],"category":"positive"}
+{"text":"ōrgasm you","label":1,"root":"orgasm","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"no occ face","label":1,"root":"coon","difficulty":"hard","transforms":["reverse","split","doubling"],"category":"positive"}
+{"text":"best shitake brand in market","label":0,"root":"shitake","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new scrap model released","label":0,"root":"scrap","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"he texted me calling me a mastùrbbately","label":1,"root":"masturbate","difficulty":"hard","transforms":["suffix","unicode","doubling"],"category":"positive"}
+{"text":"pussycat tutorial for beginners","label":0,"root":"pussycat","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb crapers","label":1,"root":"crap","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"scunthorpe how to guide","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cockroach tutorial for beginners","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a an al","label":1,"root":"anal","difficulty":"hard","transforms":["split"],"category":"positive"}
+{"text":"stupid hookerness","label":1,"root":"hooker","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"I recommend pussywillow to everyone","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"kike you","label":1,"root":"kike","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"latest cocked technology","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid с̲̎̒o̺̮̳c̣̼k̻","label":1,"root":"cock","difficulty":"medium","transforms":["unicode","zalgo"],"category":"positive"}
+{"text":"lasso information available online","label":0,"root":"lasso","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"scumbag head","label":1,"root":"scumbag","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"I went to the store and bought some scunthorpe","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little ńiğğer","label":1,"root":"nigger","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"you bellend","label":1,"root":"bellend","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"new classify model released","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the cockpit is really nice","label":0,"root":"cockpit","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the ePaR up","label":1,"root":"rape","difficulty":"extreme","transforms":["case","reverse"],"category":"positive"}
+{"text":"quality cocked for sale","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"New titillate model released","label":0,"root":"titillate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"We studied buckle in science class today","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dike review and comparison","label":0,"root":"dike","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Best classic brand in market","label":0,"root":"classic","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb blowjo8neee5s","label":1,"root":"blowjob","difficulty":"hard","transforms":["suffix","charRepeat","leet"],"category":"positive"}
+{"text":"m$7r8ate you","label":1,"root":"masturbate","difficulty":"medium","transforms":["leet","vowelDrop"],"category":"positive"}
+{"text":"rapeseed prices are going up","label":0,"root":"rapeseed","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"vandyke tutorial for beginners","label":0,"root":"vandyke","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"scrape specifications listed below","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"assignment review and comparison","label":0,"root":"assignment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"our teacher explained assessment in great detail","label":0,"root":"assessment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"he texted me calling me a ̐̉sss̤̟i̵̭̇n̓̕e̠̜̒p","label":1,"root":"penis","difficulty":"extreme","transforms":["zalgo","charRepeat","reverse"],"category":"positive"}
+{"text":"you little skco⁠llob","label":1,"root":"bollocks","difficulty":"hard","transforms":["reverse","zwc"],"category":"positive"}
+{"text":"latest dickens technology","label":0,"root":"dickens","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"bassist specifications listed below","label":0,"root":"bassist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"bugger face","label":1,"root":"bugger","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"new analytical model released","label":0,"root":"analytical","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"peacock review and comparison","label":0,"root":"peacock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the a`s`s`h`o` `l`e up","label":1,"root":"asshole","difficulty":"medium","transforms":["split","separator"],"category":"positive"}
+{"text":"you are a scrwwwws","label":1,"root":"screw","difficulty":"hard","transforms":["suffix","charRepeat","vowelDrop"],"category":"positive"}
+{"text":"I bought a scunthorpe today","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"kc🤬a‍b‌t⁣ewly off","label":1,"root":"wetback","difficulty":"extreme","transforms":["reverse","zwc","emojiMix","suffix"],"category":"positive"}
+{"text":"Latest classify technology","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the A̧̮‎̼̟S̵S̜⁢̧H̻ O̬L̼̹̔ up","label":1,"root":"asshole","difficulty":"extreme","transforms":["zwc","zalgo","vowelDrop","case","split"],"category":"positive"}
+{"text":"dumb niggerery","label":1,"root":"nigger","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"online trolls keep typing tranny everywhere","label":1,"root":"tranny","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"latest passion technology","label":0,"root":"passion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a cockatoo today","label":0,"root":"cockatoo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb b‌o​ll‎o⁤c‍kss","label":1,"root":"bollocks","difficulty":"medium","transforms":["zwc","suffix"],"category":"positive"}
+{"text":"you little pri c😡ks","label":1,"root":"prick","difficulty":"hard","transforms":["suffix","split","emojiMix"],"category":"positive"}
+{"text":"the assembly is really nice","label":0,"root":"assembly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"our teacher explained cocked in great detail","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
 {"text":"shut the b:u:g:g:e:e:e:r:i:n:g up","label":1,"root":"bugger","difficulty":"hard","transforms":["charRepeat","suffix","separator"],"category":"positive"}
+{"text":"the argument escalated with blowjob insults","label":1,"root":"blowjob","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"I went to the store and bought some scrap","label":0,"root":"scrap","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best helium recipe","label":0,"root":"helium","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the book about hello was a bestseller","label":0,"root":"hello","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new helicopter model released","label":0,"root":"helicopter","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend cockney to everyone","label":0,"root":"cockney","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute beellend","label":1,"root":"bellend","difficulty":"medium","transforms":["doubling"],"category":"positive"}
+{"text":"piece of SHIT","label":1,"root":"shit","difficulty":"easy","transforms":["case"],"category":"positive"}
+{"text":"this piston works great","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"this asset works great","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the dildo","label":1,"root":"dildo","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"this cocoon works great","label":0,"root":"cocoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend assembly to everyone","label":0,"root":"assembly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"to sser face","label":1,"root":"tosser","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"stupid waankes","label":1,"root":"wank","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"this scrape works great","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the argument escalated with 9o0k insults","label":1,"root":"gook","difficulty":"medium","transforms":["leet"],"category":"positive"}
+{"text":"the post was full of retard and hate","label":1,"root":"retard","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"a̟̒ş̇̌̕﻿̣̇s̭ off","label":1,"root":"ass","difficulty":"extreme","transforms":["zwc","zalgo","unicode"],"category":"positive"}
+{"text":"we studied puck in science class today","label":0,"root":"puck","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the scrappy is really nice","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"online trolls keep typing cock everywhere","label":1,"root":"cock","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"you little d~a~m~n~s","label":1,"root":"damn","difficulty":"medium","transforms":["suffix","separator"],"category":"positive"}
+{"text":"harass prices are going up","label":0,"root":"harass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new helmet model released","label":0,"root":"helmet","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"best title brand in market","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"prickly review and comparison","label":0,"root":"prickly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the book about assessment was a bestseller","label":0,"root":"assessment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute h‏o⁡ok﻿e⁡ rery","label":1,"root":"hooker","difficulty":"hard","transforms":["zwc","suffix","split"],"category":"positive"}
+{"text":"7iit off","label":1,"root":"tit","difficulty":"hard","transforms":["doubling","leet"],"category":"positive"}
+{"text":"the new prickly technology is revolutionary","label":0,"root":"prickly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the cum up","label":1,"root":"cum","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"the argument escalated with c̵💩̼m̯̹ insults","label":1,"root":"cum","difficulty":"hard","transforms":["zalgo","emojiMix","vowelDrop"],"category":"positive"}
+{"text":"go anal yourself","label":1,"root":"anal","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"pe3n!s off","label":1,"root":"penis","difficulty":"medium","transforms":["doubling","leet"],"category":"positive"}
+{"text":"the argument escalated with fggtnnnnss insults","label":1,"root":"faggot","difficulty":"hard","transforms":["suffix","vowelDrop","charRepeat"],"category":"positive"}
+{"text":"someone wrote shit in the comments","label":1,"root":"shit","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"The bass is really nice","label":0,"root":"bass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little ̷т̜̉i̷t","label":1,"root":"tit","difficulty":"extreme","transforms":["zalgo","reverse","unicode"],"category":"positive"}
+{"text":"analog research has made great progress","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the message contained dykely language","label":1,"root":"dyke","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"what the сгáp","label":1,"root":"crap","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"best helmet brand in market","label":0,"root":"helmet","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a NIGGGGERly","label":1,"root":"nigger","difficulty":"extreme","transforms":["charRepeat","case","suffix"],"category":"positive"}
+{"text":"the eggshell festival attracted thousands of visitors","label":0,"root":"eggshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest penistone technology","label":0,"root":"penistone","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid kccuf","label":1,"root":"fuck","difficulty":"medium","transforms":["doubling","reverse"],"category":"positive"}
+{"text":"tycoon research has made great progress","label":0,"root":"tycoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"The scrap festival attracted thousands of visitors","label":0,"root":"scrap","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"The documentary about grass was very informative","label":0,"root":"grass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the cocoon is really nice","label":0,"root":"cocoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a skankly","label":1,"root":"skank","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"I recommend titan to everyone","label":0,"root":"titan","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute f⁣aag⁣g‎o⁠t","label":1,"root":"faggot","difficulty":"hard","transforms":["zwc","charRepeat"],"category":"positive"}
+{"text":"total dildo","label":1,"root":"dildo","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"к CIRƥ face","label":1,"root":"prick","difficulty":"extreme","transforms":["split","reverse","case","unicode"],"category":"positive"}
+{"text":"the documentary about analytical was very informative","label":0,"root":"analytical","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we visited the passage factory during our trip","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"scunthorpe review and comparison","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"passive prices are going up","label":0,"root":"passive","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best dike recipe","label":0,"root":"dike","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we visited the harass factory during our trip","label":0,"root":"harass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best puck recipe","label":0,"root":"puck","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the player kept saying kike to everyone","label":1,"root":"kike","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"wnkr head","label":1,"root":"wanker","difficulty":"medium","transforms":["vowelDrop"],"category":"positive"}
+{"text":"trespass delivered on time","label":0,"root":"trespass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute wetbacker","label":1,"root":"wetback","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"best assignment brand in market","label":0,"root":"assignment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the player kept saying ̶̄́YỶL̸̥̙Ṱ̘̕U̇L̳̞̏S to everyone","label":1,"root":"slut","difficulty":"extreme","transforms":["suffix","zalgo","case","reverse","charRepeat"],"category":"positive"}
+{"text":"the tycoon market is growing rapidly worldwide","label":0,"root":"tycoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shell how to guide","label":0,"root":"shell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"turd head","label":1,"root":"turd","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"what the wetback","label":1,"root":"wetback","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"peni sers head","label":1,"root":"penis","difficulty":"medium","transforms":["split","suffix"],"category":"positive"}
+{"text":"I bought a prickly today","label":0,"root":"prickly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"that k_oo_o_g remark was totally uncalled for","label":1,"root":"gook","difficulty":"extreme","transforms":["separator","charRepeat","reverse"],"category":"positive"}
+{"text":"pussywillow review and comparison","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute bitch","label":1,"root":"bitch","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"ť̹ö̺ s̹̕s̗̣̊r̵e̕e̚r̞̥̎y̥̒ face","label":1,"root":"tosser","difficulty":"extreme","transforms":["suffix","charRepeat","vowelDrop","zalgo","split"],"category":"positive"}
+{"text":"Nutshell specifications listed below","label":0,"root":"nutshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I signed up for a cocked workshop next week","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Massive information available online","label":0,"root":"massive","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the helicopter industry creates many jobs","label":0,"root":"helicopter","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little a/ /s/🤬s","label":1,"root":"ass","difficulty":"extreme","transforms":["split","separator","emojiMix"],"category":"positive"}
+{"text":"the argument escalated with cum insults","label":1,"root":"cum","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"cockney information available online","label":0,"root":"cockney","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the review was just pure bollockksing language","label":1,"root":"bollocks","difficulty":"medium","transforms":["charRepeat","suffix"],"category":"positive"}
+{"text":"they screamed n⁣g ⁣g⁣⁢r at the referee","label":1,"root":"nigger","difficulty":"hard","transforms":["zwc","split","vowelDrop"],"category":"positive"}
+{"text":"total cRAр","label":1,"root":"crap","difficulty":"hard","transforms":["unicode","case"],"category":"positive"}
+{"text":"absolute dyke","label":1,"root":"dyke","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"online trolls keep typing ԁaɱn everywhere","label":1,"root":"damn","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"ț̘ìt̴ head","label":1,"root":"tit","difficulty":"hard","transforms":["zalgo"],"category":"positive"}
+{"text":"stop being such a d̉y̘̤k̘̑e̷̻̳ to people","label":1,"root":"dyke","difficulty":"easy","transforms":["zalgo"],"category":"positive"}
+{"text":"online trolls keep typing asssed everywhere","label":1,"root":"ass","difficulty":"medium","transforms":["doubling","suffix"],"category":"positive"}
+{"text":"the documentary about screwdriver was very informative","label":0,"root":"screwdriver","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you r̙̘̆4̟p̦̻̄̄̄̄e̷̎","label":1,"root":"rape","difficulty":"hard","transforms":["leet","zalgo","charRepeat"],"category":"positive"}
+{"text":"absolute KcAbTeW","label":1,"root":"wetback","difficulty":"medium","transforms":["reverse","case"],"category":"positive"}
+{"text":"go dicк yourself","label":1,"root":"dick","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"best pussywillow brand in market","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you çun👎 t","label":1,"root":"cunt","difficulty":"extreme","transforms":["emojiMix","unicode","split"],"category":"positive"}
+{"text":"assertion specifications listed below","label":0,"root":"assertion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest passion technology","label":0,"root":"passion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid douche","label":1,"root":"douche","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"this pucks works great","label":0,"root":"pucks","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the puck exhibition at the museum was fantastic","label":0,"root":"puck","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"why would you call someone a AsShOlE","label":1,"root":"asshole","difficulty":"easy","transforms":["case"],"category":"positive"}
+{"text":"hello review and comparison","label":0,"root":"hello","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the SKANK up","label":1,"root":"skank","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"peacock how to guide","label":0,"root":"peacock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Classic information available online","label":0,"root":"classic","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go c👎um yourself","label":1,"root":"cum","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"the documentary about prickle was very informative","label":0,"root":"prickle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"jjizz you","label":1,"root":"jizz","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"you little H̆̋O̐̑̂O̢̨̰K̸̬̈Ę̳̍Ṛ̦̏","label":1,"root":"hooker","difficulty":"hard","transforms":["case","zalgo"],"category":"positive"}
+{"text":"the message contained aaaassholeer🚫s language","label":1,"root":"asshole","difficulty":"extreme","transforms":["suffix","emojiMix","charRepeat"],"category":"positive"}
+{"text":"I recommend compass to everyone","label":0,"root":"compass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the ̺̎̒d̹r̦̉̅ấ̧t̴̮̰s̯̏̂a̻b","label":1,"root":"bastard","difficulty":"hard","transforms":["zalgo","reverse"],"category":"positive"}
+{"text":"The classic is really nice","label":0,"root":"classic","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a с=O=ö=C=кēгš","label":1,"root":"cock","difficulty":"extreme","transforms":["charRepeat","case","separator","suffix","unicode"],"category":"positive"}
+{"text":"I bought a bombshell today","label":0,"root":"bombshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ttttiteryy you","label":1,"root":"tit","difficulty":"extreme","transforms":["suffix","doubling","charRepeat"],"category":"positive"}
+{"text":"online trolls keep typing 8̵u̴̼̪g̻̋gggg̢ę̰̩ȓ everywhere","label":1,"root":"bugger","difficulty":"hard","transforms":["leet","zalgo","charRepeat"],"category":"positive"}
+{"text":"that asshole remark was totally uncalled for","label":1,"root":"asshole","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"this tycoon works great","label":0,"root":"tycoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the helmet is really nice","label":0,"root":"helmet","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"someone wrote d`⚠️i`c`k in the comments","label":1,"root":"dick","difficulty":"medium","transforms":["separator","emojiMix"],"category":"positive"}
+{"text":"Shuttlecock specifications listed below","label":0,"root":"shuttlecock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"best analyze brand in market","label":0,"root":"analyze","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the new penistone technology is revolutionary","label":0,"root":"penistone","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the message contained b'a's't'a 'r'd language","label":1,"root":"bastard","difficulty":"medium","transforms":["separator","split"],"category":"positive"}
+{"text":"the scrappy is really nice","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"analyze tutorial for beginners","label":0,"root":"analyze","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"classroom prices are going up","label":0,"root":"classroom","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a f aggot","label":1,"root":"faggot","difficulty":"easy","transforms":["split"],"category":"positive"}
+{"text":"piece of Ṅ̹e̵̶̬G̼̉̑r̸̲O̥̣","label":1,"root":"negro","difficulty":"medium","transforms":["case","zalgo"],"category":"positive"}
+{"text":"classify prices are going up","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Vandyke specifications listed below","label":0,"root":"vandyke","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Ĥ̆̎E̻̒l̼̆L̋̚nEsS head","label":1,"root":"hell","difficulty":"hard","transforms":["zalgo","suffix","case"],"category":"positive"}
+{"text":"absolute v﻿_⁡a‎_g‍_i_⁤n_﻿aers","label":1,"root":"vagina","difficulty":"hard","transforms":["separator","zwc","suffix"],"category":"positive"}
+{"text":"the book about grape was a bestseller","label":0,"root":"grape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we studied scrape in science class today","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"that r4pe remark was totally uncalled for","label":1,"root":"rape","difficulty":"easy","transforms":["leet"],"category":"positive"}
+{"text":"stop being such a semen to people","label":1,"root":"semen","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"this compass works great","label":0,"root":"compass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I signed up for a passage workshop next week","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little BUgGeR","label":1,"root":"bugger","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"the documentary about scrape was very informative","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a fag goot","label":1,"root":"faggot","difficulty":"hard","transforms":["doubling","split"],"category":"positive"}
+{"text":"I recommend passenger to everyone","label":0,"root":"passenger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the new rapeseed technology is revolutionary","label":0,"root":"rapeseed","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"chink off","label":1,"root":"chink","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"go j̗̣̍`̧̃̎i̦̼`̺ž̷`̠̰̇`̱̉̐z̖̒̔ yourself","label":1,"root":"jizz","difficulty":"hard","transforms":["separator","doubling","zalgo"],"category":"positive"}
+{"text":"you little c💢um","label":1,"root":"cum","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"K‍Í​Ķē you","label":1,"root":"kike","difficulty":"hard","transforms":["zwc","unicode","case"],"category":"positive"}
+{"text":"latest document technology","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go t👊ites yourself","label":1,"root":"tit","difficulty":"hard","transforms":["emojiMix","suffix"],"category":"positive"}
+{"text":"dumb p‍o﻿rn","label":1,"root":"porn","difficulty":"easy","transforms":["zwc"],"category":"positive"}
+{"text":"puck review and comparison","label":0,"root":"puck","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"analysis information available online","label":0,"root":"analysis","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the 7i 7","label":1,"root":"tit","difficulty":"medium","transforms":["leet","split"],"category":"positive"}
+{"text":"prick head","label":1,"root":"prick","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"piece of ̸̢k̯̭ňǐh ̨c","label":1,"root":"chink","difficulty":"hard","transforms":["zalgo","reverse","split"],"category":"positive"}
+{"text":"analysis prices are going up","label":0,"root":"analysis","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"The cockroach exhibition at the museum was fantastic","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the nc","label":1,"root":"coon","difficulty":"hard","transforms":["vowelDrop","reverse"],"category":"positive"}
+{"text":"the book about passenger was a bestseller","label":0,"root":"passenger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"our teacher explained heller in great detail","label":0,"root":"heller","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute fuck","label":1,"root":"fuck","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"best assistant brand in market","label":0,"root":"assistant","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ass#ole you","label":1,"root":"asshole","difficulty":"medium","transforms":["leet"],"category":"positive"}
+{"text":"latest shell technology","label":0,"root":"shell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"O/D/l/i/💀d/e/R you","label":1,"root":"dildo","difficulty":"extreme","transforms":["reverse","suffix","separator","case","emojiMix"],"category":"positive"}
+{"text":"scrap delivered on time","label":0,"root":"scrap","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"grass prices are going up","label":0,"root":"grass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the hancock market is growing rapidly worldwide","label":0,"root":"hancock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"jizzneess head","label":1,"root":"jizz","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"that kike remark was totally uncalled for","label":1,"root":"kike","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"Rapeseed tutorial for beginners","label":0,"root":"rapeseed","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"our teacher explained shuttlecock in great detail","label":0,"root":"shuttlecock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"this analog works great","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the post was full of p̝̱e̸̎n̴̼̮i̦̋̋s̻ and hate","label":1,"root":"penis","difficulty":"easy","transforms":["zalgo"],"category":"positive"}
+{"text":"dumb ŵank","label":1,"root":"wank","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"absolute P ̝̋U̱̮ŠŞ̞Y̪̩","label":1,"root":"pussy","difficulty":"hard","transforms":["zalgo","case","split"],"category":"positive"}
+{"text":"best hello brand in market","label":0,"root":"hello","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of PI🔥\udd25SsS","label":1,"root":"piss","difficulty":"extreme","transforms":["suffix","case","emojiMix","doubling"],"category":"positive"}
+{"text":"trespass prices are going up","label":0,"root":"trespass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the ċ̻ìp̀̅s̟̗̔","label":1,"root":"spic","difficulty":"extreme","transforms":["reverse","zalgo"],"category":"positive"}
+{"text":"you heell","label":1,"root":"hell","difficulty":"medium","transforms":["doubling"],"category":"positive"}
+{"text":"I recommend assume to everyone","label":0,"root":"assume","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"someone wrote ti👎t in the comments","label":1,"root":"tit","difficulty":"easy","transforms":["emojiMix"],"category":"positive"}
+{"text":"you little h̗⁤̺̀‎o̔⁤ŏ‍̉‏k⁠̮̤﻿̼e⁢̥̆r‌̱⁣̍","label":1,"root":"hooker","difficulty":"medium","transforms":["zalgo","zwc"],"category":"positive"}
+{"text":"rapeseed prices are going up","label":0,"root":"rapeseed","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"scrappy research has made great progress","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you d̍o̧u̷c̦̦̊h̡̺e̴̖e̺̙r̘ỳ̭̯","label":1,"root":"douche","difficulty":"extreme","transforms":["suffix","zalgo","doubling"],"category":"positive"}
+{"text":"titillate production increased by twenty percent","label":0,"root":"titillate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the argument escalated with ý̘⁢̒‌|‍̭̜̓l̟|̴‍̑﻿e‍̱﻿̨⁠|‍̣‍̥̈k‌̏̈⁡̇﻿|̪‍y﻿̰̐|̝̗⁠̪⁡d⁢̳̓⁠̔ insults","label":1,"root":"dyke","difficulty":"extreme","transforms":["suffix","separator","reverse","zalgo","zwc"],"category":"positive"}
+{"text":"I went to the store and bought some passage","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"corkscrew delivered on time","label":0,"root":"corkscrew","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total va6in4","label":1,"root":"vagina","difficulty":"easy","transforms":["leet"],"category":"positive"}
+{"text":"the new seashell technology is revolutionary","label":0,"root":"seashell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total ș̝̥p̵i̜ĩc̶̳̘","label":1,"root":"spic","difficulty":"medium","transforms":["doubling","zalgo"],"category":"positive"}
+{"text":"absolute jizz","label":1,"root":"jizz","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"I recommend shiitake to everyone","label":0,"root":"shiitake","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best shitake recipe","label":0,"root":"shitake","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"A⁣nÁĺ head","label":1,"root":"anal","difficulty":"hard","transforms":["unicode","case","zwc"],"category":"positive"}
+{"text":"piece of TURDD","label":1,"root":"turd","difficulty":"hard","transforms":["doubling","case"],"category":"positive"}
+{"text":"you little ѕcuɱƄág","label":1,"root":"scumbag","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"what the г-ä-ƥ-e","label":1,"root":"rape","difficulty":"hard","transforms":["separator","unicode"],"category":"positive"}
+{"text":"díldo you","label":1,"root":"dildo","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"dy ke head","label":1,"root":"dyke","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"ḏ4̵̡̀m̒̒n̪ off","label":1,"root":"damn","difficulty":"medium","transforms":["leet","zalgo"],"category":"positive"}
+{"text":"quality asset for sale","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"helium review and comparison","label":0,"root":"helium","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you retard","label":1,"root":"retard","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"titillate review and comparison","label":0,"root":"titillate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest passport technology","label":0,"root":"passport","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"someone wrote cuuu🔥unt in the comments","label":1,"root":"cunt","difficulty":"medium","transforms":["charRepeat","emojiMix"],"category":"positive"}
+{"text":"cockpit review and comparison","label":0,"root":"cockpit","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute d̙̞ḭc̒̍̚ķ̙̙","label":1,"root":"dick","difficulty":"easy","transforms":["zalgo"],"category":"positive"}
+{"text":"our teacher explained analysis in great detail","label":0,"root":"analysis","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the new assignment technology is revolutionary","label":0,"root":"assignment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"yss\udd25\ud83dup off","label":1,"root":"pussy","difficulty":"medium","transforms":["emojiMix","reverse"],"category":"positive"}
+{"text":"they screamed damn at the referee","label":1,"root":"damn","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"stupid vagina","label":1,"root":"vagina","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"I bought a classic today","label":0,"root":"classic","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend massage to everyone","label":0,"root":"massage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the k`c`a`в`7`3`ŵ","label":1,"root":"wetback","difficulty":"extreme","transforms":["unicode","reverse","leet","separator"],"category":"positive"}
+{"text":"go cun💀t yourself","label":1,"root":"cunt","difficulty":"extreme","transforms":["emojiMix"],"category":"positive"}
+{"text":"I signed up for a woodcock workshop next week","label":0,"root":"woodcock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the message contained porn language","label":1,"root":"porn","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"I bought a lasso today","label":0,"root":"lasso","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the cocked market is growing rapidly worldwide","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"WAN🚫K is not an appropriate word to use","label":1,"root":"wank","difficulty":"medium","transforms":["emojiMix","case"],"category":"positive"}
+{"text":"shut the n⁢ig⁤g⁢er up","label":1,"root":"nigger","difficulty":"easy","transforms":["zwc"],"category":"positive"}
+{"text":"new helicopter model released","label":0,"root":"helicopter","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"passion delivered on time","label":0,"root":"passion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"they screamed Ƅ|e|ĺ|⁠|l|e|⁣|n|‌|d at the referee","label":1,"root":"bellend","difficulty":"extreme","transforms":["zwc","unicode","separator"],"category":"positive"}
+{"text":"the shell market is growing rapidly worldwide","label":0,"root":"shell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Scrappy how to guide","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a passion today","label":0,"root":"passion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of shit","label":1,"root":"shit","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"go ķkkkna👎kś yourself","label":1,"root":"skank","difficulty":"extreme","transforms":["charRepeat","unicode","reverse","emojiMix"],"category":"positive"}
+{"text":"our teacher explained cockroach in great detail","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total nemes","label":1,"root":"semen","difficulty":"easy","transforms":["reverse"],"category":"positive"}
+{"text":"the documentary about title was very informative","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of #elLL","label":1,"root":"hell","difficulty":"hard","transforms":["doubling","leet","case"],"category":"positive"}
+{"text":"CһInK is not an appropriate word to use","label":1,"root":"chink","difficulty":"medium","transforms":["unicode","case"],"category":"positive"}
+{"text":"new scrape model released","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the class exhibition at the museum was fantastic","label":0,"root":"class","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"analysis information available online","label":0,"root":"analysis","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"s*c*u*m*b*a*g*s you","label":1,"root":"scumbag","difficulty":"hard","transforms":["suffix","separator"],"category":"positive"}
+{"text":"he texted me calling me a ţ=w=a=ţ","label":1,"root":"twat","difficulty":"medium","transforms":["separator","unicode"],"category":"positive"}
+{"text":"cockney review and comparison","label":0,"root":"cockney","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"analyze review and comparison","label":0,"root":"analyze","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of fuckkkked","label":1,"root":"fuck","difficulty":"hard","transforms":["charRepeat","suffix"],"category":"positive"}
+{"text":"the passport is really nice","label":0,"root":"passport","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"someone wrote r-e-k-n-a-w in the comments","label":1,"root":"wanker","difficulty":"medium","transforms":["reverse","separator"],"category":"positive"}
+{"text":"my grandmother makes the best helmet recipe","label":0,"root":"helmet","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute ŵanк","label":1,"root":"wank","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"someone wrote asshol e in the comments","label":1,"root":"asshole","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"go tiiiits yourself","label":1,"root":"tit","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"the associate industry creates many jobs","label":0,"root":"associate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest pussywillow technology","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you chhink","label":1,"root":"chink","difficulty":"easy","transforms":["doubling"],"category":"positive"}
+{"text":"I recommend piston to everyone","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"bass how to guide","label":0,"root":"bass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total blowjb","label":1,"root":"blowjob","difficulty":"hard","transforms":["charRepeat","vowelDrop"],"category":"positive"}
+{"text":"the new bass technology is revolutionary","label":0,"root":"bass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid orgy","label":1,"root":"orgy","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"hassle information available online","label":0,"root":"hassle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the post was full of Ṣś̭̑a̩̋ and hate","label":1,"root":"ass","difficulty":"extreme","transforms":["case","unicode","reverse","zalgo"],"category":"positive"}
+{"text":"I bought a heller today","label":0,"root":"heller","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the seashell is really nice","label":0,"root":"seashell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Quality classroom for sale","label":0,"root":"classroom","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"assertion how to guide","label":0,"root":"assertion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the documentary about scunthorpe was very informative","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"r̊ ̞,̍ḝ̻,̯̬t̵̻,̈̕ã̩̙,̒̄̇ř̩,̷̥̱d̈ head","label":1,"root":"retard","difficulty":"hard","transforms":["separator","zalgo","split"],"category":"positive"}
+{"text":"I recommend assume to everyone","label":0,"root":"assume","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a cocked today","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"tWat you","label":1,"root":"twat","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"grape prices are going up","label":0,"root":"grape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"o❌ddl id face","label":1,"root":"dildo","difficulty":"extreme","transforms":["split","charRepeat","emojiMix","reverse"],"category":"positive"}
+{"text":"what the bell⁣en​d","label":1,"root":"bellend","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"you cuñт","label":1,"root":"cunt","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"analysis tutorial for beginners","label":0,"root":"analysis","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the book about assembly was a bestseller","label":0,"root":"assembly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest drape technology","label":0,"root":"drape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you ppussying","label":1,"root":"pussy","difficulty":"medium","transforms":["suffix","doubling"],"category":"positive"}
+{"text":"helicopter information available online","label":0,"root":"helicopter","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"assignment review and comparison","label":0,"root":"assignment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the documentary about cockroach was very informative","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"bass tutorial for beginners","label":0,"root":"bass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cockroach review and comparison","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"they screamed diLDo at the referee","label":1,"root":"dildo","difficulty":"easy","transforms":["case"],"category":"positive"}
+{"text":"we visited the assignment factory during our trip","label":0,"root":"assignment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"pass prices are going up","label":0,"root":"pass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new bassist model released","label":0,"root":"bassist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"seashell review and comparison","label":0,"root":"seashell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"this seashell works great","label":0,"root":"seashell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"fuuck off","label":1,"root":"fuck","difficulty":"easy","transforms":["doubling"],"category":"positive"}
+{"text":"piece of b‏itc​h","label":1,"root":"bitch","difficulty":"easy","transforms":["zwc"],"category":"positive"}
+{"text":"the corkscrew is really nice","label":0,"root":"corkscrew","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb cr💢p","label":1,"root":"crap","difficulty":"medium","transforms":["emojiMix","vowelDrop"],"category":"positive"}
+{"text":"you little s.k.a.n.k","label":1,"root":"skank","difficulty":"easy","transforms":["separator"],"category":"positive"}
+{"text":"I went to the store and bought some scunthorpe","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb S-к-A-N- -ķ-n-e-s-s","label":1,"root":"skank","difficulty":"extreme","transforms":["split","case","unicode","suffix","separator"],"category":"positive"}
+{"text":"you are a w⁤w‏h‎o⁠r⁤e","label":1,"root":"whore","difficulty":"hard","transforms":["charRepeat","zwc"],"category":"positive"}
+{"text":"My grandmother makes the best eggshell recipe","label":0,"root":"eggshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the documentary about asset was very informative","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"quality hello for sale","label":0,"root":"hello","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest shuttlecock technology","label":0,"root":"shuttlecock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"t😈it off","label":1,"root":"tit","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"quality therapist for sale","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"title review and comparison","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the $̏$̮̺̕̕l̻u̇ẗ̯̖ up","label":1,"root":"slut","difficulty":"extreme","transforms":["leet","charRepeat","zalgo","doubling"],"category":"positive"}
+{"text":"our teacher explained pussywillow in great detail","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"online trolls keep typing p‏p⁤o​or⁡n everywhere","label":1,"root":"porn","difficulty":"hard","transforms":["charRepeat","doubling","zwc"],"category":"positive"}
+{"text":"new pussywillow model released","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cummm graffiti was sprayed on the wall","label":1,"root":"cum","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"total prrick","label":1,"root":"prick","difficulty":"medium","transforms":["doubling"],"category":"positive"}
+{"text":"best tycoon brand in market","label":0,"root":"tycoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"document information available online","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb jjizz","label":1,"root":"jizz","difficulty":"hard","transforms":["charRepeat"],"category":"positive"}
+{"text":"the cocoon exhibition at the museum was fantastic","label":0,"root":"cocoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total ѡһöгE","label":1,"root":"whore","difficulty":"hard","transforms":["case","unicode"],"category":"positive"}
+{"text":"the message contained douche language","label":1,"root":"douche","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"the massage festival attracted thousands of visitors","label":0,"root":"massage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new screwdriver model released","label":0,"root":"screwdriver","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the post was full of a⁤ń‍a‍l and hate","label":1,"root":"anal","difficulty":"medium","transforms":["zwc","unicode"],"category":"positive"}
+{"text":"this nutshell works great","label":0,"root":"nutshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the message contained slut language","label":1,"root":"slut","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"the documentary about compass was very informative","label":0,"root":"compass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"кOöǦ you","label":1,"root":"gook","difficulty":"extreme","transforms":["unicode","case","reverse"],"category":"positive"}
+{"text":"The book about cocked was a bestseller","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"helicopter how to guide","label":0,"root":"helicopter","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stop being such a wetbbackly to people","label":1,"root":"wetback","difficulty":"hard","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"this helicopter works great","label":0,"root":"helicopter","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"scunthorpe information available online","label":0,"root":"scunthorpe","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best analog recipe","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute scre​w","label":1,"root":"screw","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"the new hancock technology is revolutionary","label":0,"root":"hancock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"therapy review and comparison","label":0,"root":"therapy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the pussycat is really nice","label":0,"root":"pussycat","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the post was full of ̒s\udca9\ud83d̋̅̊k̠̓ç̩̆̑o̥̺̒ḽ̉̚l̹̂o̴bness and hate","label":1,"root":"bollocks","difficulty":"extreme","transforms":["zalgo","emojiMix","unicode","reverse","suffix"],"category":"positive"}
+{"text":"total v̟̦̍a̼̖̯g̶̐̆i̯̅n̎ä","label":1,"root":"vagina","difficulty":"easy","transforms":["zalgo"],"category":"positive"}
+{"text":"passenger delivered on time","label":0,"root":"passenger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"peacock how to guide","label":0,"root":"peacock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Bassist information available online","label":0,"root":"bassist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"analog specifications listed below","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"why would you call someone a blowjobing","label":1,"root":"blowjob","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"piece of s̩̬̚e̒m̲e̒n̙̔̇","label":1,"root":"semen","difficulty":"medium","transforms":["zalgo"],"category":"positive"}
+{"text":"total nigg😤er","label":1,"root":"nigger","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"analysis prices are going up","label":0,"root":"analysis","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend titillate to everyone","label":0,"root":"titillate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the argument escalated with v🔥aGiNa insults","label":1,"root":"vagina","difficulty":"hard","transforms":["case","emojiMix"],"category":"positive"}
+{"text":"shut the erohw up","label":1,"root":"whore","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"the cocked is really nice","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
 {"text":"go ɡoōk yourself","label":1,"root":"gook","difficulty":"easy","transforms":["unicode"],"category":"positive"}
-{"text":"I went to the store and bought some buckle","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"latest seashell technology","label":0,"root":"seashell","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"document review and comparison","label":0,"root":"document","difficulty":"clean","transforms":[],"category":"negative"}
-{"text":"passion review and comparison","label":0,"root":"passion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute damn","label":1,"root":"damn","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"the book about vandyke was a bestseller","label":0,"root":"vandyke","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"prickle specifications listed below","label":0,"root":"prickle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb bitch","label":1,"root":"bitch","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"best hassle brand in market","label":0,"root":"hassle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest corkscrew technology","label":0,"root":"corkscrew","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"knaѡ off","label":1,"root":"wank","difficulty":"hard","transforms":["reverse","unicode"],"category":"positive"}
+{"text":"8llocks you","label":1,"root":"bollocks","difficulty":"medium","transforms":["vowelDrop","leet"],"category":"positive"}
+{"text":"someone wrote tnuuuuc in the comments","label":1,"root":"cunt","difficulty":"medium","transforms":["charRepeat","reverse"],"category":"positive"}
+{"text":"go bollocks yourself","label":1,"root":"bollocks","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"śčгew is not an appropriate word to use","label":1,"root":"screw","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"ki👎ke face","label":1,"root":"kike","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"why would you call someone a @A5s","label":1,"root":"ass","difficulty":"extreme","transforms":["doubling","leet","case"],"category":"positive"}
 {"text":"piece of yssup","label":1,"root":"pussy","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"analyze review and comparison","label":0,"root":"analyze","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb ass ‎s","label":1,"root":"ass","difficulty":"hard","transforms":["split","doubling","zwc"],"category":"positive"}
+{"text":"he texted me calling me a ElOhSsA","label":1,"root":"asshole","difficulty":"medium","transforms":["case","reverse"],"category":"positive"}
+{"text":"the argument escalated with ẇ̂❌̢̟̓ȁ̗n̦̅̍k̯̤̄i̦̰̐n̤̩̉g̬ insults","label":1,"root":"wank","difficulty":"hard","transforms":["emojiMix","suffix","zalgo"],"category":"positive"}
+{"text":"I recommend assist to everyone","label":0,"root":"assist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a bb̨̘ŝ̍t̹̩̻🖕̞̲âa̼ă̜ŗd̠̯̲","label":1,"root":"bastard","difficulty":"extreme","transforms":["charRepeat","emojiMix","zalgo","doubling","vowelDrop"],"category":"positive"}
+{"text":"they screamed вitch at the referee","label":1,"root":"bitch","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"the documentary about pussycat was very informative","label":0,"root":"pussycat","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend heller to everyone","label":0,"root":"heller","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"online trolls keep typing čřap everywhere","label":1,"root":"crap","difficulty":"extreme","transforms":["unicode"],"category":"positive"}
+{"text":"you little bollc🚫ks","label":1,"root":"bollocks","difficulty":"hard","transforms":["emojiMix","vowelDrop"],"category":"positive"}
+{"text":"dumb d,i,l,d,o","label":1,"root":"dildo","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"absolute t̼̒̇i̎h̐ș̼́ǐ̢̥n̡g̎","label":1,"root":"shit","difficulty":"hard","transforms":["reverse","suffix","zalgo"],"category":"positive"}
+{"text":"stop being such a nooc to people","label":1,"root":"coon","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"the eggshell is really nice","label":0,"root":"eggshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the documentary about scrape was very informative","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the t7","label":1,"root":"tit","difficulty":"medium","transforms":["leet","vowelDrop"],"category":"positive"}
+{"text":"analyze tutorial for beginners","label":0,"root":"analyze","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"our teacher explained nutshell in great detail","label":0,"root":"nutshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the argument escalated with c,c,\ud83d,\udd25,u,n,t insults","label":1,"root":"cunt","difficulty":"extreme","transforms":["doubling","charRepeat","emojiMix","vowelDrop","separator"],"category":"positive"}
+{"text":"the pucks is really nice","label":0,"root":"pucks","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"assassin specifications listed below","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little dоçhе","label":1,"root":"douche","difficulty":"medium","transforms":["vowelDrop","unicode"],"category":"positive"}
+{"text":"p0rnnnn head","label":1,"root":"porn","difficulty":"hard","transforms":["leet","charRepeat"],"category":"positive"}
+{"text":"ƥăŕrRRRc is not an appropriate word to use","label":1,"root":"crap","difficulty":"extreme","transforms":["reverse","doubling","charRepeat","case","unicode"],"category":"positive"}
+{"text":"why would you call someone a a-a-n-a-l","label":1,"root":"anal","difficulty":"medium","transforms":["charRepeat","separator"],"category":"positive"}
+{"text":"screwdriver tutorial for beginners","label":0,"root":"screwdriver","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stop being such a analing to people","label":1,"root":"anal","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"cu❌❌m graffiti was sprayed on the wall","label":1,"root":"cum","difficulty":"medium","transforms":["emojiMix","doubling"],"category":"positive"}
+{"text":"embassy prices are going up","label":0,"root":"embassy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb sluted","label":1,"root":"slut","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"Quality piston for sale","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cassette delivered on time","label":0,"root":"cassette","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Massage prices are going up","label":0,"root":"massage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little retttard","label":1,"root":"retard","difficulty":"medium","transforms":["charRepeat","doubling"],"category":"positive"}
+{"text":"absolute BuĞgè r","label":1,"root":"bugger","difficulty":"extreme","transforms":["unicode","split","case"],"category":"positive"}
+{"text":"latest assertion technology","label":0,"root":"assertion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"gookk off","label":1,"root":"gook","difficulty":"easy","transforms":["doubling"],"category":"positive"}
+{"text":"stupid BI777CHs","label":1,"root":"bitch","difficulty":"extreme","transforms":["leet","charRepeat","case","suffix"],"category":"positive"}
+{"text":"mastrbtness head","label":1,"root":"masturbate","difficulty":"hard","transforms":["charRepeat","suffix","vowelDrop"],"category":"positive"}
+{"text":"absolute ekik","label":1,"root":"kike","difficulty":"hard","transforms":["reverse"],"category":"positive"}
+{"text":"n/ /i/g/g/e/e/r you","label":1,"root":"nigger","difficulty":"hard","transforms":["doubling","split","separator"],"category":"positive"}
+{"text":"my grandmother makes the best assistant recipe","label":0,"root":"assistant","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"analogy specifications listed below","label":0,"root":"analogy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you NI GGER","label":1,"root":"nigger","difficulty":"hard","transforms":["split","case"],"category":"positive"}
+{"text":"piston how to guide","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new puck model released","label":0,"root":"puck","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"b̷̐̂;̖̆í̴̂;̏т̸̢̦;̔̋c̍;̘̻̄ḩ̐ graffiti was sprayed on the wall","label":1,"root":"bitch","difficulty":"extreme","transforms":["separator","zalgo","unicode"],"category":"positive"}
+{"text":"rapeseed prices are going up","label":0,"root":"rapeseed","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of seelohssa","label":1,"root":"asshole","difficulty":"medium","transforms":["suffix","reverse"],"category":"positive"}
+{"text":"I signed up for a passage workshop next week","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the тrnnŷ","label":1,"root":"tranny","difficulty":"medium","transforms":["unicode","vowelDrop"],"category":"positive"}
+{"text":"you spiiics","label":1,"root":"spic","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"piece of BuG😤gEr","label":1,"root":"bugger","difficulty":"medium","transforms":["case","emojiMix"],"category":"positive"}
+{"text":"dumb Or GAsM","label":1,"root":"orgasm","difficulty":"medium","transforms":["split","case"],"category":"positive"}
+{"text":"my grandmother makes the best nutshell recipe","label":0,"root":"nutshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we visited the shiitake factory during our trip","label":0,"root":"shiitake","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Quality cassette for sale","label":0,"root":"cassette","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go scuumbag yourself","label":1,"root":"scumbag","difficulty":"medium","transforms":["doubling"],"category":"positive"}
+{"text":"dumb scumbaging","label":1,"root":"scumbag","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"you ƥ̟̂̋ï̪s̺s̠̙","label":1,"root":"piss","difficulty":"medium","transforms":["zalgo","unicode"],"category":"positive"}
+{"text":"v̱ǎ̪̒g̸̹̪i̔̃̀n̫̆a̜̯es you","label":1,"root":"vagina","difficulty":"medium","transforms":["zalgo","suffix"],"category":"positive"}
+{"text":"we studied grasshopper in science class today","label":0,"root":"grasshopper","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a porńness","label":1,"root":"porn","difficulty":"hard","transforms":["unicode","suffix"],"category":"positive"}
+{"text":"why would you call someone a CoCk","label":1,"root":"cock","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"the message contained r3$s0t language","label":1,"root":"tosser","difficulty":"hard","transforms":["reverse","leet"],"category":"positive"}
+{"text":"dA mn face","label":1,"root":"damn","difficulty":"hard","transforms":["split","case"],"category":"positive"}
+{"text":"stupid ƒ`a`g`g`o`t","label":1,"root":"faggot","difficulty":"medium","transforms":["separator","unicode"],"category":"positive"}
+{"text":"I bought a pucks today","label":0,"root":"pucks","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Passage prices are going up","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"they screamed ̤̙t̶̶̶̶̰ñ̼̘̕ṳc at the referee","label":1,"root":"cunt","difficulty":"extreme","transforms":["zalgo","charRepeat","reverse","unicode"],"category":"positive"}
+{"text":"I bought a cockatiel today","label":0,"root":"cockatiel","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the nutshell exhibition at the museum was fantastic","label":0,"root":"nutshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the woodcock is really nice","label":0,"root":"woodcock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of v⁣a⁤g!⁤n﻿@","label":1,"root":"vagina","difficulty":"hard","transforms":["zwc","leet"],"category":"positive"}
+{"text":"the bassist festival attracted thousands of visitors","label":0,"root":"bassist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I signed up for a grass workshop next week","label":0,"root":"grass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I went to the store and bought some assassin","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the assing up","label":1,"root":"ass","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"the cocoon exhibition at the museum was fantastic","label":0,"root":"cocoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Latest grasshopper technology","label":0,"root":"grasshopper","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the post was full of b̘̔̐o̠̩j̭ẃ̼0̃l̬8̆ and hate","label":1,"root":"blowjob","difficulty":"hard","transforms":["reverse","leet","zalgo"],"category":"positive"}
+{"text":"dyke head","label":1,"root":"dyke","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"he called me a t̷̘w̭à̟̝Ṱ̸̅ in the game chat","label":1,"root":"twat","difficulty":"hard","transforms":["zalgo","case"],"category":"positive"}
+{"text":"cockroach information available online","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the review was just pure wankkkk language","label":1,"root":"wank","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"p̹̯ů̵s̡š̮̎y̧ face","label":1,"root":"pussy","difficulty":"medium","transforms":["zalgo"],"category":"positive"}
+{"text":"I bought a assembly today","label":0,"root":"assembly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the shuttlecock festival attracted thousands of visitors","label":0,"root":"shuttlecock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"helicopter delivered on time","label":0,"root":"helicopter","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of a~s~s~h~o~l~e","label":1,"root":"asshole","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"someone wrote vâğìna in the comments","label":1,"root":"vagina","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"shut the eeeekyd up","label":1,"root":"dyke","difficulty":"medium","transforms":["charRepeat","reverse"],"category":"positive"}
+{"text":"what the ṊĨ̥❌g̲̋̍ǵ̙̗ẽ̚R̖̀","label":1,"root":"nigger","difficulty":"hard","transforms":["zalgo","case","emojiMix"],"category":"positive"}
+{"text":"the titan festival attracted thousands of visitors","label":0,"root":"titan","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shitake information available online","label":0,"root":"shitake","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"р|r|i🤮|c|k off","label":1,"root":"prick","difficulty":"extreme","transforms":["separator","unicode","emojiMix"],"category":"positive"}
+{"text":"someone wrote bastard in the comments","label":1,"root":"bastard","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"quality cockroach for sale","label":0,"root":"cockroach","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a asset today","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid p̴̵-̼̗@̡-̒̄@̬̻-̵̺̒4̇-̹̇̈r̷̼-̠̱́c̺̖","label":1,"root":"crap","difficulty":"extreme","transforms":["reverse","charRepeat","leet","separator","zalgo"],"category":"positive"}
+{"text":"online trolls keep typing š̂ĉ̼̔r̴̮̈ee̐̄w̠̤es everywhere","label":1,"root":"screw","difficulty":"hard","transforms":["zalgo","suffix","charRepeat"],"category":"positive"}
+{"text":"shut the öгğŷ up","label":1,"root":"orgy","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"the cockatoo industry creates many jobs","label":0,"root":"cockatoo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"v⁣🤮aginaaaaed off","label":1,"root":"vagina","difficulty":"extreme","transforms":["zwc","suffix","emojiMix","charRepeat"],"category":"positive"}
+{"text":"g=o=o=k=e=s face","label":1,"root":"gook","difficulty":"medium","transforms":["suffix","separator"],"category":"positive"}
+{"text":"new raccoon model released","label":0,"root":"raccoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"this piston works great","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the title industry creates many jobs","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"New classic model released","label":0,"root":"classic","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of ļ̀l̢̕ẽ̬ħ̷̐̀","label":1,"root":"hell","difficulty":"hard","transforms":["reverse","unicode","zalgo"],"category":"positive"}
+{"text":"cockatiel information available online","label":0,"root":"cockatiel","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"8888ug9er is not an appropriate word to use","label":1,"root":"bugger","difficulty":"medium","transforms":["leet","charRepeat"],"category":"positive"}
+{"text":"assess delivered on time","label":0,"root":"assess","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"NeGr OnSs you","label":1,"root":"negro","difficulty":"extreme","transforms":["suffix","charRepeat","case","vowelDrop","split"],"category":"positive"}
+{"text":"absolute SLUT","label":1,"root":"slut","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"analyze tutorial for beginners","label":0,"root":"analyze","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you little p,u,s,s,y,y","label":1,"root":"pussy","difficulty":"extreme","transforms":["charRepeat","separator"],"category":"positive"}
+{"text":"title delivered on time","label":0,"root":"title","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"quality classify for sale","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"associate delivered on time","label":0,"root":"associate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Passport production increased by twenty percent","label":0,"root":"passport","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of DYKKeers","label":1,"root":"dyke","difficulty":"extreme","transforms":["case","suffix","charRepeat"],"category":"positive"}
+{"text":"they screamed a⁡s⁤sh⁤o⁡oo⁡ole at the referee","label":1,"root":"asshole","difficulty":"hard","transforms":["charRepeat","zwc"],"category":"positive"}
+{"text":"latest analogy technology","label":0,"root":"analogy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"CRA🤮Pers you","label":1,"root":"crap","difficulty":"hard","transforms":["case","emojiMix","suffix"],"category":"positive"}
+{"text":"you little pen is","label":1,"root":"penis","difficulty":"easy","transforms":["split"],"category":"positive"}
+{"text":"passage specifications listed below","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"The cassette market is growing rapidly worldwide","label":0,"root":"cassette","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"penistone research has made great progress","label":0,"root":"penistone","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"spic face","label":1,"root":"spic","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"assertion tutorial for beginners","label":0,"root":"assertion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the n\udc4a \ud83drop","label":1,"root":"porn","difficulty":"hard","transforms":["emojiMix","split","reverse"],"category":"positive"}
+{"text":"go damn yourself","label":1,"root":"damn","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"go l=a=n=a yourself","label":1,"root":"anal","difficulty":"hard","transforms":["separator","reverse"],"category":"positive"}
+{"text":"analogy review and comparison","label":0,"root":"analogy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we visited the grasshopper factory during our trip","label":0,"root":"grasshopper","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid t urd","label":1,"root":"turd","difficulty":"easy","transforms":["split"],"category":"positive"}
+{"text":"I recommend titan to everyone","label":0,"root":"titan","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"assassin delivered on time","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a pussyfoot today","label":0,"root":"pussyfoot","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"screwdriver tutorial for beginners","label":0,"root":"screwdriver","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the new piston technology is revolutionary","label":0,"root":"piston","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new assertion model released","label":0,"root":"assertion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total assss","label":1,"root":"ass","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"chinnnk you","label":1,"root":"chink","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"new massive model released","label":0,"root":"massive","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of orgasm","label":1,"root":"orgasm","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"scrappy tutorial for beginners","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend seashell to everyone","label":0,"root":"seashell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"piece of poRNeD","label":1,"root":"porn","difficulty":"hard","transforms":["suffix","case"],"category":"positive"}
+{"text":"We studied passage in science class today","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"total v@G!nA","label":1,"root":"vagina","difficulty":"hard","transforms":["leet","case"],"category":"positive"}
+{"text":"Latest grape technology","label":0,"root":"grape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the argument escalated with P~E~N~I~S insults","label":1,"root":"penis","difficulty":"medium","transforms":["case","separator"],"category":"positive"}
+{"text":"I recommend peacock to everyone","label":0,"root":"peacock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"latest passive technology","label":0,"root":"passive","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Analogy how to guide","label":0,"root":"analogy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"analog how to guide","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"this hancock works great","label":0,"root":"hancock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"go negro yourself","label":1,"root":"negro","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"pucks delivered on time","label":0,"root":"pucks","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"douchhe off","label":1,"root":"douche","difficulty":"medium","transforms":["doubling"],"category":"positive"}
+{"text":"I bought a massage today","label":0,"root":"massage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"pussyfoot research has made great progress","label":0,"root":"pussyfoot","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"embassy production increased by twenty percent","label":0,"root":"embassy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cocked review and comparison","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new cocked model released","label":0,"root":"cocked","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"drape how to guide","label":0,"root":"drape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"assist how to guide","label":0,"root":"assist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"someone wrote ṱ̼-̪́t̙-̑😡̻̇u̺-̗̄r̻̦̓-̣d̵ in the comments","label":1,"root":"turd","difficulty":"extreme","transforms":["charRepeat","separator","zalgo","emojiMix"],"category":"positive"}
+{"text":"the player kept saying CHHNNNNK to everyone","label":1,"root":"chink","difficulty":"extreme","transforms":["vowelDrop","charRepeat","doubling","case"],"category":"positive"}
+{"text":"the post was full of $,⁤,с,⁡,r,⁣,3,w and hate","label":1,"root":"screw","difficulty":"extreme","transforms":["unicode","leet","zwc","separator"],"category":"positive"}
+{"text":"the book about analog was a bestseller","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb s-h-i-tt","label":1,"root":"shit","difficulty":"medium","transforms":["separator","charRepeat"],"category":"positive"}
+{"text":"I went to the store and bought some assassin","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"best hello brand in market","label":0,"root":"hello","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"n'3'm'e's graffiti was sprayed on the wall","label":1,"root":"semen","difficulty":"hard","transforms":["leet","separator","reverse"],"category":"positive"}
+{"text":"we visited the peacock factory during our trip","label":0,"root":"peacock","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"k⁠ike face","label":1,"root":"kike","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"pucks specifications listed below","label":0,"root":"pucks","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a hello today","label":0,"root":"hello","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"This passion works great","label":0,"root":"passion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"cockney tutorial for beginners","label":0,"root":"cockney","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I recommend shell to everyone","label":0,"root":"shell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the grasshopper festival attracted thousands of visitors","label":0,"root":"grasshopper","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"k‏cid head","label":1,"root":"dick","difficulty":"extreme","transforms":["reverse","zwc"],"category":"positive"}
+{"text":"you a:n:a:l","label":1,"root":"anal","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"absolute POrN","label":1,"root":"porn","difficulty":"easy","transforms":["case"],"category":"positive"}
+{"text":"dumb ƥïś⁡s","label":1,"root":"piss","difficulty":"medium","transforms":["zwc","unicode"],"category":"positive"}
+{"text":"the documentary about pussywillow was very informative","label":0,"root":"pussywillow","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"my grandmother makes the best lasso recipe","label":0,"root":"lasso","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"analyze information available online","label":0,"root":"analyze","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"that аnaľ remark was totally uncalled for","label":1,"root":"anal","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"latest passenger technology","label":0,"root":"passenger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I bought a buckle today","label":0,"root":"buckle","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we visited the assignment factory during our trip","label":0,"root":"assignment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you are a cccc‍u⁢ n⁡t","label":1,"root":"cunt","difficulty":"extreme","transforms":["split","charRepeat","zwc"],"category":"positive"}
+{"text":"quality penistone for sale","label":0,"root":"penistone","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you D0ÛcHeers","label":1,"root":"douche","difficulty":"extreme","transforms":["unicode","case","leet","suffix"],"category":"positive"}
+{"text":"latest passage technology","label":0,"root":"passage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the ShiT up","label":1,"root":"shit","difficulty":"easy","transforms":["case"],"category":"positive"}
+{"text":"Latest asset technology","label":0,"root":"asset","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"c`ħ``````ո`k graffiti was sprayed on the wall","label":1,"root":"chink","difficulty":"extreme","transforms":["unicode","separator","vowelDrop","charRepeat","doubling"],"category":"positive"}
+{"text":"best titillate brand in market","label":0,"root":"titillate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"assembly information available online","label":0,"root":"assembly","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"shut the cock up","label":1,"root":"cock","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"latest therapy technology","label":0,"root":"therapy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"The classify is really nice","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the new pussycat technology is revolutionary","label":0,"root":"pussycat","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"massage research has made great progress","label":0,"root":"massage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new associate model released","label":0,"root":"associate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"pussycat how to guide","label":0,"root":"pussycat","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ș̪̌ĥ̡ì̹̔́ţ̺̜̙ off","label":1,"root":"shit","difficulty":"medium","transforms":["unicode","zalgo"],"category":"positive"}
+{"text":"someone wrote sekk 0og in the comments","label":1,"root":"gook","difficulty":"extreme","transforms":["suffix","leet","reverse","charRepeat","split"],"category":"positive"}
+{"text":"the new bombshell technology is revolutionary","label":0,"root":"bombshell","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absolute p,i,s,s","label":1,"root":"piss","difficulty":"easy","transforms":["separator"],"category":"positive"}
+{"text":"best grass brand in market","label":0,"root":"grass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"massage how to guide","label":0,"root":"massage","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid bollocks","label":1,"root":"bollocks","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"tosserrrr head","label":1,"root":"tosser","difficulty":"easy","transforms":["charRepeat"],"category":"positive"}
+{"text":"go ѡeţbbacк yourself","label":1,"root":"wetback","difficulty":"medium","transforms":["doubling","unicode"],"category":"positive"}
+{"text":"titan specifications listed below","label":0,"root":"titan","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"we visited the massive factory during our trip","label":0,"root":"massive","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"heller specifications listed below","label":0,"root":"heller","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"he called me a or⁡ğ💀‎yy‍у in the game chat","label":1,"root":"orgy","difficulty":"extreme","transforms":["charRepeat","unicode","zwc","emojiMix"],"category":"positive"}
+{"text":"you little pss","label":1,"root":"piss","difficulty":"easy","transforms":["vowelDrop"],"category":"positive"}
+{"text":"I signed up for a scrape workshop next week","label":0,"root":"scrape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"8u963r face","label":1,"root":"bugger","difficulty":"medium","transforms":["leet"],"category":"positive"}
+{"text":"Best therapist brand in market","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"stupid g`o`o`k","label":1,"root":"gook","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"what the R;E;T;A;R;D","label":1,"root":"retard","difficulty":"hard","transforms":["separator","case"],"category":"positive"}
+{"text":"the review was just pure wanker language","label":1,"root":"wanker","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"Best massive brand in market","label":0,"root":"massive","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Grasshopper research has made great progress","label":0,"root":"grasshopper","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"hell face","label":1,"root":"hell","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"best therapist brand in market","label":0,"root":"therapist","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Passport tutorial for beginners","label":0,"root":"passport","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"he texted me calling me a šħiť","label":1,"root":"shit","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"stupid fa6g0ters","label":1,"root":"faggot","difficulty":"hard","transforms":["leet","suffix"],"category":"positive"}
+{"text":"you are a hookerly","label":1,"root":"hooker","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"analog specifications listed below","label":0,"root":"analog","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"I went to the store and bought some grasshopper","label":0,"root":"grasshopper","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"why would you call someone a d ick","label":1,"root":"dick","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"what the s⁢pi c","label":1,"root":"spic","difficulty":"hard","transforms":["zwc","split"],"category":"positive"}
+{"text":"the documentary about assassin was very informative","label":0,"root":"assassin","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"online trolls keep typing tùrd everywhere","label":1,"root":"turd","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"helmet prices are going up","label":0,"root":"helmet","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the new scrap technology is revolutionary","label":0,"root":"scrap","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"this titillate works great","label":0,"root":"titillate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"what the ɡ' '⁡'o'⁤'o'﻿'к","label":1,"root":"gook","difficulty":"extreme","transforms":["split","unicode","zwc","separator"],"category":"positive"}
+{"text":"scrap prices are going up","label":0,"root":"scrap","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"you r eťařԁd","label":1,"root":"retard","difficulty":"extreme","transforms":["charRepeat","split","unicode"],"category":"positive"}
+{"text":"dumb ɗ; ;O;u;c;h;E","label":1,"root":"douche","difficulty":"extreme","transforms":["case","split","unicode","separator"],"category":"positive"}
+{"text":"grass review and comparison","label":0,"root":"grass","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the classify is really nice","label":0,"root":"classify","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dumb wan​ke⁤r‎er⁡s","label":1,"root":"wanker","difficulty":"medium","transforms":["suffix","zwc"],"category":"positive"}
+{"text":"stupid tit","label":1,"root":"tit","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"I bought a corkscrew today","label":0,"root":"corkscrew","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"he texted me calling me a O̡̘̠/̻r̵̺/̶̝̄G̰/̱̑̑y̪̕","label":1,"root":"orgy","difficulty":"hard","transforms":["case","separator","zalgo"],"category":"positive"}
+{"text":"you c̶̞̕h̎ǐ̠ṉ̴̑ḵ̵","label":1,"root":"chink","difficulty":"medium","transforms":["zalgo"],"category":"positive"}
+{"text":"shut the ä̍ŝ̨̜s̖̑h̚ò̳̗l̙̺̮ê̳̫̆ë̝ŕ̈ up","label":1,"root":"asshole","difficulty":"extreme","transforms":["suffix","unicode","zalgo"],"category":"positive"}
+{"text":"you are a s‎c‌umb‏ag","label":1,"root":"scumbag","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"raccoon how to guide","label":0,"root":"raccoon","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"associate review and comparison","label":0,"root":"associate","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"helium prices are going up","label":0,"root":"helium","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"our teacher explained puck in great detail","label":0,"root":"puck","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"k|i|k|e face","label":1,"root":"kike","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"stupid ȍ̌r̤ ̒ģ̙̇y̶̺̬","label":1,"root":"orgy","difficulty":"extreme","transforms":["zalgo","split"],"category":"positive"}
+{"text":"the post was full of b'ō'ł'l'o'с'k'ѕ and hate","label":1,"root":"bollocks","difficulty":"medium","transforms":["separator","unicode"],"category":"positive"}
+{"text":"the assessment market is growing rapidly worldwide","label":0,"root":"assessment","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"he called me a j.‍i.​z.⁢ z in the game chat","label":1,"root":"jizz","difficulty":"hard","transforms":["separator","split","zwc"],"category":"positive"}
+{"text":"someone wrote wHorE in the comments","label":1,"root":"whore","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"stop being such a t,‍,̉,u,̮,r,⁢,̔,﻿,d,̣,‍,d,‍,̘,̗ to people","label":1,"root":"turd","difficulty":"extreme","transforms":["doubling","zalgo","zwc","separator"],"category":"positive"}
+{"text":"you little shit","label":1,"root":"shit","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"absolute 8̙̮`̰̘̍i̧̜`̏t̤̋̌`̭̩̈c̲̓`̨̘h̘̦","label":1,"root":"bitch","difficulty":"hard","transforms":["separator","leet","zalgo"],"category":"positive"}
+{"text":"drape how to guide","label":0,"root":"drape","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"quality scrappy for sale","label":0,"root":"scrappy","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"assertion review and comparison","label":0,"root":"assertion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"new penistone model released","label":0,"root":"penistone","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"the new shell technology is revolutionary","label":0,"root":"shell","difficulty":"clean","transforms":[],"category":"negative"}

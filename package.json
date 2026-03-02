@@ -79,6 +79,9 @@
     "bench:report": "cd benchmarks/comparison && pnpm install && pnpm start",
     "typecheck": "tsc --noEmit",
     "dev:live": "tsx watch tools/server.ts",
+    "spdg:generate": "node tools/Synthetic-Profanity-Dataset-Generator/generate_dataset.js --tr --pos 500 --neg 500 --seed 42 && node tools/Synthetic-Profanity-Dataset-Generator/generate_dataset.js --en --pos 500 --neg 500 --seed 42 && node tools/Synthetic-Profanity-Dataset-Generator/generate_dataset.js --es --pos 500 --neg 500 --seed 42 && node tools/Synthetic-Profanity-Dataset-Generator/generate_dataset.js --de --pos 500 --neg 500 --seed 42",
+    "test:spdg": "vitest run tests/spdg-automated-test.test.ts",
+    "spdg": "pnpm spdg:generate && pnpm test:spdg",
     "prepare": "husky"
   },
   "keywords": [

@@ -130,17 +130,20 @@ Daha uzun cumle sablonlari. `{word}` placeholder'i kullanir.
 ### suffixes.txt / separators.txt / emoji_replacements.txt / zalgo_chars.txt / zwc_chars.txt
 Her satirda bir girdi. Unicode escape (`\uXXXX`) desteklenir.
 
-## Gelecek: Test Entegrasyonu
+## Test Entegrasyonu
 
-Uretilen dataset'ler vitest testlerine baglanacak:
+Uretilen dataset'ler `tests/spdg-automated-test.test.ts` uzerinden vitest'e baglidir:
 
+```bash
+pnpm spdg          # dataset uret + test calistir (tek komut)
+pnpm spdg:generate # sadece 4 dil JSONL uret (500+500, seed 42)
+pnpm test:spdg     # sadece SPDG testlerini calistir
 ```
-export-tr.jsonl -> tests/lang/tr-synthetic.test.ts
-export-en.jsonl -> tests/lang/en-synthetic.test.ts
-```
 
-Her test dosyasi:
-- `export-{lang}.jsonl` yoksa `describe.skipIf` ile atlar
-- label=1: `containsProfanity() === true` beklenir
-- label=0: `containsProfanity() === false` beklenir
-- Difficulty bazinda detection rate takibi
+Test dosyasi:
+- JSONL yoksa `describe.skipIf` ile sessizce atlar — mevcut testlere sifir etki
+- label=1: `containsProfanity() === true` beklenir (difficulty bazinda threshold)
+- label=0: `containsProfanity() === false` beklenir (<%5 false positive)
+- Console'a detayli istatistik raporu yazdirir
+
+Detayli dokumantasyon: [SPDG Automated Test](../../docs/spdg-automated-test.md)
