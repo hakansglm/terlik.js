@@ -162,7 +162,7 @@ input
 
 Each language has its own char map, leet map, char classes, and optional number expansions. The engine is language-agnostic — only the data is language-specific. This means **any language can be added** without modifying the core engine.
 
-For suffixable roots, the engine appends an optional suffix group (up to 2 chained suffixes). Turkish has 83 suffixes (including question particles and adverbial forms), English has 90 (inflectional, noun/adjective/verb/adverb-forming, and compound elements), Spanish has 13, German has 8.
+For suffixable roots, the engine appends an optional suffix group (up to 2 chained suffixes). Turkish has 83 suffixes (including question particles and adverbial forms), English has 28 (inflectional, derivational, and compound elements), Spanish has 13, German has 8.
 
 ### Language Packs
 
@@ -213,7 +213,7 @@ terlik.js ships with a **deliberately narrow dictionary** — the goal is to **m
 | Language | Status | Roots | Explicit Variants | Suffixes | Whitelist | Effective Forms |
 |---|---|---|---|---|---|---|
 | Turkish | Flagship | 147 | 139 | 83 | 87 | ~10,000+ |
-| English | Full | 138 | 342 | 90 | 105 | ~10,000+ |
+| English | Full | 138 | 342 | 28 | 106 | ~10,000+ |
 | Spanish | Community | 29 | 101 | 13 | 21 | ~500+ |
 | German | Community | 28 | 67 | 8 | 6 | ~300+ |
 

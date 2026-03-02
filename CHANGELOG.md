@@ -4,7 +4,7 @@ All notable changes to terlik.js are documented here.
 
 ## v2.6.0 (2026-03-02) — TR + EN Dictionary Expansion & Benchmark Enrichment
 
-**Massive TR dictionary expansion (39 → 147 entries), EN dictionary expansion (56 → 138 entries), and SPDG-driven benchmark enrichment (290 → 1280 samples).**
+**Massive TR dictionary expansion (39 → 147 entries), EN dictionary expansion (56 → 138 entries), EN suffix engine strengthened (9 → 28 suffixes), and SPDG-driven benchmark enrichment (290 → 1280 samples).**
 
 ### Turkish Dictionary
 - **Turkish dictionary overhaul** — 108 new entries across 8 categories: character insults (`alçak`, `terbiyesiz`, `küstah`), general insults (`budala`, `ahmak`, `embesil`), slang (`çomar`, `maganda`, `yobaz`), fraud/deception (`dolandırıcı`, `sahtekar`, `şarlatan`), threats (`geber`, `öldürücem`, `defol`), sexual (`kerhane`, `kaşar`, `sakso`), abbreviations (`sg`, `oç`, `sktrgt`), animal insults (`domuz`, `öküz`, `eşek`).
@@ -20,8 +20,14 @@ All notable changes to terlik.js are documented here.
 - **Whitelist expansion** — 9 new FP protections: `homogeneous`, `homogenous`, `homophone`, `homonym`, `homologous`, `homosexual`, `shaggy`, `doorknob`, `spunky`.
 - **EN root count** — 56 → 138 roots, ~200 → 342 variants, 97 → 105 whitelist entries.
 
+### EN Suffix Engine
+- **EN suffix engine strengthened** — 9 → 28 suffixes. Added morphological suffixes (`ish`, `able`, `dom`, `less`, `y`, `est`, `en`), compound elements (`head`, `face`, `hole`, `tard`, `wad`, `stain`, `lord`, `bag`, `monger`, `ass`, `job`, `boy`). Whitelist expanded: `cocky`.
+- **SPDG EN suffix list aligned** — 90 → 28 suffixes, trimmed to realistic profanity-relevant forms only.
+- **SPDG medium threshold restored** — 55% → 70% now that the engine catches compound forms natively.
+- **ReDoS timing budget scaled** — Multiplier 24x → 72x to accommodate expanded dictionary on Node 18 CI runners.
+
 ### SPDG & Benchmark
-- **EN SPDG data enrichment** — Comprehensive suffix list (9 → 90), leet map (9 → 16 mappings), templates (15 → 87 positive, 15 → 63 negative), contexts (15 → 40 each), emoji replacements (15 → 25).
+- **EN SPDG data enrichment** — Suffix list (9 → 28, aligned with engine), leet map (9 → 16 mappings), templates (15 → 87 positive, 15 → 63 negative), contexts (15 → 40 each), emoji replacements (15 → 25).
 - **Benchmark dataset enrichment** — Dynamic SPDG import in `dataset.ts`: curated 290 samples + SPDG-generated 990 samples = **1280 total samples** with category mapping.
 - **1341 tests** passing, zero regression.
 

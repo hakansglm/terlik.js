@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "suffixes": ["ing", "ed", "er", "ers", "s", "es", "ly", "ness", "ery"],
+  "suffixes": ["ing", "ed", "er", "ers", "s", "es", "ly", "ness", "ery", "ish", "able", "dom", "less", "head", "face", "hole", "tard", "wad", "stain", "lord", "bag", "monger", "y", "est", "ass", "en", "job", "boy"],
   "entries": [
     {
       "root": "fuck",
@@ -1074,6 +1074,7 @@
     "homosexual",
     "shaggy",
     "doorknob",
-    "spunky"
+    "spunky",
+    "cocky"
   ]
 }

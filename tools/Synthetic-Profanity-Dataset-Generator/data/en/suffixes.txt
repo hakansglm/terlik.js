@@ -1,4 +1,5 @@
-# English suffixes — comprehensive list for SPDG data generation
+# English suffixes — aligned with terlik.js EN suffix engine (28 suffixes)
+# Only includes suffixes that the detection engine actually supports
 
 # === INFLECTIONAL ===
 s
@@ -10,82 +11,15 @@ er
 ers
 est
 
-# === NOUN-FORMING ===
-ade
-age
-ance
-ence
-ancy
-ency
-ant
-ent
-ar
-ard
-ary
-ate
-dom
-ee
-eer
-ery
-ess
-ette
-hood
-ian
-ier
-ine
-ion
-tion
-ation
-sion
-ism
-ist
-ite
-ity
-ty
-let
-ling
-ment
-ness
-or
-ship
-th
-ure
-
-# === ADJECTIVE-FORMING ===
-able
-ible
-al
-ial
-an
-ane
-ern
-ese
-esque
-ful
-ic
-ical
-ile
-ish
-ive
-less
-like
-oid
-ous
-ious
-eous
-ular
-ward
-y
-
-# === VERB-FORMING ===
-ify
-ise
-ize
-
-# === ADVERB-FORMING ===
+# === DERIVATIONAL (productive with profanity) ===
 ly
-wards
-wise
+ness
+ery
+ish
+able
+dom
+less
+y
 
 # === COMPOUND ELEMENTS (productive in profanity) ===
 head
@@ -97,7 +31,6 @@ tard
 ass
 job
 boy
-girl
 lord
 stain
 monger
