@@ -16,9 +16,9 @@ Automated, reproducible comparison of terlik.js against popular profanity detect
 | **False Positives** | **0** | 3 | 0 | 0 |
 | **False Negatives** | **0** | 48 | 82 | 93 |
 | **Total Errors** | **0 / 290** | 51 / 290 | 82 / 290 | 93 / 290 |
-| **Detection Speed** | 68K ops/sec | **72K ops/sec** | 3K ops/sec | 45K ops/sec |
-| **Cleaning Speed** | **71K ops/sec** | 50K ops/sec | 557 ops/sec | 45K ops/sec |
-| **Init Memory** | 266 KB | 422 KB | **205 KB** | 1,317 KB |
+| **Detection Speed** | 38K ops/sec | **70K ops/sec** | 3K ops/sec | 46K ops/sec |
+| **Cleaning Speed** | 37K ops/sec | **50K ops/sec** | 598 ops/sec | 46K ops/sec |
+| **Init Memory** | 1,459 KB | 463 KB | **204 KB** | 1,317 KB |
 | **Bundle (gzip)** | ~14 KB | ~8 KB | ~3 KB | ~15 KB |
 | **Languages** | 4 (TR, EN, ES, DE) | 1 (EN) | 1 (EN) | 9 |
 | **Zero Dependencies** | Yes | Yes | No | No |
@@ -258,21 +258,21 @@ Measured in operations per second (higher = better). Each operation processes a 
 
 | Library | ops/sec | avg latency | p50 | p95 | p99 | vs terlik.js |
 |---|---:|---:|---:|---:|---:|---|
-| **obscenity** | **71,914** | **1,390 μs** | **1,354 μs** | **1,604 μs** | **1,720 μs** | ~1.06x faster |
-| terlik.js | 67,623 | 1,478 μs | 1,481 μs | 1,672 μs | 1,863 μs | — |
-| allprofanity | 45,450 | 2,200 μs | 2,173 μs | 2,518 μs | 2,688 μs | 1.5x slower |
-| bad-words | 2,831 | 35,322 μs | 36,141 μs | 38,440 μs | 41,194 μs | 23.9x slower |
+| **obscenity** | **70,369** | **1,421 μs** | **1,403 μs** | **1,554 μs** | **1,673 μs** | ~1.84x faster |
+| allprofanity | 46,484 | 2,151 μs | 2,132 μs | 2,270 μs | 2,405 μs | ~1.21x faster |
+| terlik.js | 38,325 | 2,608 μs | 2,560 μs | 2,911 μs | 3,308 μs | — |
+| bad-words | 3,124 | 32,005 μs | 31,971 μs | 32,705 μs | 34,013 μs | 12.3x slower |
 
 **Cleaning speed (clean/censor):**
 
 | Library | ops/sec | avg latency | p50 | p95 | p99 | vs terlik.js |
 |---|---:|---:|---:|---:|---:|---|
-| **terlik.js** | **71,321** | **1,401 μs** | **1,342 μs** | **1,721 μs** | **1,966 μs** | — |
-| obscenity | 49,978 | 2,001 μs | 1,989 μs | 2,284 μs | 2,513 μs | 1.4x slower |
-| allprofanity | 45,162 | 2,214 μs | 2,215 μs | 2,536 μs | 2,716 μs | 1.6x slower |
-| bad-words | 557 | 179,438 μs | 184,372 μs | 191,283 μs | 194,898 μs | 128.0x slower |
+| **obscenity** | **49,583** | **2,017 μs** | **1,995 μs** | **2,190 μs** | **2,342 μs** | ~1.32x faster |
+| allprofanity | 46,495 | 2,151 μs | 2,127 μs | 2,285 μs | 2,400 μs | ~1.24x faster |
+| terlik.js | 37,463 | 2,669 μs | 2,604 μs | 3,099 μs | 3,602 μs | — |
+| bad-words | 598 | 167,324 μs | 167,449 μs | 172,197 μs | 175,625 μs | 62.6x slower |
 
-> **What do these numbers mean in practice?** At 68K ops/sec, terlik.js can check ~67,623 messages per second on a single core. For a chat app with 1,000 concurrent users sending 1 message/second, that's 68x headroom. obscenity edges ahead on raw check() by ~6%, but terlik.js is **43% faster on clean()** and catches 30% more profanity (100% vs 70% recall). bad-words would need 24 cores for the same load.
+> **What do these numbers mean in practice?** At 38K ops/sec, terlik.js can check ~38,325 messages per second on a single core. For a chat app with 1,000 concurrent users sending 1 message/second, that's 38x headroom. obscenity edges ahead on raw check() by ~84%, but terlik.js is **-24% faster on clean()** and catches 30% more profanity (100% vs 70% recall). bad-words would need 12 cores for the same load.
 
 **p95/p99 explained:** p95 = 95% of batches complete within this time. p99 = 99%. Low p99 means consistent performance without random spikes.
 
@@ -313,10 +313,10 @@ Heap and RSS delta measured in KB:
 
 | Library | Init Heap | Init RSS | After 2K msgs Heap | After 2K msgs RSS | Notes |
 |---|---:|---:|---:|---:|---|
-| terlik.js | +266 KB | +48 KB | -3,053 KB | +228 KB | GC reclaims memory efficiently |
-| bad-words | +205 KB | +12 KB | -6,767 KB | +44 KB | Heap grows with usage |
-| obscenity | +422 KB | +20 KB | +426 KB | +28 KB | Lightweight, stable |
-| allprofanity | +1,317 KB | +236 KB | +3,246 KB | -19,976 KB | Large init (loads 2 dictionaries) |
+| terlik.js | +1,459 KB | +40 KB | -9,797 KB | +1,744 KB | GC reclaims memory efficiently |
+| bad-words | +204 KB | +4 KB | +9,511 KB | +36 KB | Heap grows with usage |
+| obscenity | +463 KB | +28 KB | +239 KB | +44 KB | Lightweight, stable |
+| allprofanity | +1,317 KB | +808 KB | -19,779 KB | -28,500 KB | Large init (loads 2 dictionaries) |
 
 **What does this mean?**
 - **Init Heap:** Memory used just to load the library. All are lightweight (~170-220 KB) except allprofanity (1.3 MB, loads English + Hindi dictionaries by default).
@@ -360,7 +360,7 @@ Heap and RSS delta measured in KB:
 | **terlik.js** | Yes | Yes | Yes | Yes | Yes |
 | obscenity | Mostly | No | Yes | Yes | Partially |
 | bad-words | Yes | No | No | Yes | No |
-| allprofanity | Yes | No | Mostly | Yes | No |
+| allprofanity | Yes | No | Yes | Yes | No |
 
 **In plain English:**
 - **terlik.js** — Perfect detection, competitive speed, zero dependencies. The only library that handles all evasion types. Slightly slower on check() than obscenity (~6%) due to multi-pass detection, but 43% faster on clean().
