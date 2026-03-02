@@ -11,8 +11,14 @@ describe("detector", () => {
     leetMap: trConfig.leetMap,
     numberExpansions: trConfig.numberExpansions,
   });
+  const safeNormalizeFn = createNormalizer({
+    locale: trConfig.locale,
+    charMap: trConfig.charMap,
+    leetMap: {},
+    numberExpansions: [],
+  });
   const dictionary = new Dictionary(trConfig.dictionary);
-  const detector = new Detector(dictionary, normalizeFn, trConfig.locale, trConfig.charClasses);
+  const detector = new Detector(dictionary, normalizeFn, safeNormalizeFn, trConfig.locale, trConfig.charClasses);
 
   describe("pattern mode (balanced)", () => {
     it("detects plain profanity", () => {

@@ -1,11 +1,13 @@
 declare function setTimeout(callback: () => void, ms: number): unknown;
 
 import type {
+  Category,
   CleanOptions,
   DetectOptions,
   MatchResult,
   MaskStyle,
   Mode,
+  Severity,
   TerlikOptions,
 } from "./types.js";
 import { Dictionary } from "./dictionary/index.js";
@@ -36,6 +38,10 @@ export class Terlik {
   private fuzzyAlgorithm: "levenshtein" | "dice";
   private maxLength: number;
   private replaceMask: string;
+  private disableLeetDecode: boolean;
+  private disableCompound: boolean;
+  private minSeverity: Severity | undefined;
+  private excludeCategories: Category[] | undefined;
   /** The language code this instance was created with. */
   readonly language: string;
 
@@ -51,6 +57,10 @@ export class Terlik {
     this.enableFuzzy = options?.enableFuzzy ?? false;
     this.fuzzyAlgorithm = options?.fuzzyAlgorithm ?? "levenshtein";
     this.replaceMask = options?.replaceMask ?? "[***]";
+    this.disableLeetDecode = options?.disableLeetDecode ?? false;
+    this.disableCompound = options?.disableCompound ?? false;
+    this.minSeverity = options?.minSeverity;
+    this.excludeCategories = options?.excludeCategories;
 
     const threshold = options?.fuzzyThreshold ?? 0.8;
     if (threshold < 0 || threshold > 1) {
@@ -71,6 +81,14 @@ export class Terlik {
       leetMap: langConfig.leetMap,
       numberExpansions: langConfig.numberExpansions,
     });
+    // Safety-only normalizer: NFKD, diacritics, Cyrillic, charMap stay active;
+    // leet decode and number expansions are disabled.
+    const safeNormalizeFn = createNormalizer({
+      locale: langConfig.locale,
+      charMap: langConfig.charMap,
+      leetMap: {},
+      numberExpansions: [],
+    });
 
     let dictData = langConfig.dictionary;
     if (options?.extendDictionary) {
@@ -87,6 +105,7 @@ export class Terlik {
     this.detector = new Detector(
       this.dictionary,
       normalizeFn,
+      safeNormalizeFn,
       langConfig.locale,
       langConfig.charClasses,
       hasCustomDict ? null : this.language,
@@ -203,6 +222,10 @@ export class Terlik {
       enableFuzzy: options?.enableFuzzy ?? this.enableFuzzy,
       fuzzyThreshold: options?.fuzzyThreshold ?? this.fuzzyThreshold,
       fuzzyAlgorithm: options?.fuzzyAlgorithm ?? this.fuzzyAlgorithm,
+      disableLeetDecode: options?.disableLeetDecode ?? this.disableLeetDecode,
+      disableCompound: options?.disableCompound ?? this.disableCompound,
+      minSeverity: options?.minSeverity ?? this.minSeverity,
+      excludeCategories: options?.excludeCategories ?? this.excludeCategories,
     };
   }
 }

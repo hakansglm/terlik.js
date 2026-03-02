@@ -1,4 +1,4 @@
-import type { CompiledPattern, WordEntry } from "./types.js";
+import type { Category, CompiledPattern, WordEntry } from "./types.js";
 
 // Explicit Latin + Turkish + European letter/digit range (À = U+00C0, ɏ = U+024F).
 // Avoids \p{L}/\p{N} Unicode property escapes which cause V8 to build
@@ -33,16 +33,24 @@ function wordToPattern(
   return parts.join(SEPARATOR);
 }
 
+/** Suffix-only char pattern: literal char + repetition, NO leet charClasses.
+ *  Suffixes are grammatical endings — they should match literally (case-insensitive
+ *  via regex 'i' flag) with repetition collapsing but without leet digit mappings.
+ *  This prevents digits like "123" from matching as suffix characters. */
+function charToLiteralPattern(ch: string): string {
+  return ch.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "+";
+}
+
 function buildSuffixGroup(
   suffixes: string[],
-  charClasses: Record<string, string>,
+  _charClasses: Record<string, string>,
 ): string {
   if (suffixes.length === 0) return "";
 
-  // Convert each suffix to a char-class pattern with separators between chars
+  // Convert each suffix to a literal pattern (no leet charClasses)
   const suffixPatterns = suffixes.map((suffix) => {
     const chars = [...suffix];
-    const parts = chars.map((ch) => charToPattern(ch, charClasses));
+    const parts = chars.map((ch) => charToLiteralPattern(ch));
     return parts.join(SEPARATOR);
   });
 
@@ -144,6 +152,7 @@ export function compilePatterns(
       patterns.push({
         root: entry.root,
         severity: entry.severity,
+        category: entry.category as Category | undefined,
         regex,
         variants: entry.variants,
       });

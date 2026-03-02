@@ -300,15 +300,17 @@ Benchmark results (Apple Silicon, single core, msgs/sec):
 
 Head-to-head comparison on a 290-sample English corpus covering plain text, variants, leet speak, separator evasion, char repetition, combined evasion, false-positive traps, and edge cases. All libraries tested with default settings.
 
-| Library | F1 | Precision | Recall | FPR | check() ops/sec |
-|---|---|---|---|---|---|
-| **terlik.js** | **100.0%** | **100.0%** | **100.0%** | **0.0%** | **81,212** |
-| obscenity | 81.7% | 97.4% | 70.4% | 2.3% | 67,471 |
-| bad-words | 66.1% | 100.0% | 49.4% | 0.0% | 2,855 |
-| allprofanity | 59.7% | 100.0% | 42.6% | 0.0% | 43,765 |
+| Library | F1 | Precision | Recall | FPR | check() ops/sec | clean() ops/sec |
+|---|---|---|---|---|---|---|
+| **terlik.js** | **100.0%** | **100.0%** | **100.0%** | **0.0%** | 67,623 | **71,321** |
+| obscenity | 81.7% | 97.4% | 70.4% | 2.3% | 71,914 | 49,978 |
+| bad-words | 66.1% | 100.0% | 49.4% | 0.0% | 2,831 | 557 |
+| allprofanity | 59.7% | 100.0% | 42.6% | 0.0% | 45,450 | 45,162 |
 
-terlik.js achieves **perfect detection** — 100% precision, 100% recall, zero false positives — while being **1.2x faster** than the next fastest library. It catches **100% of separator and repetition evasions** that other libraries miss entirely. See [full methodology, per-category breakdown, and limitations](./docs/benchmark-comparison.md).
+terlik.js achieves **perfect detection** — 100% precision, 100% recall, zero false positives — with competitive throughput (~68K check ops/sec, **fastest clean()** at 71K ops/sec). It catches **100% of separator and repetition evasions** that other libraries miss entirely. See [full methodology, per-category breakdown, and limitations](./docs/benchmark-comparison.md).
 
+> **Throughput note:** The multi-pass detection pipeline (NFKD, Cyrillic confusable mapping, CamelCase decompounding) costs ~17% vs a naive single-pass approach — this is what enables 100% recall vs obscenity's 70%. Optional toggles (`disableLeetDecode`, `disableCompound`) can recover ~5-8% for controlled inputs. Safety layers (NFKD, diacritics, Cyrillic) are always active. See [full toggle guide](./docs/benchmark-comparison.md#where-does-the-throughput-go).
+>
 > **Transparency:** This benchmark is maintained by the terlik.js team. Dataset, adapters, and runner are open source. Reproduce with `pnpm bench:compare`. We document every false positive and miss — [see the full report](./docs/benchmark-comparison.md).
 
 ### Accuracy

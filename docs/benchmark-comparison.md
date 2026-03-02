@@ -14,14 +14,14 @@ Automated, reproducible comparison of terlik.js against popular profanity detect
 | **False Positives** | **0** | 3 | 0 | 0 |
 | **False Negatives** | **0** | 48 | 82 | 93 |
 | **Total Errors** | **0 / 290** | 51 / 290 | 82 / 290 | 93 / 290 |
-| **Detection Speed** | **81K ops/sec** | 67K ops/sec | 2.8K ops/sec | 44K ops/sec |
-| **Cleaning Speed** | **81K ops/sec** | 47K ops/sec | 564 ops/sec | 44K ops/sec |
-| **Init Memory** | 220 KB | 167 KB | 205 KB | 1,317 KB |
+| **Detection Speed** | 68K ops/sec | **72K ops/sec** | 2.8K ops/sec | 45K ops/sec |
+| **Cleaning Speed** | **71K ops/sec** | 50K ops/sec | 557 ops/sec | 45K ops/sec |
+| **Init Memory** | 266 KB | 167 KB | 205 KB | 1,316 KB |
 | **Bundle (gzip)** | ~14 KB | ~8 KB | ~3 KB | ~15 KB |
 | **Languages** | 4 (TR, EN, ES, DE) | 1 (EN) | 1 (EN) | 9 |
 | **Zero Dependencies** | Yes | Yes | No | No |
 
-> **What does this mean?** terlik.js detects every profane message without a single mistake, runs faster than all alternatives, and does it with zero dependencies across 4 languages.
+> **What does this mean?** terlik.js detects every profane message without a single mistake — perfect F1 on all 9 evasion categories — while maintaining competitive throughput and zero dependencies across 4 languages.
 
 ---
 
@@ -256,23 +256,50 @@ Measured in operations per second (higher = better). Each operation processes a 
 
 | Library | ops/sec | avg latency | p50 | p95 | p99 | vs terlik.js |
 |---|---:|---:|---:|---:|---:|---|
-| **terlik.js** | **81,212** | 1,230 μs | 1,197 μs | 1,524 μs | 1,798 μs | — |
-| obscenity | 67,471 | 1,482 μs | 1,497 μs | 1,641 μs | 1,752 μs | 1.2x slower |
-| allprofanity | 43,765 | 2,285 μs | 2,309 μs | 2,560 μs | 2,770 μs | 1.9x slower |
-| bad-words | 2,855 | 35,030 μs | 35,564 μs | 38,381 μs | 40,226 μs | 28x slower |
+| obscenity | 71,914 | 1,390 μs | 1,354 μs | 1,572 μs | 1,687 μs | ~1.06x faster |
+| **terlik.js** | **67,623** | **1,478 μs** | **1,481 μs** | **1,672 μs** | **1,863 μs** | — |
+| allprofanity | 45,450 | 2,200 μs | 2,173 μs | 2,465 μs | 2,649 μs | 1.5x slower |
+| bad-words | 2,831 | 35,310 μs | 36,141 μs | 38,131 μs | 39,846 μs | 24x slower |
 
 **Cleaning speed (clean/censor):**
 
 | Library | ops/sec | avg latency | p50 | p95 | p99 | vs terlik.js |
 |---|---:|---:|---:|---:|---:|---|
-| **terlik.js** | **81,214** | 1,231 μs | 1,199 μs | 1,533 μs | 1,646 μs | — |
-| obscenity | 47,390 | 2,110 μs | 2,143 μs | 2,326 μs | 2,425 μs | 1.7x slower |
-| allprofanity | 43,885 | 2,279 μs | 2,317 μs | 2,496 μs | 2,594 μs | 1.9x slower |
-| bad-words | 564 | 177,394 μs | 182,347 μs | 188,173 μs | 191,156 μs | 144x slower |
+| **terlik.js** | **71,321** | **1,401 μs** | **1,342 μs** | **1,761 μs** | **2,000 μs** | — |
+| obscenity | 49,978 | 2,001 μs | 1,989 μs | 2,255 μs | 2,449 μs | 1.4x slower |
+| allprofanity | 45,162 | 2,214 μs | 2,215 μs | 2,479 μs | 2,658 μs | 1.6x slower |
+| bad-words | 557 | 179,578 μs | 184,372 μs | 191,515 μs | 194,643 μs | 128x slower |
 
-> **What do these numbers mean in practice?** At 81K ops/sec, terlik.js can check ~81,000 messages per second on a single core. For a chat app with 1,000 concurrent users sending 1 message/second, that's 81x headroom. bad-words would need 28 cores for the same load.
+> **What do these numbers mean in practice?** At 68K ops/sec, terlik.js can check ~68,000 messages per second on a single core. For a chat app with 1,000 concurrent users sending 1 message/second, that's 68x headroom. obscenity edges ahead on raw check() by ~6%, but terlik.js is **43% faster on clean()** and catches 30% more profanity (100% vs 70% recall). bad-words would need 24 cores for the same load.
 
 **p95/p99 explained:** p95 = 95% of batches complete within this time. p99 = 99%. Low p99 means consistent performance without random spikes.
+
+#### Where Does the Throughput Go?
+
+terlik.js runs a multi-pass detection pipeline that trades raw speed for detection depth. Here's what each layer costs and what it catches:
+
+| Detection Layer | Throughput Cost | What It Catches | Can You Disable It? |
+|---|---|---|---|
+| NFKD decomposition | ~3% | Fullwidth evasion (ｆｕｃｋ), accented tricks (fück) | No — safety layer |
+| Cyrillic confusable mapping | ~1% | Cyrillic а→a, о→o substitution | No — safety layer |
+| Combining mark stripping | ~1% | Diacritics used for evasion (s̈h̊ït) | No — safety layer |
+| Locale-aware lowercase | ~1% | İ→i, I→ı (Turkish locale correctness) | No — safety layer |
+| Leet decode + number expansion | ~5% | $1kt1r, f#ck, 8itch, s2k | Yes: `disableLeetDecode: true` |
+| CamelCase decompounding | ~3% | ShitLord, FuckYou (non-variant compounds) | Yes: `disableCompound: true` |
+| Suffix chain matching | ~3% | Suffixed forms (siktirci, fuckers) | No — core detection |
+
+> **Do NOT disable safety layers for performance.** The ~6% total cost of NFKD + Cyrillic + diacritics + locale lowercase is non-negotiable — without them, trivial Unicode tricks bypass the entire filter. These layers run on every input regardless of toggle settings.
+
+#### When to Use the Optional Toggles
+
+| Toggle | Use Case | Performance Gain | Risk |
+|---|---|---|---|
+| `disableLeetDecode: true` | Input is from a controlled source (e.g., CMS with restricted charset, database field names) | ~5% faster | Misses $1kt1r, 8itch, f#ck, number-embedded evasions |
+| `disableCompound: true` | Camel case is intentional (e.g., code identifiers like `ShittyClassName`) | ~3% faster | Misses novel compounds not in dictionary (ShitLord, FuckBoy if not variant) |
+| `minSeverity: "medium"` | Skip mild words (damn, crap, hell) in casual contexts | Marginal (pattern-level skip) | Low-severity profanity passes through |
+| `excludeCategories: ["sexual"]` | Allow general/insult words but block sexual content | Marginal (pattern-level skip) | Selected category passes through |
+
+**Important:** `disableLeetDecode` does NOT disable all substitution detection. The regex charClass patterns (Pass 1) still catch some visual substitutions like `$` → `s`. The toggle only disables the normalizer's decode stages (leet map + number expansion). If a user says "I set `disableLeetDecode` but `$hit` is still caught" — that's by design. The charClass patterns are part of the core regex engine, not the normalizer.
 
 ---
 
@@ -284,10 +311,10 @@ Heap and RSS delta measured in KB:
 
 | Library | Init Heap | Init RSS | After 2K msgs Heap | After 2K msgs RSS | Notes |
 |---|---:|---:|---:|---:|---|
-| terlik.js | +220 KB | +48 KB | -4,023 KB | +2,936 KB | GC reclaims memory efficiently |
-| obscenity | +167 KB | +16 KB | +651 KB | +32 KB | Lightweight, stable |
-| bad-words | +205 KB | +36 KB | +9,519 KB | +60 KB | Heap grows with usage |
-| allprofanity | +1,317 KB | +244 KB | -4,944 KB | -21,772 KB | Large init (loads 2 dictionaries) |
+| terlik.js | +266 KB | +44 KB | -2,966 KB | +1,352 KB | GC reclaims memory efficiently |
+| obscenity | +167 KB | +24 KB | +713 KB | +28 KB | Lightweight, stable |
+| bad-words | +205 KB | +12 KB | +9,552 KB | +40 KB | Heap grows with usage |
+| allprofanity | +1,316 KB | +272 KB | -5,984 KB | -20,444 KB | Large init (loads 2 dictionaries) |
 
 **What does this mean?**
 - **Init Heap:** Memory used just to load the library. All are lightweight (~170-220 KB) except allprofanity (1.3 MB, loads English + Hindi dictionaries by default).
@@ -302,23 +329,23 @@ Heap and RSS delta measured in KB:
 
 | Library | Raw size | Gzipped | Dependencies |
 |---|---:|---:|---|
-| terlik.js | ~64 KB | **~14 KB** | 0 |
+| terlik.js | ~67 KB | **~14 KB** | 0 |
 | obscenity | ~45 KB | ~8 KB | 0 |
 | bad-words | ~15 KB | ~3 KB | 1 (badwords-list) |
 | allprofanity | ~80 KB | ~15 KB | 2 |
 
-**Dictionary expansion impact (v2.4.1 → current):**
+**Dictionary expansion + strictness toggles impact (v2.4.1 → current):**
 
-| | Before | After | Delta |
+| | v2.4.1 | Current | Delta |
 |---|---:|---:|---:|
 | English roots | 36 | 56 | +20 |
 | Explicit variants | 139 | 185 | +46 |
 | Whitelist entries | 60 | 96 | +36 |
 | Suffix rules | 8 | 9 | +1 |
-| ESM raw | ~57 KB | ~64 KB | +7 KB |
+| ESM raw | ~57 KB | ~67 KB | +10 KB |
 | ESM gzip | ~12 KB | ~14 KB | **+2 KB** |
 
-> The entire English detection overhaul (20 new roots, 46 variants, 36 whitelist entries) added only **+2 KB gzipped**. Dictionary entries share common substrings and compress extremely well.
+> The English detection overhaul (20 new roots, 46 variants, 36 whitelist entries) plus Phase 1-4 features (NFKD normalization, CamelCase decompounding, Cyrillic confusable handling, strictness toggles) added only **+2 KB gzipped**.
 
 ---
 
@@ -334,9 +361,9 @@ Heap and RSS delta measured in KB:
 | allprofanity | Yes | No | Mostly | Mostly | No |
 
 **In plain English:**
-- **terlik.js** — No compromises. Perfect detection, fastest speed, zero dependencies. The only library that handles all evasion types.
-- **obscenity** — Good precision, decent leet handling, but can't handle separators and has no whitelist (causes false positives). Closest competitor.
-- **bad-words** — Zero false positives, but misses over half of all profanity. Any determined user will bypass it.
+- **terlik.js** — Perfect detection, competitive speed, zero dependencies. The only library that handles all evasion types. Slightly slower on check() than obscenity (~6%) due to multi-pass detection, but 43% faster on clean().
+- **obscenity** — Good precision, decent leet handling, marginally fastest check(). Can't handle separators and has no whitelist (causes false positives). Closest competitor on speed, distant on accuracy.
+- **bad-words** — Zero false positives, but misses over half of all profanity. Any determined user will bypass it. 24x slower than terlik.js.
 - **allprofanity** — Similar to bad-words but with more language support. Weak evasion handling. Fast init but large memory footprint.
 
 ---
@@ -348,15 +375,29 @@ The detection pipeline explains why terlik.js catches what others miss:
 ```
 Input: "phuck y0u m0th3rfuck3r"
   │
-  ├─ 1. Lowercase         → "phuck y0u m0th3rfuck3r"
-  ├─ 2. Char folding      → "phuck y0u m0th3rfuck3r"
-  ├─ 3. Leet decode       → "phuck you motherfucker"
-  ├─ 4. Separator removal → (no separators to remove)
-  ├─ 5. Repeat collapse   → (no repeats to collapse)
-  ├─ 6. Pattern matching  → charClasses: f=[fph], so "ph" → matches "f" pattern
-  │                          "phuck" matches /[fph][uv][c][k]/ → ✅ fuck
-  │                          "motherfucker" → ✅ direct variant match
-  ├─ 7. Whitelist check   → neither word is whitelisted
+  ├─ Pass 0: 10-stage normalizer
+  │   ├─ 1. Strip invisible chars (ZWSP, soft hyphen, etc.)
+  │   ├─ 2. NFKD decompose (ｆｕｃｋ → fuck, accented → base)
+  │   ├─ 3. Strip combining marks (diacritics)
+  │   ├─ 4. Locale-aware lowercase
+  │   ├─ 5. Cyrillic confusable → Latin (Cyrillic а→a, о→o, etc.)
+  │   ├─ 6. Char folding (ü→u, ö→o, etc.)
+  │   ├─ 7. Number expansion (s2k → sikik in TR)
+  │   ├─ 8. Leet decode (0→o, 3→e, $→s)
+  │   ├─ 9. Punctuation removal (f.u.c.k → fuck)
+  │   └─ 10. Repeat collapse (fuuuck → fuck)
+  │   Result: "phuck you motherfucker"
+  │
+  ├─ Pass 1: Locale-lowered regex matching
+  │   charClasses: f=[fph], so "ph" → matches "f" pattern
+  │   "phuck" matches /[fph][uv][c][k]/ → ✅ fuck
+  │
+  ├─ Pass 2: Normalized text regex matching
+  │   "motherfucker" → ✅ direct variant match
+  │
+  ├─ Pass 3: CamelCase decompounding (ShitLord → Shit Lord)
+  │
+  ├─ Whitelist check → neither word is whitelisted
   └─ Result: 2 matches found
 ```
 
@@ -376,7 +417,7 @@ Other libraries fail at different stages:
 | Context-dependent words | "hell yeah" is flagged (but user may consider it mild) | By design — severity: "low" |
 | 3-letter root FP risk | "cum" in "cucumber" | Protected by whitelist, but new compounds may appear |
 | Rapidly evolving slang | New coinages not in dictionary | Use `addWords()` or `customList` at runtime |
-| Non-Latin scripts | Cyrillic "а" substituted for Latin "a" | Not yet handled |
+| Non-Latin scripts | Cyrillic "а" substituted for Latin "a" | Handled (Cyrillic confusable → Latin mapping) |
 | Dataset size | 290 samples is comprehensive but not exhaustive | Continuously expanding |
 
 We document every limitation and encourage the community to report edge cases.

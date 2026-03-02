@@ -14,8 +14,14 @@ function createDetector(config: typeof trConfig) {
     leetMap: config.leetMap,
     numberExpansions: config.numberExpansions,
   });
+  const safeNormalizeFn = createNormalizer({
+    locale: config.locale,
+    charMap: config.charMap,
+    leetMap: {},
+    numberExpansions: [],
+  });
   const dictionary = new Dictionary(config.dictionary);
-  return new Detector(dictionary, normalizeFn, config.locale, config.charClasses);
+  return new Detector(dictionary, normalizeFn, safeNormalizeFn, config.locale, config.charClasses);
 }
 
 // Timeout is per-pattern (not total budget), so each pattern gets its own

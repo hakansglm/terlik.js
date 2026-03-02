@@ -28,17 +28,16 @@
     {
       "root": "sik",
       "variants": [
-        "siktir", "sikicem", "siktim", "sikeyim", "sikerim", "sikis", "sikik",
-        "sikim", "sikimle", "sikimin", "sikime",
-        "sike", "siken", "siker", "sikti", "siktiler", "sikmis", "sikmek",
-        "sikecek", "sikiyor", "sikme", "sikici", "siksin", "siktirler",
-        "sikimsonik", "siktirin", "siktiler", "sikerler", "sikiler",
-        "siktiğimin", "sikermisiniz", "sikermisin", "siktirmişcesine",
+        "siktir", "sikicem", "siktim", "sikeyim", "sikik",
+        "sikim", "sikis",
+        "sike", "siken", "siker", "sikti", "sikmis", "sikmek",
+        "sikecek", "sikiyor", "sikme", "sikici", "siksin",
+        "sikimsonik",
+        "siktiğimin", "siktirmişcesine",
         "sktr",
         "sikişse", "sikişecek", "sikişen", "sikişme", "sikişmek",
-        "sikeceksin", "sikecekler", "sikeceğim",
-        "sikmişler",
-        "sikilecek"
+        "sikeceğim",
+        "sikilecek", "sikiler"
       ],
       "severity": "high",
       "category": "sexual",
@@ -393,6 +392,16 @@
     "ahlak",
     "ahlaki",
     "sıkıcı",
-    "sıkerler"
+    "sıkerler",
+    "sıkıştı",
+    "sıkışık",
+    "sıkışma",
+    "sıkışmak",
+    "sıkışan",
+    "sıkışıyor",
+    "sıkıştır",
+    "sıkıştırma",
+    "sıkışmış",
+    "sikkeleri"
   ]
 }

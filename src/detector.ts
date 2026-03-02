@@ -1,4 +1,5 @@
-import type { CompiledPattern, DetectOptions, MatchResult, Mode } from "./types.js";
+import type { Category, CompiledPattern, DetectOptions, MatchResult, Mode } from "./types.js";
+import { SEVERITY_ORDER } from "./types.js";
 import { Dictionary } from "./dictionary/index.js";
 import { compilePatterns, REGEX_TIMEOUT_MS } from "./patterns.js";
 import { getFuzzyMatcher } from "./fuzzy.js";
@@ -13,18 +14,21 @@ export class Detector {
   private normalizedWordSet: Set<string>;
   private normalizedWordToRoot: Map<string, string>;
   private normalizeFn: (text: string) => string;
+  private safeNormalizeFn: (text: string) => string;
   private locale: string;
   private charClasses: Record<string, string>;
 
   constructor(
     dictionary: Dictionary,
     normalizeFn: (text: string) => string,
+    safeNormalizeFn: (text: string) => string,
     locale: string,
     charClasses: Record<string, string>,
     cacheKey?: string | null,
   ) {
     this.dictionary = dictionary;
     this.normalizeFn = normalizeFn;
+    this.safeNormalizeFn = safeNormalizeFn;
     this.locale = locale;
     this.charClasses = charClasses;
     this.cacheKey = cacheKey ?? null;
@@ -96,7 +100,7 @@ export class Detector {
     if (mode === "strict") {
       this.detectStrict(text, whitelist, results);
     } else {
-      this.detectPattern(text, whitelist, results);
+      this.detectPattern(text, whitelist, results, options);
     }
 
     if (mode === "loose" || options?.enableFuzzy) {
@@ -105,7 +109,23 @@ export class Detector {
       this.detectFuzzy(text, whitelist, results, threshold, algorithm);
     }
 
-    return this.deduplicateResults(results);
+    return this.deduplicateResults(
+      this.applyStrictnessFilters(results, options),
+    );
+  }
+
+  private applyStrictnessFilters(
+    results: MatchResult[],
+    options?: DetectOptions,
+  ): MatchResult[] {
+    const minSev = options?.minSeverity;
+    const exCats = options?.excludeCategories;
+    if (!minSev && (!exCats || exCats.length === 0)) return results;
+    return results.filter((r) => {
+      if (minSev && SEVERITY_ORDER[r.severity] < SEVERITY_ORDER[minSev]) return false;
+      if (exCats && r.category && exCats.includes(r.category)) return false;
+      return true;
+    });
   }
 
   private detectStrict(
@@ -141,6 +161,7 @@ export class Detector {
             root: entry.root,
             index: charIndex,
             severity: entry.severity,
+            category: entry.category as Category | undefined,
             method: "exact",
           });
         }
@@ -154,30 +175,36 @@ export class Detector {
     text: string,
     whitelist: Set<string>,
     results: MatchResult[],
+    options?: DetectOptions,
   ): void {
+    const activeNormFn = options?.disableLeetDecode
+      ? this.safeNormalizeFn
+      : this.normalizeFn;
+
     // First pass: locale-lowered text ensures İ→i (Turkish) and similar
     // locale-specific mappings happen before regex matching, avoiding
     // platform-specific V8/ICU case-folding differences.
     const lowerText = text.toLocaleLowerCase(this.locale);
-    this.runPatterns(lowerText, text, whitelist, results, lowerText !== text);
+    this.runPatterns(lowerText, text, whitelist, results, lowerText !== text, options);
 
     // Second pass on normalized text only if normalization changed something
     // beyond simple lowercasing (leet, numExpand, punctuation removal, etc.)
-    const normalizedText = this.normalizeFn(text);
+    const normalizedText = activeNormFn(text);
     if (normalizedText !== lowerText && normalizedText.length > 0) {
-      this.runPatterns(normalizedText, text, whitelist, results, true);
+      this.runPatterns(normalizedText, text, whitelist, results, true, options);
     }
 
     // Third pass: decompound CamelCase boundaries (FuckYou → Fuck You,
-    // SHITlord → SHIT lord). Not in normalizer to avoid breaking Turkish
-    // mixed-case like sIktIr where I→ı in TR locale.
-    const decompound = text
-      .replace(/([a-z])([A-Z])/g, "$1 $2")
-      .replace(/([A-Z]{2,})([a-z])/g, "$1 $2");
-    if (decompound !== text) {
-      const decompoundNorm = this.normalizeFn(decompound);
-      if (decompoundNorm !== normalizedText && decompoundNorm !== lowerText) {
-        this.runPatterns(decompoundNorm, text, whitelist, results, true);
+    // SHITlord → SHIT lord). Skipped when disableCompound is set.
+    if (!options?.disableCompound) {
+      const decompound = text
+        .replace(/([a-z])([A-Z])/g, "$1 $2")
+        .replace(/([A-Z]{2,})([a-z])/g, "$1 $2");
+      if (decompound !== text) {
+        const decompoundNorm = activeNormFn(decompound);
+        if (decompoundNorm !== normalizedText && decompoundNorm !== lowerText) {
+          this.runPatterns(decompoundNorm, text, whitelist, results, true, options);
+        }
       }
     }
   }
@@ -188,11 +215,18 @@ export class Detector {
     whitelist: Set<string>,
     results: MatchResult[],
     isNormalized: boolean,
+    options?: DetectOptions,
   ): void {
     const existingIndices = new Set(results.map((r) => r.index));
     const patterns = this.ensureCompiled();
+    const minSev = options?.minSeverity;
+    const exCats = options?.excludeCategories;
 
     for (const pattern of patterns) {
+      // Pattern-level skip: don't even run regex if this pattern will be filtered
+      if (minSev && SEVERITY_ORDER[pattern.severity] < SEVERITY_ORDER[minSev]) continue;
+      if (exCats && pattern.category && exCats.includes(pattern.category)) continue;
+
       const patternStart = Date.now();
       pattern.regex.lastIndex = 0;
       let match: RegExpExecArray | null;
@@ -216,12 +250,17 @@ export class Detector {
           const mapped = this.mapNormalizedToOriginal(originalText, matchIndex, matchedText);
           // Check original word against whitelist (handles ı→i folding cases)
           if (mapped && whitelist.has(mapped.word.toLowerCase())) continue;
+          // Reject matches where the original word ends with only digits
+          // (e.g. "siktir123" — leet normalization turns "123" into "iie"
+          // which suffix matching then catches as grammatical endings)
+          if (mapped && /\d+$/.test(mapped.word) && /^[^\d]+\d+$/.test(mapped.word)) continue;
           if (mapped && !existingIndices.has(mapped.index)) {
             results.push({
               word: mapped.word,
               root: pattern.root,
               index: mapped.index,
               severity: pattern.severity,
+              category: pattern.category,
               method: "pattern",
             });
             existingIndices.add(mapped.index);
@@ -233,6 +272,7 @@ export class Detector {
               root: pattern.root,
               index: matchIndex,
               severity: pattern.severity,
+              category: pattern.category,
               method: "pattern",
             });
             existingIndices.add(matchIndex);
@@ -322,6 +362,7 @@ export class Detector {
                 root: entry.root,
                 index: charIndex,
                 severity: entry.severity,
+                category: entry.category as Category | undefined,
                 method: "fuzzy",
               });
               existingIndices.add(charIndex);
