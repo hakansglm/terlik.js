@@ -1,0 +1,42 @@
+# Pozitif (toxic) kök kelimeler — Türkçe
+# dictionary.json entries'den alınmıştır
+# Her satır: root
+sik
+amk
+orospu
+piç
+yarrak
+göt
+am
+taşak
+meme
+ibne
+gavat
+pezevenk
+bok
+haysiyetsiz
+salak
+aptal
+gerizekalı
+mal
+dangalak
+ezik
+puşt
+şerefsiz
+yavşak
+döl
+kahpe
+sürtük
+kaltak
+fahişe
+kevaşe
+oğlancı
+dingil
+avanak
+manyak
+hödük
+kepaze
+rezil
+kalleş
+namussuz
+ahlaksız

@@ -1,0 +1,17 @@
+# Negatif (clean) context cümleleri — Türkçe
+# {word} placeholder ile kök kelime yerleştirilir
+bugün marketten {word} aldım eve geldim
+{word} konusunda uzman bir arkadaşım var
+geçen hafta {word} ile ilgili bir kitap okudum
+internet sitesinde {word} hakkında güzel bir yazı var
+okulda {word} dersi çok zevkli geçti
+{word} festivali bu yıl da düzenleniyor
+anneannem {word} yapmayı çok seviyor
+tatilde {word} gezisi yaptık harika bir deneyimdi
+yeni {word} projesi başarıyla tamamlandı
+{word} müzesini ziyaret etmek istiyorum
+doktor {word} kullanmamı önerdi
+{word} mağazasından alışveriş yaptım
+bu yıl {word} üretimi rekor kırdı
+{word} teknolojisi hızla gelişiyor
+bahçede {word} yetiştirmeye başladım

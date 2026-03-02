@@ -1,0 +1,17 @@
+# Negative (clean) context sentences — English
+# {word} placeholder for root word insertion
+I went to the store and bought some {word}
+the {word} exhibition at the museum was fantastic
+my grandmother makes the best {word} recipe
+the new {word} technology is revolutionary
+we studied {word} in science class today
+the {word} festival attracted thousands of visitors
+{word} production increased by twenty percent
+the documentary about {word} was very informative
+I signed up for a {word} workshop next week
+the {word} market is growing rapidly worldwide
+our teacher explained {word} in great detail
+the {word} industry creates many jobs
+we visited the {word} factory during our trip
+{word} research has made great progress
+the book about {word} was a bestseller

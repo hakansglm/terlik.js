@@ -1,0 +1,17 @@
+# Emoji replacements — harfler arası emoji ekleme
+# Format: emoji
+🤬
+💩
+🖕
+😡
+👊
+💀
+🔥
+😤
+🤮
+👎
+⚠️
+❌
+🚫
+💢
+😈

@@ -1,0 +1,10 @@
+# Leet speak mapping — config.ts leetMap'ten ters çevrilmiş
+# Format: harf -> leet_karşılıkları (virgülle ayrılmış)
+o -> 0
+i -> 1,2,!
+e -> 3
+a -> 4,@
+s -> 5,$
+g -> 6,9
+t -> 7
+b -> 8

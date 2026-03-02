@@ -1,0 +1,200 @@
+{"text":"du spast","label":1,"root":"spast","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"verdammter spack💀en","label":1,"root":"spacken","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"die bewertung war nur nekcaps sprache","label":1,"root":"spacken","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"Die dokumentation ueber arschen war sehr informativ","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ich ging in den laden und kaufte arschen","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"meine oma macht das beste schwanzen rezept","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Arschen anleitung fuer anfaenger","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"hochwertiges geschichte zu verkaufen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"š​pãck‍e⁣n dich","label":1,"root":"spacken","difficulty":"hard","transforms":["unicode","zwc"],"category":"positive"}
+{"text":"sie schrien blödmannte zum schiedsrichter","label":1,"root":"blödmann","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"elender s‍c﻿h​wa‍n⁣z","label":1,"root":"schwanz","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"мisѕgebburt graffiti war an die wand gesprueht","label":1,"root":"missgeburt","difficulty":"hard","transforms":["unicode","charRepeat"],"category":"positive"}
+{"text":"h+a+c+k+f+r+e+s+s+ +e gesicht","label":1,"root":"hackfresse","difficulty":"hard","transforms":["split","separator"],"category":"positive"}
+{"text":"das schwanger festival zog tausende besucher an","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du b'a's't'a'r'd","label":1,"root":"bastard","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"ich ging in den laden und kaufte ficktion","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"geh dreeeecksau dich","label":1,"root":"drecksau","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"der streit eskalierte mit mssstkrlte beleidigungen","label":1,"root":"mistkerl","difficulty":"hard","transforms":["suffix","vowelDrop","charRepeat"],"category":"positive"}
+{"text":"neues geschichte modell erschienen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du bist ein schlampp ees","label":1,"root":"schlampe","difficulty":"hard","transforms":["split","suffix","charRepeat"],"category":"positive"}
+{"text":"absoluter d+u+m+m+e+m","label":1,"root":"dumm","difficulty":"hard","transforms":["suffix","separator"],"category":"positive"}
+{"text":"Die forschung ueber schwanger hat grosse fortschritte gemacht","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"schwanzen spezifikationen aufgelistet","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"geh s~p~a~s~t dich","label":1,"root":"spast","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"ficktion informationen verfuegbar","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"geh Ɗ*r*e*ć*k dich","label":1,"root":"dreck","difficulty":"hard","transforms":["separator","unicode"],"category":"positive"}
+{"text":"die preise fuer geschichte sind gestiegen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"heute habe ich schwanger gekauft","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"heute habe ich schwanzen gekauft","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die beste schwanger marke","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Ich habe mich fuer einen ficktion kurs angemeldet","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"schwangerschaft ist jetzt sehr beliebt","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"totaler spa🖕ckeeeen","label":1,"root":"spacken","difficulty":"hard","transforms":["charRepeat","emojiMix"],"category":"positive"}
+{"text":"schwanzen ist jetzt sehr beliebt","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"schwanzen bewertung und vergleich","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"heute habe ich geschichte gekauft","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"der beitrag war voll von ̦̦ň ̫̄n̖̕a̡̤m̍d̴ö̗l̰̗в","label":1,"root":"blödmann","difficulty":"extreme","transforms":["unicode","zalgo","split","reverse"],"category":"positive"}
+{"text":"sie schrien penňeŕ zum schiedsrichter","label":1,"root":"penner","difficulty":"medium","transforms":["case","unicode"],"category":"positive"}
+{"text":"halt die hure","label":1,"root":"hure","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"wir besuchten die geschichte fabrik waehrend der reise","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du ḐR̮̦😡̻̕Ẽ̟C̸̗K̪̉S̻̰̔Ą̨̘Ũ","label":1,"root":"drecksau","difficulty":"extreme","transforms":["emojiMix","zalgo","case","doubling"],"category":"positive"}
+{"text":"wir haben ficktion im unterricht studiert","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Der schwangerschaft wurde puenktlich geliefert","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absoluter v̗0̟̊l̇l̑i̸d̊̑̚i̷o̱̱t̜","label":1,"root":"vollidiot","difficulty":"extreme","transforms":["zalgo","leet","charRepeat"],"category":"positive"}
+{"text":"hoer auf so ein š;c;һ;l;ā;m;p;e;e;n zu sein","label":1,"root":"schlampe","difficulty":"hard","transforms":["unicode","suffix","separator"],"category":"positive"}
+{"text":"die beste ficktion marke","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die beste arschen marke","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"geschichte informationen verfuegbar","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"miststück typ","label":1,"root":"miststück","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"elender f̳̋0̈ť̜̞z̨̨̨̝3̶","label":1,"root":"fotze","difficulty":"hard","transforms":["leet","zalgo","charRepeat"],"category":"positive"}
+{"text":"warum nennst du jemanden fickst","label":1,"root":"fick","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"MISTSTÜCK ist kein angemessenes wort","label":1,"root":"miststück","difficulty":"easy","transforms":["case"],"category":"positive"}
+{"text":"du s‌⚠️⁠p⁢4​5ss​$t57","label":1,"root":"spast","difficulty":"extreme","transforms":["suffix","emojiMix","charRepeat","zwc","leet"],"category":"positive"}
+{"text":"du alter ppenner","label":1,"root":"penner","difficulty":"medium","transforms":["doubling"],"category":"positive"}
+{"text":"dumm ist kein angemessenes wort","label":1,"root":"dumm","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"ssspaste dich","label":1,"root":"spast","difficulty":"hard","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"Hochwertiges geschichte zu verkaufen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"neues geschichte modell erschienen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"geh vòllidiotteг dich","label":1,"root":"vollidiot","difficulty":"hard","transforms":["doubling","suffix","unicode"],"category":"positive"}
+{"text":"nekcaps nochmal","label":1,"root":"spacken","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"wir haben geschichte im unterricht studiert","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du a​r‌s⁠sss​ch","label":1,"root":"arsch","difficulty":"extreme","transforms":["charRepeat","zwc"],"category":"positive"}
+{"text":"ba⁠s⁠tar⁢d nochmal","label":1,"root":"bastard","difficulty":"easy","transforms":["zwc"],"category":"positive"}
+{"text":"du bist ein drcken","label":1,"root":"dreck","difficulty":"medium","transforms":["suffix","vowelDrop"],"category":"positive"}
+{"text":"die preise fuer arschen sind gestiegen","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die forschung ueber schwangerschaft hat grosse fortschritte gemacht","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du I̭d̥̃I̲̋̍ó̙̗t̃̚","label":1,"root":"idiot","difficulty":"medium","transforms":["zalgo","case"],"category":"positive"}
+{"text":"die dokumentation ueber schwanger war sehr informativ","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"missgeburt dich","label":1,"root":"missgeburt","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"die forschung ueber geschichte hat grosse fortschritte gemacht","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"hochwertiges schwangerschaft zu verkaufen","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"warum nennst du jemanden IDIOT","label":1,"root":"idiot","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"das buch ueber schwanzen war ein bestseller","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absoluter spaster","label":1,"root":"spast","difficulty":"hard","transforms":["suffix"],"category":"positive"}
+{"text":"ficktion ist jetzt sehr beliebt","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ich ging in den laden und kaufte arschen","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"vollidiot dich","label":1,"root":"vollidiot","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"ich empfehle schwanzen jedem","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"der arschen wurde puenktlich geliefert","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"p​s⁣sn‍l⁣k‌e typ","label":1,"root":"pissnelke","difficulty":"medium","transforms":["vowelDrop","zwc"],"category":"positive"}
+{"text":"der spieler hoerte nicht auf аrsçһėm zu sagen","label":1,"root":"arsch","difficulty":"hard","transforms":["suffix","unicode"],"category":"positive"}
+{"text":"schwanzen ist jetzt sehr beliebt","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"verdammter s⁤p‍a‍сķ⁡еn","label":1,"root":"spacken","difficulty":"medium","transforms":["zwc","unicode"],"category":"positive"}
+{"text":"die neue ficktion technologie ist revolutionaer","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"geh BlÖÖDmAANN dich","label":1,"root":"blödmann","difficulty":"hard","transforms":["case","doubling","charRepeat"],"category":"positive"}
+{"text":"Heute habe ich schwangerschaft gekauft","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"so ein mi5tk3rlung","label":1,"root":"mistkerl","difficulty":"hard","transforms":["leet","suffix"],"category":"positive"}
+{"text":"meine oma macht das beste arschen rezept","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Meine oma macht das beste schwanzen rezept","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"er schrieb mir und nannte mich schwuchtel","label":1,"root":"schwuchtel","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"die neue arschen technologie ist revolutionaer","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Der schwangerschaft wurde puenktlich geliefert","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"verdammter w1 chs$3r","label":1,"root":"wichser","difficulty":"extreme","transforms":["doubling","split","leet"],"category":"positive"}
+{"text":"der ficktion wurde puenktlich geliefert","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"der schwanger ist sehr interessant","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"jemand hat fic k in die kommentare geschrieben","label":1,"root":"fick","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"ich empfehle schwangerschaft jedem","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du alter m~\ud83d~\udd95~̖~̎~I~̝~̀~S~̇~̪~̟~T~̃~̴~̅~k~̗~̙~̏~E~̭~r~̵~̞~̃~L~̇~̐~t~̂~̘~e~̃~̐~̴","label":1,"root":"mistkerl","difficulty":"extreme","transforms":["case","suffix","zalgo","emojiMix","separator"],"category":"positive"}
+{"text":"die schwanzen produktion stieg um zwanzig prozent","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"spackene nochmal","label":1,"root":"spacken","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"Die forschung ueber schwanzen hat grosse fortschritte gemacht","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"sie schrien dratsab zum schiedsrichter","label":1,"root":"bastard","difficulty":"easy","transforms":["reverse"],"category":"positive"}
+{"text":"Schwanzen anleitung fuer anfaenger","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"das geschichte festival zog tausende besucher an","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Hochwertiges geschichte zu verkaufen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du bist ein vollpfo$ten73","label":1,"root":"vollpfosten","difficulty":"hard","transforms":["suffix","leet"],"category":"positive"}
+{"text":"һ̡̹̐ẫ̴c̡̪̥k̥̀̈f̜̌r̔ę̠̈s̹̫̒s̃ĕ nochmal","label":1,"root":"hackfresse","difficulty":"hard","transforms":["zalgo","unicode"],"category":"positive"}
+{"text":"du blöder p​en⁡nerung","label":1,"root":"penner","difficulty":"extreme","transforms":["suffix","zwc"],"category":"positive"}
+{"text":"geh p/e/n/n/e/ř dich","label":1,"root":"penner","difficulty":"medium","transforms":["separator","unicode"],"category":"positive"}
+{"text":"neues arschen modell erschienen","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"arschen bewertung und vergleich","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du alter schwuch73l","label":1,"root":"schwuchtel","difficulty":"medium","transforms":["leet"],"category":"positive"}
+{"text":"tt=г=ò=t=t=e=l gesicht","label":1,"root":"trottel","difficulty":"extreme","transforms":["separator","doubling","unicode"],"category":"positive"}
+{"text":"geh hurensòòòhń dich","label":1,"root":"hurensohn","difficulty":"hard","transforms":["unicode","charRepeat"],"category":"positive"}
+{"text":"s̴̗̣p̶̧a̩̻̔s̼̍t̓é̶̞s̷̤ typ","label":1,"root":"spast","difficulty":"medium","transforms":["suffix","zalgo"],"category":"positive"}
+{"text":"verdammter rennep","label":1,"root":"penner","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"heute habe ich schwanger gekauft","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"das arschen festival zog tausende besucher an","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ezt\udd2e\ud83e\ud83e\ud83eof nochmal","label":1,"root":"fotze","difficulty":"extreme","transforms":["emojiMix","charRepeat","reverse"],"category":"positive"}
+{"text":"die dokumentation ueber schwangerschaft war sehr informativ","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"vólłıdioт dich","label":1,"root":"vollidiot","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"die preise fuer schwanger sind gestiegen","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"so ein b⁤a$⁣7@​r﻿d","label":1,"root":"bastard","difficulty":"hard","transforms":["zwc","leet"],"category":"positive"}
+{"text":"Meine oma macht das beste ficktion rezept","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die dokumentation ueber schwanger war sehr informativ","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"hochwertiges geschichte zu verkaufen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"so ein ttttrotteler","label":1,"root":"trottel","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"Die geschichte technologie entwickelt sich","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die ficktion ausstellung im museum war fantastisch","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"verdammter fick","label":1,"root":"fick","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"der streit eskalierte mit f​i ﻿ck beleidigungen","label":1,"root":"fick","difficulty":"hard","transforms":["zwc","split"],"category":"positive"}
+{"text":"hochwertiges geschichte zu verkaufen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die beste arschen marke","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"geschichte spezifikationen aufgelistet","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"wir besuchten die schwanger fabrik waehrend der reise","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"arschen anleitung fuer anfaenger","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"verdammter VOLLIƊÏOŤ","label":1,"root":"vollidiot","difficulty":"hard","transforms":["unicode","case"],"category":"positive"}
+{"text":"dumm❌m gesicht","label":1,"root":"dumm","difficulty":"medium","transforms":["emojiMix","doubling"],"category":"positive"}
+{"text":"bastard nochmal","label":1,"root":"bastard","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"du bist ein ѡіchѕ eř","label":1,"root":"wichser","difficulty":"hard","transforms":["unicode","split"],"category":"positive"}
+{"text":"du MISSGEburT","label":1,"root":"missgeburt","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"der arschen ist sehr interessant","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Ich empfehle schwangerschaft jedem","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"der spieler hoerte nicht auf m⁣i‏stkke⁠rl zu sagen","label":1,"root":"mistkerl","difficulty":"hard","transforms":["zwc","doubling"],"category":"positive"}
+{"text":"dieses arschen funktioniert sehr gut","label":0,"root":"arschen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Der ficktion markt waechst schnell weltweit","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"der ficktion wurde puenktlich geliefert","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"totaler p‏e⁡nn﻿e ⁡rst","label":1,"root":"penner","difficulty":"hard","transforms":["zwc","suffix","split"],"category":"positive"}
+{"text":"halt die z`\udc80`\ud83d`n`a`w`h`c`s","label":1,"root":"schwanz","difficulty":"extreme","transforms":["emojiMix","separator","reverse"],"category":"positive"}
+{"text":"wir haben schwanzen im unterricht studiert","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"der schwangerschaft wurde puenktlich geliefert","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die neue schwangerschaft technologie ist revolutionaer","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"schwangerschaft informationen verfuegbar","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die dokumentation ueber geschichte war sehr informativ","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die nachricht enthielt das wort s̱̰+̥ ̨̙+̵̏̊c̙̝+̝̒h̯̋̒+̋w̙̋+̋̄a̬+̶̢̈n̵̴̟+̲̜̹z̢","label":1,"root":"schwanz","difficulty":"hard","transforms":["split","separator","zalgo"],"category":"positive"}
+{"text":"mìststüсk dich","label":1,"root":"miststück","difficulty":"easy","transforms":["unicode"],"category":"positive"}
+{"text":"heute habe ich ficktion gekauft","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Heute habe ich schwangerschaft gekauft","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die nachricht enthielt das wort pissnеlke","label":1,"root":"pissnelke","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"ficktion anleitung fuer anfaenger","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"verdammter ficccck","label":1,"root":"fick","difficulty":"medium","transforms":["charRepeat"],"category":"positive"}
+{"text":"sp ack⚠️enem ist kein angemessenes wort","label":1,"root":"spacken","difficulty":"extreme","transforms":["split","emojiMix","suffix"],"category":"positive"}
+{"text":"schwanzen spezifikationen aufgelistet","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"dieses geschichte funktioniert sehr gut","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"so ein s`c`h`w`u`c`h`t`e `lem","label":1,"root":"schwuchtel","difficulty":"hard","transforms":["separator","split","suffix"],"category":"positive"}
+{"text":"halt die T̩́̈R̗̊̆T̢T̗̘̮L̥e","label":1,"root":"trottel","difficulty":"extreme","transforms":["vowelDrop","zalgo","case","suffix"],"category":"positive"}
+{"text":"arschst gesicht","label":1,"root":"arsch","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"D-г-E-C- -ķ-t-e typ","label":1,"root":"dreck","difficulty":"extreme","transforms":["split","case","unicode","suffix","separator"],"category":"positive"}
+{"text":"ficktion spezifikationen aufgelistet","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"du blöder pnnr","label":1,"root":"penner","difficulty":"easy","transforms":["vowelDrop"],"category":"positive"}
+{"text":"halt die S;C;H;L;A;M;P;E","label":1,"root":"schlampe","difficulty":"hard","transforms":["separator","case"],"category":"positive"}
+{"text":"im spielchat hat er mich h̟̲̺ü̥ř̸̠e̝̳̲ genannt","label":1,"root":"hure","difficulty":"medium","transforms":["zalgo"],"category":"positive"}
+{"text":"dieses schwanger funktioniert sehr gut","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"jemand hat arsch in die kommentare geschrieben","label":1,"root":"arsch","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"du w̴̼̮i̦̋̋⁣̻c̝̠̑h̹̒⁤̷̹s̟̼̀ĕ̆‍̗r̲","label":1,"root":"wichser","difficulty":"extreme","transforms":["zwc","zalgo","doubling"],"category":"positive"}
+{"text":"das buch ueber schwanger war ein bestseller","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"elender hackfress🤬ees","label":1,"root":"hackfresse","difficulty":"medium","transforms":["suffix","emojiMix"],"category":"positive"}
+{"text":"hurensohn dich","label":1,"root":"hurensohn","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"halt die kcifem","label":1,"root":"fick","difficulty":"hard","transforms":["reverse","suffix"],"category":"positive"}
+{"text":"schwangerschaft informationen verfuegbar","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"das buch ueber ficktion war ein bestseller","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"verdammter hurens ohn","label":1,"root":"hurensohn","difficulty":"easy","transforms":["split"],"category":"positive"}
+{"text":"Die schwanger ausstellung im museum war fantastisch","label":0,"root":"schwanger","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"die neue schwangerschaft technologie ist revolutionaer","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Die ficktion technologie entwickelt sich","label":0,"root":"ficktion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"absoluter wic🤮 hserer","label":1,"root":"wichser","difficulty":"hard","transforms":["suffix","split","emojiMix"],"category":"positive"}
+{"text":"Schwangerschaft spezifikationen aufgelistet","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"heute habe ich schwangerschaft gekauft","label":0,"root":"schwangerschaft","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"sie schrien s🤮chlampee zum schiedsrichter","label":1,"root":"schlampe","difficulty":"medium","transforms":["emojiMix","doubling"],"category":"positive"}
+{"text":"die nachricht enthielt das wort v̪o̳l̻̺l̥̅p̜f̏o̟̝̣s̮7̼̆̃3̔n̍","label":1,"root":"vollpfosten","difficulty":"hard","transforms":["zalgo","leet"],"category":"positive"}
+{"text":"absoluter haackfresse","label":1,"root":"hackfresse","difficulty":"easy","transforms":["doubling"],"category":"positive"}
+{"text":"geh z~ո~ä~w~h~ç~š dich","label":1,"root":"schwanz","difficulty":"hard","transforms":["unicode","reverse","separator"],"category":"positive"}
+{"text":"schwanzen anleitung fuer anfaenger","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"U_A_SS_K_C_E_R_D dich","label":1,"root":"drecksau","difficulty":"extreme","transforms":["separator","case","reverse","doubling"],"category":"positive"}
+{"text":"geschichte bewertung und vergleich","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"neues geschichte modell erschienen","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"wir besuchten die schwanzen fabrik waehrend der reise","label":0,"root":"schwanzen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"geschichte informationen verfuegbar","label":0,"root":"geschichte","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"fic k ist kein angemessenes wort","label":1,"root":"fick","difficulty":"easy","transforms":["split"],"category":"positive"}
+{"text":"blödmann gesicht","label":1,"root":"blödmann","difficulty":"easy","transforms":[],"category":"positive"}

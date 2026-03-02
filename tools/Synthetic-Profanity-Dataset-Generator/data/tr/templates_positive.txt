@@ -1,0 +1,17 @@
+# Pozitif (toxic) template'ler — Türkçe
+# {word} placeholder ile kök kelime yerleştirilir
+seni {word}
+lan {word}
+{word} herif
+{word} seni
+hadi {word}
+ulan {word}
+ya {word}
+bir {word} gibi
+{word} olma
+ne {word} adamsın
+tam bir {word}
+{word} ya
+sen ne {word} birisin
+{word} gibi davranma
+{word} lafı

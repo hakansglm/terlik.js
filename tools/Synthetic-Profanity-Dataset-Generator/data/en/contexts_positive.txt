@@ -1,0 +1,17 @@
+# Positive (toxic) context sentences — English
+# {word} placeholder for root word insertion
+he called me a {word} in the game chat
+someone wrote {word} in the comments
+the player kept saying {word} to everyone
+that {word} remark was totally uncalled for
+stop being such a {word} to people
+the message contained {word} language
+why would you call someone a {word}
+the post was full of {word} and hate
+{word} is not an appropriate word to use
+they screamed {word} at the referee
+online trolls keep typing {word} everywhere
+the review was just pure {word} language
+he texted me calling me a {word}
+{word} graffiti was sprayed on the wall
+the argument escalated with {word} insults

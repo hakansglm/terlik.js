@@ -1,0 +1,17 @@
+# Positive (toxic) templates — English
+# {word} placeholder for root word insertion
+you {word}
+{word} you
+what the {word}
+go {word} yourself
+you are a {word}
+stupid {word}
+{word} off
+shut the {word} up
+{word} face
+piece of {word}
+you little {word}
+absolute {word}
+total {word}
+{word} head
+dumb {word}

@@ -1,0 +1,10 @@
+# English suffixes — from dictionary.json
+ing
+ed
+er
+ers
+s
+es
+ly
+ness
+ery

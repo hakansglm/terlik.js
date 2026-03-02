@@ -1,0 +1,200 @@
+{"text":"habia grafiti de HUEVON en la pared","label":1,"root":"huevon","difficulty":"easy","transforms":["case"],"category":"positive"}
+{"text":"hosttttiaas hijo de","label":1,"root":"hostia","difficulty":"hard","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"el profesor explico reputacion con gran detalle","label":0,"root":"reputacion","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"los precios del inocular subieron","label":0,"root":"inocular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"verg aito de mierda","label":1,"root":"verga","difficulty":"medium","transforms":["split","suffix"],"category":"positive"}
+{"text":"maldito i😈diota","label":1,"root":"idiota","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"computar es muy popular ahora","label":0,"root":"computar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el acular es muy interesante","label":0,"root":"acular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"no seas P̲‎̚o̒﻿̷‏̨⁣l̷̥̅⁣l̤ã‌̤⁢̈","label":1,"root":"polla","difficulty":"hard","transforms":["zalgo","case","zwc"],"category":"positive"}
+{"text":"menudo pendejooo","label":1,"root":"pendejo","difficulty":"easy","transforms":["charRepeat"],"category":"positive"}
+{"text":"hoy compre polluelo en la tienda","label":0,"root":"polluelo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el jugador no paraba de decir ca rajo","label":1,"root":"carajo","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"Los precios del computadora subieron","label":0,"root":"computadora","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"eres un boludoer","label":1,"root":"boludo","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"la tecnologia de articulo avanza","label":0,"root":"articulo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"este calcular funciona muy bien","label":0,"root":"calcular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la tecnologia de calcular avanza","label":0,"root":"calcular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"me envio un mensaje diciendome i̜̟̭m̬̩̏b̙̻̠ę̸̊c̮̃ǐ̕l̢̗̇","label":1,"root":"imbecil","difficulty":"easy","transforms":["zalgo"],"category":"positive"}
+{"text":"pollito es muy popular ahora","label":0,"root":"pollito","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el profesor explico folleto con gran detalle","label":0,"root":"folleto","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"fui a la tienda y compre calcular","label":0,"root":"calcular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la exposicion de vehicular en el museo fue fantastica","label":0,"root":"vehicular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"sallopilig de mierda","label":1,"root":"gilipollas","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"por que le dices mam ada a alguien","label":1,"root":"mamada","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"el disputar es muy interesante","label":0,"root":"disputar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Recomiendo el polluelo a todos","label":0,"root":"polluelo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"EsTuPiDo de mierda","label":1,"root":"estupido","difficulty":"medium","transforms":["case"],"category":"positive"}
+{"text":"el mercado de folleto crece rapidamente","label":0,"root":"folleto","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ѵ/ê/ř/g/a total","label":1,"root":"verga","difficulty":"medium","transforms":["unicode","separator"],"category":"positive"}
+{"text":"Maricopa de calidad en venta","label":0,"root":"maricopa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el documental sobre folleto fue muy informativo","label":0,"root":"folleto","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"puro çоjõńes","label":1,"root":"cojones","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"la industria de follaje crea muchos empleos","label":0,"root":"follaje","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"imputar de calidad en venta","label":0,"root":"imputar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"pedazo de mmadado","label":1,"root":"mamada","difficulty":"medium","transforms":["suffix","vowelDrop"],"category":"positive"}
+{"text":"la resena era puro lenguaje AdR3Im","label":1,"root":"mierda","difficulty":"extreme","transforms":["reverse","leet","case"],"category":"positive"}
+{"text":"polleria revision y comparacion","label":0,"root":"polleria","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la publicacion estaba llena de peendejoas","label":1,"root":"pendejo","difficulty":"medium","transforms":["suffix","charRepeat"],"category":"positive"}
+{"text":"los precios del folleto subieron","label":0,"root":"folleto","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el polleria es muy interesante","label":0,"root":"polleria","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"El vehicular es muy interesante","label":0,"root":"vehicular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Fui a la tienda y compre articulo","label":0,"root":"articulo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el documental sobre computar fue muy informativo","label":0,"root":"computar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Los precios del vehicular subieron","label":0,"root":"vehicular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la discusion escalo con insultos de gilipollas","label":1,"root":"gilipollas","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"la mejor marca de calcular","label":0,"root":"calcular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"tremendo c‍hin⁢g​ar","label":1,"root":"chingar","difficulty":"medium","transforms":["zwc"],"category":"positive"}
+{"text":"tremendo јodėгess","label":1,"root":"joder","difficulty":"hard","transforms":["unicode","suffix","doubling"],"category":"positive"}
+{"text":"pedazo de h_u_e_v_o_n","label":1,"root":"huevon","difficulty":"medium","transforms":["separator"],"category":"positive"}
+{"text":"s̤̤̕ò̩̼p̢̱̘l̠̋a̸̵̺p̶̝̄o̰ḻ̑̑l̪̕a̳̦⚠️̩ș̌ total","label":1,"root":"soplapollas","difficulty":"medium","transforms":["zalgo","emojiMix"],"category":"positive"}
+{"text":"el profesor explico computadora con gran detalle","label":0,"root":"computadora","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la produccion de putamen aumento un veinte por ciento","label":0,"root":"putamen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"pollo de calidad en venta","label":0,"root":"pollo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"El libro sobre pollo fue un exito de ventas","label":0,"root":"pollo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"puro s̆p̉l̳̂̚a̡̅́p̼̍l̺̍̂l̶̈s̐os","label":1,"root":"soplapollas","difficulty":"hard","transforms":["vowelDrop","zalgo","suffix"],"category":"positive"}
+{"text":"no seas odulob","label":1,"root":"boludo","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"este follaje funciona muy bien","label":0,"root":"follaje","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"menudo zorraiendo","label":1,"root":"zorra","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"me envio un mensaje diciendome estupido","label":1,"root":"estupido","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"computar de calidad en venta","label":0,"root":"computar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la mejor marca de polluelo","label":0,"root":"polluelo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Vehicular de calidad en venta","label":0,"root":"vehicular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Hoy compre putamen en la tienda","label":0,"root":"putamen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"guia de pollito para principiantes","label":0,"root":"pollito","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"deja de ser tan ĉu̡ļ̌r̺̹̙o̵̤̒ con la gente","label":1,"root":"culero","difficulty":"hard","transforms":["zalgo","vowelDrop"],"category":"positive"}
+{"text":"eres una c~a~p~u~l~l~o~o~s","label":1,"root":"capullo","difficulty":"hard","transforms":["suffix","separator"],"category":"positive"}
+{"text":"recomiendo el disputa a todos","label":0,"root":"disputa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"en el chat del juego le dijeron veergaaazo","label":1,"root":"verga","difficulty":"hard","transforms":["suffix","doubling","charRepeat"],"category":"positive"}
+{"text":"Ṃ̓ȃ̘̲r̷̺̗!̑̆C̯̻̒@̜ que eres","label":1,"root":"marica","difficulty":"hard","transforms":["zalgo","leet","case"],"category":"positive"}
+{"text":"zorřŕa total","label":1,"root":"zorra","difficulty":"hard","transforms":["doubling","unicode"],"category":"positive"}
+{"text":"nuevo modelo de pollito","label":0,"root":"pollito","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Especificaciones del follaje","label":0,"root":"follaje","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"menudo c‎~‏ô⁠~ñ~o","label":1,"root":"coño","difficulty":"hard","transforms":["separator","unicode","zwc"],"category":"positive"}
+{"text":"carajoita de porqueria","label":1,"root":"carajo","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"el acular es muy interesante","label":0,"root":"acular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"por que le dices mm мaƊaâdò a alguien","label":1,"root":"mamada","difficulty":"extreme","transforms":["suffix","charRepeat","vowelDrop","unicode","split"],"category":"positive"}
+{"text":"tremendo hostia","label":1,"root":"hostia","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"menudo Pe  NdEjO","label":1,"root":"pendejo","difficulty":"extreme","transforms":["split","doubling","case"],"category":"positive"}
+{"text":"mamad a que eres","label":1,"root":"mamada","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"habia grafiti de CaB💢rOn en la pared","label":1,"root":"cabron","difficulty":"hard","transforms":["case","emojiMix"],"category":"positive"}
+{"text":"Recomiendo el imputar a todos","label":0,"root":"imputar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"coñoazo no es una palabra apropiada","label":1,"root":"coño","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"soplapollasos no es una palabra apropiada","label":1,"root":"soplapollas","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"vete a la f ollar","label":1,"root":"follar","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"la tecnologia de inocular avanza","label":0,"root":"inocular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"tremendo 0llup@c","label":1,"root":"capullo","difficulty":"medium","transforms":["leet","reverse"],"category":"positive"}
+{"text":"el jugador no paraba de decir maricaiendo","label":1,"root":"marica","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"culo no es una palabra apropiada","label":1,"root":"culo","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"la discusion escalo con insultos de cojons","label":1,"root":"cojones","difficulty":"medium","transforms":["vowelDrop"],"category":"positive"}
+{"text":"el profesor explico computadora con gran detalle","label":0,"root":"computadora","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la resena era puro lenguaje mamadair","label":1,"root":"mamada","difficulty":"medium","transforms":["suffix"],"category":"positive"}
+{"text":"especificaciones del particular","label":0,"root":"particular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"menudo vrgiendoooo","label":1,"root":"verga","difficulty":"hard","transforms":["suffix","vowelDrop","charRepeat"],"category":"positive"}
+{"text":"los precios del computadora subieron","label":0,"root":"computadora","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el documental sobre pollo fue muy informativo","label":0,"root":"pollo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"maricopa informacion disponible","label":0,"root":"maricopa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el jugador no paraba de decir ozaojednep","label":1,"root":"pendejo","difficulty":"medium","transforms":["suffix","reverse"],"category":"positive"}
+{"text":"vete a la c💢\udca2\udca2ulero","label":1,"root":"culero","difficulty":"medium","transforms":["emojiMix","charRepeat"],"category":"positive"}
+{"text":"la mejor marca de polleria","label":0,"root":"polleria","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"ojedňe  ƥ de mierda","label":1,"root":"pendejo","difficulty":"extreme","transforms":["unicode","split","doubling","reverse"],"category":"positive"}
+{"text":"v̚e̦̹ṛ̝̎g̢̫a̷̍ểṙ asqueroso","label":1,"root":"verga","difficulty":"medium","transforms":["suffix","zalgo"],"category":"positive"}
+{"text":"inocular de calidad en venta","label":0,"root":"inocular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"me envio un mensaje diciendome ollupac","label":1,"root":"capullo","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"este follaje funciona muy bien","label":0,"root":"follaje","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Este inocular funciona muy bien","label":0,"root":"inocular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el disputa llego a tiempo","label":0,"root":"disputa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"disputar de calidad en venta","label":0,"root":"disputar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la mejor marca de icular","label":0,"root":"icular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"zor    ra de porqueria","label":1,"root":"zorra","difficulty":"hard","transforms":["split","charRepeat"],"category":"positive"}
+{"text":"c‎oo⁠ooño total","label":1,"root":"coño","difficulty":"hard","transforms":["charRepeat","zwc"],"category":"positive"}
+{"text":"pedazo de PoLl⚠️A","label":1,"root":"polla","difficulty":"hard","transforms":["emojiMix","case"],"category":"positive"}
+{"text":"puro s~e~n~o~j~o~c","label":1,"root":"cojones","difficulty":"hard","transforms":["separator","reverse"],"category":"positive"}
+{"text":"hoy compre pollo en la tienda","label":0,"root":"pollo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"pe⁣lo⁤t‍d\ud83d💢o de mierda","label":1,"root":"pelotudo","difficulty":"extreme","transforms":["zwc","emojiMix","doubling","vowelDrop"],"category":"positive"}
+{"text":"el libro sobre disputar fue un exito de ventas","label":0,"root":"disputar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"imputar de calidad en venta","label":0,"root":"imputar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"me envio un mensaje diciendome m arica","label":1,"root":"marica","difficulty":"medium","transforms":["split"],"category":"positive"}
+{"text":"H🔥O STIA de porqueria","label":1,"root":"hostia","difficulty":"hard","transforms":["case","split","emojiMix"],"category":"positive"}
+{"text":"menudo o*j*a*r*a*c","label":1,"root":"carajo","difficulty":"medium","transforms":["reverse","separator"],"category":"positive"}
+{"text":"vete a la pelotuudô","label":1,"root":"pelotudo","difficulty":"medium","transforms":["unicode","doubling"],"category":"positive"}
+{"text":"la mejor marca de follaje","label":0,"root":"follaje","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"fui a la tienda y compre disputa","label":0,"root":"disputa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"recomiendo el disputa a todos","label":0,"root":"disputa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Guia de particular para principiantes","label":0,"root":"particular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Articulo revision y comparacion","label":0,"root":"articulo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el maricopa es muy interesante","label":0,"root":"maricopa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"no seas mArica","label":1,"root":"marica","difficulty":"easy","transforms":["case"],"category":"positive"}
+{"text":"la exposicion de polluelo en el museo fue fantastica","label":0,"root":"polluelo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la mejor marca de vehicular","label":0,"root":"vehicular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"estudiamos putamen en la clase de ciencias","label":0,"root":"putamen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"Fui a la tienda y compre icular","label":0,"root":"icular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la mejor marca de putamen","label":0,"root":"putamen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"deja de ser tan MrRrDaEnDo con la gente","label":1,"root":"mierda","difficulty":"extreme","transforms":["suffix","charRepeat","vowelDrop","case"],"category":"positive"}
+{"text":"la discusion escalo con insultos de immbéçil","label":1,"root":"imbecil","difficulty":"medium","transforms":["unicode","doubling"],"category":"positive"}
+{"text":"p‌en⁠d‍ ejoir asqueroso","label":1,"root":"pendejo","difficulty":"hard","transforms":["zwc","suffix","split"],"category":"positive"}
+{"text":"pendejo hijo de","label":1,"root":"pendejo","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"tremendo c̶̍a̞p ̧̣̓u̵̅̒l̜̆l̯̅0̧̦","label":1,"root":"capullo","difficulty":"hard","transforms":["leet","zalgo","split"],"category":"positive"}
+{"text":"Ħ⁠3v0ň de mierda","label":1,"root":"huevon","difficulty":"extreme","transforms":["leet","unicode","case","zwc","vowelDrop"],"category":"positive"}
+{"text":"vete a la cabron","label":1,"root":"cabron","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"no seas c̟̗̓̆ñ̲̃̒o̗̅","label":1,"root":"coño","difficulty":"hard","transforms":["zalgo","vowelDrop"],"category":"positive"}
+{"text":"tremendo m@r!ca","label":1,"root":"marica","difficulty":"easy","transforms":["leet"],"category":"positive"}
+{"text":"el polleria es muy interesante","label":0,"root":"polleria","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"eres una mamada","label":1,"root":"mamada","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"hoy compre polleria en la tienda","label":0,"root":"polleria","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"eres una c‌̯‌uu‎̹̎̓l̶⁢o̷̭̎","label":1,"root":"culo","difficulty":"extreme","transforms":["zalgo","charRepeat","zwc"],"category":"positive"}
+{"text":"eres una c\\̑\\̯\\̢\\a\\̺\\̯\\̎\\b\\̳\\r\\̕\\̃\\o\\̏\\̖\\̋\\n\\̑\\̨","label":1,"root":"cabron","difficulty":"medium","transforms":["zalgo","separator"],"category":"positive"}
+{"text":"eres un p̻o̤̗̐l ̧̌̋l̴̊̊̚a̸̸̕","label":1,"root":"polla","difficulty":"extreme","transforms":["zalgo","split","doubling"],"category":"positive"}
+{"text":"guia de vehicular para principiantes","label":0,"root":"vehicular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"este calcular funciona muy bien","label":0,"root":"calcular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"pollito informacion disponible","label":0,"root":"pollito","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el mensaje contenia la palabra atup","label":1,"root":"puta","difficulty":"medium","transforms":["reverse"],"category":"positive"}
+{"text":"el festival de polluelo atrajo miles de visitantes","label":0,"root":"polluelo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el putamen llego a tiempo","label":0,"root":"putamen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"nuevo modelo de inocular","label":0,"root":"inocular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"puro p_e_n_d_e_j_o","label":1,"root":"pendejo","difficulty":"easy","transforms":["separator"],"category":"positive"}
+{"text":"OO⁣D​U7‎O⁠L‍EP que eres","label":1,"root":"pelotudo","difficulty":"extreme","transforms":["leet","zwc","reverse","case","charRepeat"],"category":"positive"}
+{"text":"tremendo m😈arica","label":1,"root":"marica","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"nuevo modelo de disputa","label":0,"root":"disputa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la tecnologia de polluelo avanza","label":0,"root":"polluelo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"especificaciones del disputar","label":0,"root":"disputar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"maricopa informacion disponible","label":0,"root":"maricopa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"nuevo modelo de icular","label":0,"root":"icular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"vete a la c,,l, ,e,r,o","label":1,"root":"culero","difficulty":"extreme","transforms":["split","separator","vowelDrop"],"category":"positive"}
+{"text":"especificaciones del maricopa","label":0,"root":"maricopa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el libro sobre maricopa fue un exito de ventas","label":0,"root":"maricopa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"foll@araz0 de mierda","label":1,"root":"follar","difficulty":"extreme","transforms":["suffix","charRepeat","leet"],"category":"positive"}
+{"text":"alguien escribio räɡníhc en los comentarios","label":1,"root":"chingar","difficulty":"medium","transforms":["reverse","unicode"],"category":"positive"}
+{"text":"especificaciones del computar","label":0,"root":"computar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"los trolls siguen escribiendo soplapollas","label":1,"root":"soplapollas","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"puro idïòta","label":1,"root":"idiota","difficulty":"medium","transforms":["unicode"],"category":"positive"}
+{"text":"hoy compre putamen en la tienda","label":0,"root":"putamen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"pedazo de follar","label":1,"root":"follar","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"eres un máma ddd@","label":1,"root":"mamada","difficulty":"extreme","transforms":["unicode","leet","split","charRepeat"],"category":"positive"}
+{"text":"nuevo modelo de vehicular","label":0,"root":"vehicular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el mercado de maricopa crece rapidamente","label":0,"root":"maricopa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"tremendo mamada","label":1,"root":"mamada","difficulty":"medium","transforms":[],"category":"positive"}
+{"text":"la publicacion estaba llena de c|a|p|u|l|l|o|a|s","label":1,"root":"capullo","difficulty":"medium","transforms":["suffix","separator"],"category":"positive"}
+{"text":"el computadora es muy interesante","label":0,"root":"computadora","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"La investigacion sobre putamen ha avanzado mucho","label":0,"root":"putamen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"fui a la tienda y compre computar","label":0,"root":"computar","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"el festival de polleria atrajo miles de visitantes","label":0,"root":"polleria","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"la industria de maricopa crea muchos empleos","label":0,"root":"maricopa","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"vete a la ma🔥mada","label":1,"root":"mamada","difficulty":"medium","transforms":["emojiMix"],"category":"positive"}
+{"text":"articulo revision y comparacion","label":0,"root":"articulo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"le gritaron pincheas al arbitro","label":1,"root":"pinche","difficulty":"easy","transforms":["suffix"],"category":"positive"}
+{"text":"la tecnologia de pollito avanza","label":0,"root":"pollito","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"p̝e̮l̤̼ȏ̬t̃u̮d̂ȏir de mierda","label":1,"root":"pelotudo","difficulty":"hard","transforms":["zalgo","suffix"],"category":"positive"}
+{"text":"puro c|u|l|e|r|o|i|t|o","label":1,"root":"culero","difficulty":"medium","transforms":["suffix","separator"],"category":"positive"}
+{"text":"el polluelo es muy interesante","label":0,"root":"polluelo","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"maldito odnaarrozz","label":1,"root":"zorra","difficulty":"extreme","transforms":["doubling","suffix","reverse"],"category":"positive"}
+{"text":"mmamada asqueroso","label":1,"root":"mamada","difficulty":"medium","transforms":["doubling"],"category":"positive"}
+{"text":"la industria de putamen crea muchos empleos","label":0,"root":"putamen","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"habia grafiti de s⁣pl‏pol‏l‎asoss en la pared","label":1,"root":"soplapollas","difficulty":"extreme","transforms":["zwc","vowelDrop","suffix","doubling"],"category":"positive"}
+{"text":"el mercado de inocular crece rapidamente","label":0,"root":"inocular","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"tremendo p3ndddde👎jjo","label":1,"root":"pendejo","difficulty":"extreme","transforms":["leet","doubling","charRepeat","emojiMix"],"category":"positive"}
+{"text":"por que le dices soplapollas a alguien","label":1,"root":"soplapollas","difficulty":"easy","transforms":[],"category":"positive"}
+{"text":"la nueva tecnologia de computadora es revolucionaria","label":0,"root":"computadora","difficulty":"clean","transforms":[],"category":"negative"}
+{"text":"no seas culer😈o","label":1,"root":"culero","difficulty":"easy","transforms":["emojiMix"],"category":"positive"}
+{"text":"maldito c̘̝̏û̳ȕ̗û̧ ̻ļ̰̃e̠̜r̜̙ò̪","label":1,"root":"culero","difficulty":"hard","transforms":["split","charRepeat","zalgo"],"category":"positive"}
+{"text":"por que le dices caabr‍ones a alguien","label":1,"root":"cabron","difficulty":"extreme","transforms":["zwc","doubling","suffix"],"category":"positive"}

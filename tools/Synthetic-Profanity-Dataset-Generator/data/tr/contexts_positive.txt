@@ -1,0 +1,17 @@
+# Pozitif (toxic) context cümleleri — Türkçe
+# {word} placeholder ile kök kelime yerleştirilir
+dün maçta herkes {word} diye bağırdı
+o adam tam bir {word} gibi davranıyor
+{word} deme bana öyle şeyler
+sosyal medyada {word} yazmışlar
+forumda birisi {word} diyor herkese
+{word} sözünü duymak istemiyorum
+o video altında {word} yazan çok
+adam {word} diye hakaret etti
+{word} kelimesini kullanmak doğru değil
+ne kadar {word} bir yorum bu
+oyunda bana {word} dediler
+arkadaşlar arasında {word} şakası yapıyorlar
+mesajda {word} yazıyor açıkça
+sinirlenince {word} diye bağırdı
+{word} gibi konuşma lütfen

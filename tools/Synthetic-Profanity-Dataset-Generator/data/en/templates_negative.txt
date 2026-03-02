@@ -1,0 +1,17 @@
+# Negative (clean) templates — English
+# {word} placeholder for root word insertion
+I bought a {word} today
+the {word} is really nice
+{word} information available online
+new {word} model released
+{word} prices are going up
+best {word} brand in market
+{word} how to guide
+{word} tutorial for beginners
+this {word} works great
+I recommend {word} to everyone
+{word} review and comparison
+quality {word} for sale
+{word} delivered on time
+{word} specifications listed below
+latest {word} technology
